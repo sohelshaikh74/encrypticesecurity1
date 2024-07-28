@@ -151,7 +151,7 @@ ol {
 
 .spad {
   padding-top: 80px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
   margin-top: -50px;
   /* margin-bottom: -50px; */
 }
@@ -305,8 +305,9 @@ ol {
   left: 0;
   top: 0;
   width: 100%;
+  height: 120px;
   background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 9;
 }
 
@@ -1119,6 +1120,7 @@ ol {
 -----------------------*/
 .breadcrumb-option {
   padding-top: 180px;
+  /* margin-bottom: 20px; */
 }
 
 .breadcrumb__text h2 {
@@ -1156,7 +1158,7 @@ ol {
 -----------------------*/
 .about {
   background: #100028;
-  padding-bottom: 90px;
+  padding-bottom: 50px;
 }
 
 .about__pic__item {
@@ -2101,6 +2103,12 @@ ol {
   .header__nav__option {
     display: none;
   }
+  .header__logo img{
+    width: 210px;
+  }
+}
+.about-section-title__main-title {
+  font-size: 22px;
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
@@ -2309,7 +2317,29 @@ ol {
   font-size: 12px;
   display: block;
 }
+.breadcrumb__text h2{
+  /* padding-top: 10px; */
+  font-size: 26px;
+  margin-top: 15px;
+  /* color: #100028; */
+}
+.breadcrumb__links{
+  margin-top: 20px;
+}
+/* .header__logo img{
+  padding: 0 20px;
+  width: 300px;
 
+} */
+.breadcrumb__text{
+  /* margin-bottom: 20px; */
+}
+.breadcrumb__links {
+  margin-bottom: 20px;
+}
+.header__logo img{
+  width: 200px;
+}
 
 }
 /* Small Device = 320px */
@@ -2354,12 +2384,19 @@ ol {
   .blog__details__quote {
     padding: 30px 40px 35px 35px;
   }
- /* contact and form */
- 
+/* header logo */
+.header__logo img{
+  width: 200px;
+}
+  /* breadcrumb__text */
+  .breadcrumb__text h2{
+    font-size: 36px;
+  }
 
 
 }
 
+/* media quries end */
 
 
 /* courses */
@@ -2507,7 +2544,6 @@ body {
 }
 
 .career-opportunities {
-  /* background-color: #ffffff; */
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   padding: 20px;
@@ -2524,7 +2560,6 @@ body {
 
 .career-opportunities p {
   font-size: 1em;
-  /* color: #666666; */
   color: #adadad;
   margin-bottom: 20px;
 }
@@ -2612,41 +2647,53 @@ body {
 .icon {
   margin-right: 10px;
 }
-/* .hero__item{
-  background: url('https://attackmap.sonicwall.com/live-attack-map/');
-} */
- /* .cards{
-  background: radial-gradient(#100028,#000);
- } */
- /* .module-header{
-  color: #fff;
- } */
 
- /* responsive  */
 
 
 
  /* practice for youtube video */
- .video-tag{
-  background: red;
-  height: 500px;
-  /* width: 100%; */
-  background-image: url('../img/work/work-1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+
+
+/* contact us */
+/* .contact.spad{
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.contact .container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+.column {
+  flex: 1;
+  margin: 10px;
+}
+.column iframe {
+  width: 100%;
+  height: 500px; /* Set a fixed height */
+  border: 0;
   border-radius: 8px;
- }
- .video-tag .play-btn {
-  display: inline-block;
-  /* color: #ffffff; */
-  color: #100028;
-  font-size: 20px;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  text-align: center;
-  border: 3px solid #100028;
-  /* border: 1px solid rgba(255, 255, 255, 0.7); */
-  border-radius: 50%;
+}
+
+/* course bnt */
+.course-btn{
+  padding: 10px 13px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: linear-gradient(#100028,#000);
+  color: #adadad;
+}
+.course-btn a{
+  color: #adadad;
+}
+.course-btn a:hover{
+  color: #fff;
+  /* transition: .2 all 0.3 linear; */
 }
