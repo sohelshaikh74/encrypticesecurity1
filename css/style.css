@@ -2743,3 +2743,16 @@ body {
   border: 0;
   border-radius: 8px;
 }
+
+/* learn more btn */
+.learn-more {
+  border: none;
+  background: #100028;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.learn-more a {
+
+  color: #adadad;
+}
