@@ -102,6 +102,47 @@
             color: #adadad;
             border-radius: 8px;
         }
+        /* enquire-now */
+        .popup{
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50% , -50%) scale(1.25);
+  opacity: 1;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0,0.2);
+  transition: top 0ms ease-in-out 200ms,
+          opacity  200ms ease-in-out 0ms,
+          transform  20ms ease-in-out 0ms;
+}
+        .popup.active{
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50% , -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+  opacity  200ms ease-in-out 0ms,
+  transform  20ms ease-in-out 0ms;
+
+}
+.popup .close-btn{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: #888;
+  color: #eee;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.popup .form h2{
+  text-align: center;
+  color: #222;
+  margin: 10px 12px 20px;
+  font-size: 25px;
+  padding-top: 15px;
+}
     </style>
 </head>
 
@@ -176,7 +217,28 @@
     <!-- Breadcrumb End -->
 
 
+
+    <!-- <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+          <div class="column form">
+            <h2>Enquire Now</h2>
+            <iframe
+              height="400"
+              width="500px"
+              src="https://crm.aumdigitech.com/forms/wtl/0daa176b51503badfa720b543040d5bf"
+              frameborder="0"
+              sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"
+            ></iframe>
+          </div>
+        </div>
+      </div> -->
+
+
     <!-- masters cyber security content-->
+
+
+
 
     <section class="master_cs" style="background: #100028;">
 
@@ -546,11 +608,17 @@
                                                     Hindi, English
                                                 </div>
                                                 <div class="links mt-3 mt-lg-20">
-
-                                                    <a href="#" class="btn btn-primary w-100" target="_blank">
-                                                        Enquire Now
-                                                    </a>
+                                                    <button class="btn btn-primary w-100 show-login">
+                                                        <a href=""  target="_blank" class="text-light">
+                                                            Enquire Now
+                                                        </a>
+                                                    </button>
                                                 </div>
+
+
+                                                <!-- prative for enquire-now -->
+                                              
+
 
                                                 <!-- <div class="career-opportunities"> -->
                                                 <h4 class="text-light mt-3">Material Includes</h4>
@@ -620,7 +688,7 @@
                             </div>
                             <div class="blog-related-courses pb-regular mt-3">
                                 <h2 class="h3 pb-50 text-black mb-0 text-light mb-4">Related Course</h2>
-                                <div class="row cards row-gap-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                                <div class="row cards row-gap-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
                                     <div class="col my-1">
                                         <div class="card bg-white card-light-shadow"><img
                                                 class="card-img-top object-fit-cover "
@@ -640,25 +708,24 @@
                                                 class="card-footer links px-32 pb-4 d-flex justify-content-between align-items-center">
                                                 <div></div>
                                                 <button class="learn-more">
-                                                    <a class="link-right" href="./ceh12.html">
+                                                    <a class="link-right text-light" href="./ceh12.html">
                                                         Learn More <span class="icon-arrow-right ms-2"></a>
                                                 </button>
                                             </div>
                                         </div>
                                     </div>                                     
-                                    <div class="col my-1">
+                                    <!-- <div class="col my-1">
                                         <div class="card bg-white card-light-shadow"><img
                                                 class="card-img-top object-fit-cover background-black "
                                                 src="./img/course/ADCS-Course-Modules-Logo-v2.png" width="612"
                                                 height="306" alt="" style="height: 153px">
                                             <div class="card-body py-4 px-32 ">
                                                 <div class="card-text text-overline-blog-card text-dark-200 mb-2">
-                                                    Advance In Cybersecurity
+                                                    Advance Diploma in Cyber Security
                                                 </div>
                                                 <div class="text-md line-clamp">
                                                     Gain essential new skills in network protection, threat detection,
-                                                    and vulnerability assessment with our comprehensive Advanced Diploma
-                                                    in Cyber Security.
+                                                    and vulnerability assessment with our comprehensive  Advance Diploma in Cyber Security.
                                                 </div>
                                             </div>
                                             <div
@@ -666,11 +733,11 @@
                                                 <div></div>
                                                 <button class="learn-more">
                                                     <a class="link-right" href="./adcs.html">
-                                                        Learn More <span class="icon-arrow-right ms-2"></a>
+                                                        Learn More <s   pan class="icon-arrow-right ms-2"></a>
                                                 </button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col my-1">
                                         <div class="card bg-white card-light-shadow"><img
                                                 class="card-img-top object-fit-cover "
@@ -682,7 +749,7 @@
                                             </div>
                                             <div class="text-black">
                                                 Boost your career with our Master of Cyber Security. Gain expertise in
-                                                threat intelligence, cryptography, and digital forensics to become a key
+                                                threat intelligence, cryptography & forensics to become a key
                                                 player in protecting the world.
                                             </div>
                                         </div>
@@ -690,14 +757,12 @@
                                             class="card-footer links px-32 pb-4 d-flex justify-content-between align-items-center">
                                             <div></div>
                                             <button class="learn-more">
-                                                <a class="link-right" href="./mcs.html">
+                                                <a class="link-right text-light" href="./mcs.html">
                                                     Learn More <span class="icon-arrow-right ms-2"></a>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- oscp -->
                                 <div class="col my-1">
                                     <div class="card bg-white card-light-shadow"><img
                                             class="card-img-top object-fit-cover "
@@ -718,7 +783,7 @@
                                             class="card-footer links px-32 pb-4 d-flex justify-content-between align-items-center">
                                             <div></div>
                                             <button class="learn-more">
-                                                <a class="link-right" href="./oscp.html">
+                                                <a class="link-right text-light" href="./oscp.html">
                                                     Learn More <span class="icon-arrow-right ms-2"></a>
                                             </button>
 
@@ -728,6 +793,82 @@
                             </div>
                         </div>
 
+
+                        <!-- <div class="blog-related-courses pb-regular mt-3">
+                            <h2 class="h3 pb-50 text-black mb-0 text-light mb-4">Related Course</h2>
+                            <div class="row row-gap-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                                <div class="col my-1">
+                                    <div class="card bg-white card-light-shadow">
+                                        <img class="card-img-top object-fit-cover" src="./img/course/CEH-V12-Course-Modules-Logo-V2.png" width="612" height="306" alt="" style="height: 153px">
+                                        <div class="card-body py-4 px-32">
+                                            <div class="card-text text-overline-blog-card text-dark-200 mb-2">CEH v12 EC Council</div>
+                                            <div class="text-md line-clamp">
+                                                Know about Certified Ethical Hacker (CEH) v12 is a top certification that equips you with advanced skills to combat cyber threats and shows your expertise in ethical hacking.
+                                            </div>
+                                        </div>
+                                        <div class="card-footer links px-32 pb-4 d-flex justify-content-between align-items-center">
+                                            <div></div>
+                                            <a class="learn-more link-right" href="./ceh12.html">
+                                                Learn More <span class="icon-arrow-right ms-2"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col my-1">
+                                    <div class="card bg-white card-light-shadow">
+                                        <img class="card-img-top object-fit-cover background-black" src="./img/course/ADCS-Course-Modules-Logo-v2.png" width="612" height="306" alt="" style="height: 153px">
+                                        <div class="card-body py-4 px-32">
+                                            <div class="card-text text-overline-blog-card text-dark-200 mb-2">Advance Diploma in Cyber Security</div>
+                                            <div class="text-md line-clamp">
+                                                Gain essential new skills in network protection, threat detection, and vulnerability assessment with our comprehensive ADCS.
+                                            </div>
+                                        </div>
+                                        <div class="card-footer links px-32 pb-4 d-flex justify-content-between align-items-center">
+                                            <div></div>
+                                            <a class="learn-more link-right" href="./adcs.html">
+                                                Learn More <span class="icon-arrow-right ms-2"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col my-1">
+                                    <div class="card bg-white card-light-shadow">
+                                        <img class="card-img-top object-fit-cover" src="./img/course/MCS-Course-Modules-Logo-v1.png" width="612" height="306" alt="" style="height: 153px">
+                                        <div class="card-body py-4 px-32">
+                                            <div class="card-text text-overline-blog-card text-dark-200 mb-2">Masters in Cyber Security</div>
+                                            <div class="text-md line-clamp">
+                                                Boost your career with our Master of Cyber Security. Gain expertise in threat intelligence, cryptography, and digital forensics to become a key player in protecting the world.
+                                            </div>
+                                        </div>
+                                        <div class="card-footer links px-32 pb-4 d-flex justify-content-between align-items-center">
+                                            <div></div>
+                                            <button class="learn-more">
+                                                <a class="learn-more link-right" href="./mcs.html">
+                                                    Learn More <span class="icon-arrow-right ms-2"></span>
+                                                </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col my-1">
+                                    <div class="card bg-white card-light-shadow">
+                                        <img class="card-img-top object-fit-cover" src="./img/course/OSCP-Course-Modules-Logo.png" width="612" height="306" alt="" style="height: 153px">
+                                        <div class="card-body py-4 px-32">
+                                            <div class="card-text text-overline-blog-card text-dark-200 mb-2">OSCP</div>
+                                            <div class="text-md line-clamp">
+                                                The OSCP certification proves your proficiency and dedication to cybersecurity by putting your ability to recognize and exploit vulnerabilities to the test.
+                                            </div>
+                                        </div>
+                                        <div class="card-footer links px-32 pb-4 d-flex justify-content-between align-items-center">
+                                            <div></div>
+                                            <a class="learn-more link-right" href="./oscp.html">
+                                                Learn More <span class="icon-arrow-right ms-2"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                 </div>
             </div>
     </section>
@@ -771,10 +912,10 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer__option__item">
                             <h5>Our Courses</h5>
+                            <p><a href="./ceh12.html" class="read__more">CEH v12 EC Council</a></p>
                             <p><a href="./adcs.html" class="read__more">Advance Diploma in Cyber Security</a></p>
                             <p><a href="./mcs.html" class="read__more">Masters in Cyber Security</a></p>
                             <p><a href="./oscp.html" class="read__more">OSCP</a></p>
-                            <p><a href="./ceh12.html" class="read__more">CEH v12 EC Council</a></p>
                         </div>
                     </div>
   
