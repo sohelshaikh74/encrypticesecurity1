@@ -321,7 +321,9 @@ ol {
   Header
 -----------------------*/
 /* ṣelf */
-
+.for__contact{
+  color: #fff;
+}
 
 .header {
   position: absolute;
@@ -2163,7 +2165,9 @@ ol {
 .about-section-title__main-title {
   font-size: 22px;
 }
-
+.for__contact{
+  font-size: 56px;
+}
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
 
@@ -2409,6 +2413,9 @@ ol {
   right: 90px;
   opacity: 0.2;
 }
+.for__contact{
+  font-size: 42px;
+}
 }
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
@@ -2477,6 +2484,9 @@ ol {
       opacity: 0.4;
       /* display: none; */
     }
+  }
+  .for__contact{
+    font-size: 29px;
   }
 }
 
@@ -2820,4 +2830,14 @@ body {
 
 .learn-more  a:hover{
   color: #adadad;
+}
+
+
+/* Thank you */
+.success{
+  padding-top: 20px;
+  color: yellowgreen;
+}
+.thank-you{
+  padding: 20px 0 20px;
 }
