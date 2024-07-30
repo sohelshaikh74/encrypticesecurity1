@@ -2015,6 +2015,11 @@ ol {
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero__text span{
+    font-size: 14px;
+    display: block;
+  }
+
   .hero__slider.owl-carousel .owl-dots {
     max-width: 690px !important;
   }
@@ -2152,7 +2157,7 @@ ol {
     width: 350px;
     top: 180px;
     right: 130px;
-    opacity: 0.2;
+    opacity: 0.3;
   }
 }
 .about-section-title__main-title {
