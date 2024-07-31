@@ -108,8 +108,9 @@ ol {
   Helper CSS
 -----------------------*/
 .section-title {
-  margin-top: 55px;
+  margin-top: 25px;
   margin-bottom: 20px;
+  /* text-align: right; */
 }
 .section-title.center-title {
   text-align: center;
@@ -136,6 +137,7 @@ ol {
 .section-title h2:after {
   position: absolute;
   left: 0;
+  /* right: 0; */
   bottom: 0;
   height: 5px;
   width: 70px;
@@ -791,9 +793,13 @@ ol {
 }
 
 .section-title.team__title {
+  /* margin-bottom: 90px; */
+  margin-bottom: 90px;
+  /* gap: 15px; */
+}
+.team .row{
   margin-bottom: 90px;
 }
-
 .team__item {
   height: 390px;
   position: relative;
@@ -807,13 +813,14 @@ ol {
   bottom: 0;
 }
 .team__item.team__item--second {
-  margin-top: -60px;
+  /* margin-top: -60px; */
+  margin-top: -180px;
 }
 .team__item.team__item--third {
   margin-top: -120px;
 }
 .team__item.team__item--four {
-  margin-top: -180px;
+  margin-top: -60px;
 }
 
 .team__item__text {
@@ -1970,10 +1977,25 @@ ol {
 }
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* thank you */
+  .team .row{
+    margin-bottom: 50px;
+  }
+  .for__contact{
+    font-size: 46px;
+  }
+  /* ty-end */
+  .course-heading{
+    font-size: 26px;
+  }
+  .about-this-course{
+    font-size: 16px;
+  }
+  
   .header__nav__menu {
     margin-right: 25px;
   }
-
+  
   .header__nav__menu ul li {
     margin-right: 25px;
   }
@@ -2018,6 +2040,20 @@ ol {
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* thank you */
+  .section-title.team__title{
+    margin-bottom: 20px;
+  }
+  .team .row{
+    margin-bottom: 60px;
+  }
+  .for__contact{
+    font-size: 36px;
+  }
+  /* end */
+  .course-heading{
+    font-size: 22px;
+  }
   .hero__text span{
     font-size: 14px;
     display: block;
@@ -2171,9 +2207,20 @@ ol {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
-
-
-
+  .section-title.team__title{
+    margin-bottom: 20px;
+  }
+/* thank you */
+.team .row{
+  margin-bottom: 40px;
+}
+.for__contact{
+  font-size: px;
+}
+/* end */
+.course-heading{
+  font-size: 20px;
+}
   .services__title {
     margin-bottom: 50px;
   }
@@ -2421,6 +2468,22 @@ ol {
 }
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
+  /* thank you */
+  .team .row{
+    margin-bottom: 30px;
+  }
+
+  .for__contact{
+    font-size: 26px;
+  }
+  /* end */
+  .section-title.team__title{
+    margin-bottom: 20px;
+  }
+  .course-heading{
+    font-size: 45px;
+  }
+
   .hero__text h2 {
     font-size: 30px;
     line-height: 40px;
@@ -2480,6 +2543,9 @@ ol {
   }
 
   @media only screen and (max-width:383px){
+  .section-title.team__title{
+    margin-bottom: 20px;
+  }
     .big-logo img{
       position: absolute;
       width: 220px;
@@ -2498,6 +2564,7 @@ ol {
 
 
 /* courses */
+
 .tutor-course-top-info__content {
   max-width: 600px;
 }
@@ -2851,4 +2918,7 @@ body {
 }
 .thank-you{
   padding: 20px 0 20px;
+}
+.for__contact{
+  font-size: 46px;
 }
