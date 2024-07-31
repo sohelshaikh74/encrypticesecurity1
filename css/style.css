@@ -607,7 +607,6 @@ ol {
 
 
 .work__item {
-  /* self */
   transform: scale(1);
 	transition: 0.3s ease-in-out;
   height: 311px !important;
@@ -651,7 +650,6 @@ ol {
   line-height: 50px;
   text-align: center;
   border: 3px solid #100028;
-  /* border: 1px solid rgba(255, 255, 255, 0.7); */
   border-radius: 50%;
 }
 
@@ -695,6 +693,9 @@ ol {
 .work__item__hover ul li:last-child:after {
   display: none;
 }
+
+/* self youtube */
+
 
 /*---------------------
   Counter
