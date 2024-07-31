@@ -2075,10 +2075,17 @@ ol {
   .for__contact{
     font-size: 36px;
   }
-  .testimonial__author__pic img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+  .testimonial__author__pic  {
+    height: 300px;
+    width: 200px;
+    border: 2px solid #fff;
+    /* border-radius: 50%; */
+    overflow: hidden;
+  }
+  .testimonial__author__pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   /* end */
   .course-heading{
