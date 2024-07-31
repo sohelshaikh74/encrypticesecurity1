@@ -598,17 +598,26 @@ ol {
 /*---------------------
   Work
 -----------------------*/
+
+/* self youtube */
 .work {
   overflow: hidden;
   background: #100028;
   padding: 10px ;
 }
 
+.work-1 {
+  background-image: url('/img/thumbnails/thumbnail-ronak.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 
 .work__item {
   transform: scale(1);
-	transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   height: 311px !important;
   width: calc(16.67% - 10px);
   margin-right: 10px;
@@ -693,10 +702,6 @@ ol {
 .work__item__hover ul li:last-child:after {
   display: none;
 }
-
-/* self youtube */
-
-
 /*---------------------
   Counter
 -----------------------*/
