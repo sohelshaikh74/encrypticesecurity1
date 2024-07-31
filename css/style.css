@@ -2021,6 +2021,19 @@ ol {
   color: #00bfe7;
 } */
 
+
+
+
+.custom-link:hover {
+  color: #00bfe7;
+}
+
+
+ .services__item h4>a{
+  color: #fff;
+ }
+
+
   .counter__item::before {
     display: none;
   }
