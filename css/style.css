@@ -200,7 +200,10 @@ ol {
   filter: brightness(0) invert(1); /* Make image white */
 }
 
-
+/* designation */
+.testimonial__author__text span{
+  color: #adadad;
+}
 /* buttons */
 .primary-btn {
   display: inline-block;
