@@ -195,6 +195,12 @@ ol {
   color: #fff;
 }
 
+/* image filter */
+.white-image {
+  filter: brightness(0) invert(1); /* Make image white */
+}
+
+
 /* buttons */
 .primary-btn {
   display: inline-block;
@@ -1212,6 +1218,7 @@ ol {
 .about__text {
   padding-left: 30px;
 }
+
 .about__text .services__item .services__item__icon:after {
   border-color: #281A3E;
 }
