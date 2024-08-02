@@ -2000,6 +2000,24 @@ ol {
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
+@media only screen and (min-width: 1080px ) and (max-widht:2406px) {
+  .container {
+    max-width: 1170px;
+    max-height: 1000px!important;
+  }
+ .hero{
+  height: 100vh;
+ }
+ .big-logo{
+  position: absolute;
+  width: 350px;
+  top: 260px;
+  right: 130px;
+  opacity: 0.4;
+}
+
+}
+
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1170px;
