@@ -526,13 +526,14 @@ ol {
 }
 
 .hero__text span {
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: #adadad;
   /* display: block; */
   font-size: 15px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
   margin-bottom: 20px;
-  /* margin-top: 20px; */
+  padding-left: 25px;
   position: relative;
   top: 100px;
   opacity: 0;
@@ -547,7 +548,7 @@ ol {
   font-weight: 700;
   line-height: 70px;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 40px;
   margin-top: 20px;
   position: relative;
   top: 100px;
@@ -598,7 +599,7 @@ ol {
   position: relative;
   top: 100px;
   opacity: 0;
-  margin-top: 18px;
+  margin-top: 20px;
   -webkit-transition: all, 0.7s;
   -o-transition: all, 0.7s;
   transition: all, 0.7s;
@@ -2035,7 +2036,7 @@ ol {
     margin-bottom: 50px;
   }
   .for__contact{
-    font-size: 46px;
+    font-size: 36px;
   }
   /* ty-end */
   .course-heading{
@@ -2114,7 +2115,7 @@ ol {
     margin-bottom: 60px;
   }
   .for__contact{
-    font-size: 36px;
+    font-size: 26px;
   }
 
   /* end */
@@ -2270,7 +2271,7 @@ ol {
   font-size: 22px;
 }
 .for__contact{
-  font-size: 56px;
+  font-size: 26px;
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
@@ -2283,7 +2284,7 @@ ol {
   margin-bottom: 40px;
 }
 .for__contact{
-  font-size: px;
+  font-size: 26px;
 }
 /* end */
 .course-heading{
@@ -2531,7 +2532,7 @@ ol {
   opacity: 0.2;
 }
 .for__contact{
-  font-size: 42px;
+  font-size: 22px;
 }
 }
 /* Small Device = 320px */
@@ -2547,7 +2548,7 @@ ol {
   }
 
   .for__contact{
-    font-size: 26px;
+    font-size: 22px;
   }
   /* end */
   .section-title.team__title{
@@ -2634,7 +2635,7 @@ ol {
     }
   }
   .for__contact{
-    font-size: 29px;
+    font-size: 22px;
   }
 }
 
@@ -2998,5 +2999,25 @@ body {
   padding: 20px 0 20px;
 }
 .for__contact{
-  font-size: 46px;
+  font-size: 36px;
+}
+
+
+/* thane contact */
+.contact__border{
+  width: 180px;
+  padding: 10px 12px;
+  border: 2px solid red;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  color: white;
+
+}
+.contact-quicly{
+  display: flex;
+  align-items: center;
+  gap: 100px;
 }

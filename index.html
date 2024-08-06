@@ -68,6 +68,80 @@
         filter: blur(10px);
         -webkit-filter: blur(10px);
       }
+
+      /* profile carasoule */
+      .containerr {
+      /* background-color: #fff; */
+      background: linear-gradient(#4A0048,#000);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 800px;
+      text-align: center;
+      /* display: flex; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .profile .before,
+    .profile .after {
+      width: 20%;
+    }
+
+    .profile .main {
+      width: 50%;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .profile .hike {
+      background-color: #00b894;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .navigation {
+      margin-top: 10px;
+    }
+
+    .navigation button {
+      background-color: #ddd;
+      border: none;
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .career-btn {
+      background-color: #d63031;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .company-logo img {
+      width: 80px;
+      height: auto;
+    }
     </style>
   </head>
 
@@ -136,10 +210,11 @@
                 <div class="hero__text">
                   <!-- <span>LEADING ETHICAL HACKING AND CYBER SECURITY TRAINING INSTITUTE IN MUMBAI</span> -->
                   <h2>EncrypticSecurity</h2>
+                  <!-- <span class="text-light mb-4"
+                    >Join Our Leading Ethical Hacking And Cyber Security Training
+                    Institute with 100% Job Guaranteed.</span> -->
                   <span class="text-light mb-4"
-                    >Join Leading Ethical Hacking And Cyber Security Training
-                    Institute with 100% Job Guaranteed.</span
-                  >
+                    >Join our premium Ethical Hacking & Cybersecurity Training Institute and transform your career with our expert-led courses and practical experience. Our comprehensive and latest curriculum ensures you are learning and improving from day one. With a 100% job placement guarantee, you can confidently embark on a successful career in cybersecurity. Secure your future by enrolling today!</span>
                   <a href="./about.html" class="primary-btn"
                     >See more about us</a
                   >
@@ -177,14 +252,12 @@
                 Enhance your skills and protect your digital assets. Join us to
                 become a cybersecurity expert.
               </p>
-              <a href="./courses.html" class="primary-btn">View all Courses</a>
+              <!-- <a href="./courses.html" class="primary-btn">View all Courses</a> -->
             </div>
           </div>
           <div class="col-lg-8">
             <div class="row">
-            
-            
-             
+
               <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="services__item">
                   <div class="services__item__icon">
@@ -199,6 +272,7 @@
                     penetration testing and vulnerability assessment against
                     modern cyber threats.
                   </p>
+                  <a href="./ceh12.html" class="btn btn-primary mt-3">Know More</a>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6">
@@ -213,6 +287,7 @@
                     six-month program covering six key areas to provide
                     comprehensive cybersecurity skills.
                   </p>
+                  <a href="./adcs.html" class="btn btn-primary mt-3">Know More</a>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6">
@@ -221,14 +296,13 @@
                     <img src="./img/icons/mcs.png" alt="" />
                   </div>
                   <h4 ><a href="/mcs.html" class="custom-link text-light">Master's In Cybersecurity</a></h4>
-
-                  
                   <p>
                     Join EncrypticSecurity's 12-month Masters in Cyber Security
                     program to gain comprehensive skills across 11 levels.
                     Achieve expertise in essential concepts and advanced
                     practices in cybersecurity.
                   </p>
+                  <a href="./mcs.html" class="btn btn-primary mt-3">Know More</a>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6">
@@ -245,6 +319,7 @@
                     equipping you with cutting-edge offensive security skills to
                     excel in your career.
                   </p>
+                  <a href="./oscp.html" class="btn btn-primary mt-3">Know More</a>
                 </div>
               </div>
             </div>
@@ -624,7 +699,45 @@
     </section>
     <!-- Latest Blog Section End -->
 
-    <!-- testimonial Being -->
+
+    <!--Profile Carousel Begin  -->
+    <section style="background-color: #100028;">
+      <div class="containerr">
+        <div class="profile">
+          <div class="before">
+            <h3>BEFORE</h3>
+            <div class="company-logo">
+              <img src="/img/team/ronak-sir.jpg" alt="Tech Mahindra" />
+            </div>
+            <p>Software Engineer</p>
+          </div>
+          <div class="main">
+            <img id="profile-pic" src="/img/team/ronak-sir.jpg" alt="Profile Picture" />
+            <h2 id="name">Mohit Singh</h2>
+            <p id="details">EPGP in Data Science from IIITB 2019</p>
+            <div class="hike">60% Hike</div>
+            <div class="navigation">
+              <button id="prev-btn">&lt;</button>
+              <span id="counter">3/4</span>
+              <button id="next-btn">&gt;</button>
+            </div>
+            <button id="career-btn" class="career-btn">
+              Talk to a Career Expert
+            </button>
+          </div>
+          <div class="after">
+            <h3>AFTER</h3>
+            <div class="company-logo">
+              <img src="wipro-logo.png" alt="Wipro" />
+            </div>
+            <p>Data Scientist</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Profile Carousel End  -->
+
+    <!-- testimonial Begin -->
     <section class="testimonial spad set-bg" style="background-color: #100028;">
       <div class="container">
           <div class="row">
@@ -895,70 +1008,80 @@ Our dedicated placement team builds successful careers for our students through 
 
         <div class="footer__option">
           <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="footer__option__item">
-                <h5>About us</h5>
-                <p>
-                  Since 2016, Encryptic Security in Thane has been a top cyber
-                  security training institute, offering courses like Advanced
-                  Diploma, Masters in Cyber Security, and OSCP certification.
-                  Renowned in Mumbai, we provide high-quality education and
-                  hands-on experience in ethical hacking and cyber security.
-                </p>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="footer__option__item">
+                      <h5>About Us:</h5>
+                      <p>
+                          Since 2016, EncrypticSecurity has been a top Ethical Hacking
+                           training institute offering courses like CEH V12 from EC Council, Advanced
+                          Diploma in CyberSecurity, Master's in CyberSecurity, and OSCP Certification
+                          renowned globally in this Domain.
+                          We provide High-quality knowledgeable education and live/Practical hands on experience in the field of CyberSecurity.
+                      </p>
+                  </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="footer__option__item">
-                <h5>Our Courses</h5>
-                <p>
-                  <a href="./ceh12.html" class="read__more"
-                    >CEH v12 EC Council</a
-                  >
-                </p>
-                <p>
-                  <a href="./adcs.html" class="read__more"
-                    >Advance Diploma in Cyber Security</a
-                  >
-                </p>
-                <p>
-                  <a href="./mcs.html" class="read__more"
-                    >Masters in Cyber Security</a
-                  >
-                </p>
-                <p><a href="./oscp.html" class="read__more">OSCP</a></p>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="footer__option__item">
+                      <h5>Our Courses</h5>
+                      <p>
+                          <a href="./ceh12.html" class="read__more">CEH v12 EC Council</a>
+                      </p>
+                      <p>
+                          <a href="./adcs.html" class="read__more">Advance Diploma in Cyber Security</a>
+                      </p>
+                      <p>
+                          <a href="./mcs.html" class="read__more">Masters in Cyber Security</a>
+                      </p>
+                      <p>
+                          <a href="./oscp.html" class="read__more">OSCP</a>
+                      </p>
+                  </div>
               </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="footer__option__item">
-                <h5>Contact Details</h5>
-                <i
-                  class="fa-solid fa-location-dot"
-                  style="color: gainsboro"
-                ></i>
-                <a
-                  class="addresss"
-                  href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu"
-                >
-                  6th Floor, ARK7 Tower, <br />
-                  Near Kazari Saree , <br />
-                  Thane Railway Station, <br />
-                  Thane West - 400601
-                </a>
-                <p>
-                  <i class="fas fa-phone"></i>
-                  <a href="tel:+918828282171">+918828282171/ 7071777789</a>
-                </p>
-                <p>
-                  <i class="fas fa fa-envelope"></i
-                  ><a href="mailto:info@encrypticsecurity.com">
-                    info@encrypticsecurity.com</a
-                  >
-                </p>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="footer__option__item">
+                      <h5>Thane Branch Address, <br> <span style="font-size: 14px; color: #adadad;">Headquarters</span></h5>
+                      <i class="fa-solid fa-location-dot" style="color: gainsboro"></i>
+                      <a class="addresss" href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                          6th Floor, ARK7 Tower, <br />
+                          Near Kazari Saree, <br />
+                          Thane Railway Station, <br />
+                          Thane West - 400601
+                      </a>
+                      <p>
+                          <i class="fas fa-phone"></i>
+                          <a href="tel:+918828282171">+91 8828282171 / 7071777789</a>
+                      </p>
+                      <p>
+                          <i class="fas fa-envelope"></i>
+                          <a href="mailto:ceo.pravin@encrypticsec.com">enroll@encrypticsecurity.com</a>
+                      </p>
+                  </div>
               </div>
-            </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="footer__option__item">
+                  <h5>Andheri Branch Address, <br> <span style="font-size: 14px; color: #adadad;">Sub Branch</span></h5>
+                  <i class="fa-solid fa-location-dot" style="color: gainsboro"></i>
+                  <a class="addresss" href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                    3rd Floor 303 DCB Bank,<br />
+                    Opposite Andheri  Subway Bridge,<br />
+                    58 West society, <br />
+                    Swami Vivekananda Rd, <br />
+                    Adheri West, Mumbai,<br />
+                    Maharashtra 400058
+                  </a>
+                  <p>
+                      <i class="fas fa-phone"></i>
+                      <a href="tel:+918828282171">+918828282171/ 7071777789</a>
+                  </p>
+                  <p>
+                      <i class="fas fa-envelope"></i>
+                      <a href="mailto:ceo.pravin@encrypticsec.com">enroll@encrypticsecurity.com</a>
+                  </p>
+              </div>
+              </div>
           </div>
-        </div>
+      </div>
+
         <div class="footer__copyright">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -967,10 +1090,9 @@ Our dedicated placement team builds successful careers for our students through 
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
-                Encryptic Security. All rights reserved.
+                EncrypticSecurity Pvt Ltd. All rights reserved.
                 <br />
-                <!-- <a href="https://encrypticsecurity.com/index.php">www.encrypticsecurity.com</a> -->
-                <a href="#">www.encrypticsecurity.com</a>
+                <a href="https://encrypticsecurity.com/index.html">www.encrypticsecurity.com</a>
               </p>
             </div>
           </div>
@@ -988,6 +1110,8 @@ Our dedicated placement team builds successful careers for our students through 
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="profileCarasoule.js"></script>
     <!-- Js Plugins end-->
   </body>
 </html>
