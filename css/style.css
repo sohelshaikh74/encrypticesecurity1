@@ -162,6 +162,8 @@ ol {
   filter: drop-shadow(1px 1px 20px  #00bfe7);
 }
 
+/*
+
 .set-bg {
   background-image: url('/img/hero/hero-without-logo.jpg');
   background-repeat: no-repeat;
@@ -172,8 +174,9 @@ ol {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh; 
-  min-height: 600px; */
+  min-height: 600px; 
 }
+*/
 
 .spad {
   padding-top: 80px;
