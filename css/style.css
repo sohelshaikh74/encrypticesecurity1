@@ -153,12 +153,12 @@ ol {
   height: 100vh;
 }
 
-.big-logo{
+.big-logo img{
   position: absolute;
   width: 350px;
-  top: 210px;
-  right: 130px;
-  opacity: 0.8;
+  top: -50px;
+  right: 10px;
+  /* opacity: 100; */
   filter: drop-shadow(1px 1px 20px  #00bfe7);
 }
 
@@ -2018,7 +2018,7 @@ ol {
   width: 350px;
   top: 260px;
   right: 130px;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 }
@@ -2026,6 +2026,17 @@ ol {
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1170px;
+  }
+  .hero{
+    height: 100vh;
+    position: relative;
+   }
+   .big-logo{
+    position: absolute;
+    width: 350px;
+    top: 260px;
+    right: 130px;
+    opacity: 0.8;
   }
 }
 /* Medium Device = 1200px */
