@@ -2008,6 +2008,7 @@ ol {
   }
  .hero{
   height: 100vh;
+  position: relative;
  }
  .big-logo{
   position: absolute;
@@ -2125,6 +2126,7 @@ ol {
   .hero__text span{
     font-size: 14px;
     display: block;
+    margin-bottom: 30px;
   }
 
   .hero__slider.owl-carousel .owl-dots {
@@ -2480,11 +2482,7 @@ ol {
     flex-direction: column;
     align-items: center;
   }
-  .containerr iframe{
-    /* height: 100%; */
-    /* height: auto; */
-    /* h */
-  }
+
   .map, .form {
     width: 100%;
     margin: 5px 0;
@@ -2514,9 +2512,7 @@ ol {
   width: 300px;
 
 } */
-.breadcrumb__text{
-  /* margin-bottom: 20px; */
-}
+
 .breadcrumb__links {
   margin-bottom: 20px;
 }
@@ -2534,10 +2530,20 @@ ol {
 .for__contact{
   font-size: 22px;
 }
+
+/* now */
+.hero__text span{
+  display: block;
+  margin-bottom: 30px;
+}
 }
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
   /* thank you */
+  .hero__text span{
+    display: block;
+    margin-bottom: 30px;
+  }
   .testimonial__author__pic img {
     height: 50px;
     width: 50px;
