@@ -103,7 +103,9 @@ ol {
   padding: 0;
   margin: 0;
 }
-
+.encryptic{
+  color: #00bfe7;
+}
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -3127,3 +3129,60 @@ body {
   align-items: center;
   gap: 100px;
 }
+
+
+/* awards and recognition */
+
+/* placement Begin */
+.gradient-text {
+  background: linear-gradient(to right, #FF0000, #FF7F00, #FF0000, #8B00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+    /* profile carasoule */
+    .profile-card {
+      text-align: center;
+      padding: 20px;
+      margin: 20px 0;
+      /* border: 1px solid #ddd; */
+      border-radius: 8px;
+  }
+  .profile-img {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+  }
+  .profile-img img {
+      width: 100%;
+      height: auto;
+  }
+  .before-after-box {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #00bfe7;
+      border-radius: 8px;
+      margin: 20px 0;
+  }
+  .profile-card span{
+   color: #adadad;
+  }
+  .profile-card .prev-next{
+    border-radius: 50px;
+    color: #00bfe7;
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  /* button */
+  .carrer-export{
+    background: none;
+    border: none;
+    outline: none;
+  }
