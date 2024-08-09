@@ -3157,13 +3157,15 @@ body {
       margin: 0 auto;
     }
     /* .profile-img img{
-      filter: drop-shadow(5px 0px 2px  #00bfe7);
-    } */
-  .profile-img img {
-      width: 100%;
-      height: 100%;
-      height: auto;
-      object-fit: cover;
+      } */
+      .profile-img img {
+        width: 100%;
+        height: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 1;
+        filter: drop-shadow(1px 1px 20px  #00bfe7);
+
   }
 
 

@@ -1,8 +1,8 @@
 // JavaScript for Content Carousel
 const contentData = [
     {
-        before: { title: "Before", role: "Software Engineer" },
-        main: { img: "/img/placement/aniket.png", name: "Mohit Singh", course: "EPGP in Data Science from IIITB<br>2019", hike: "60% Hike" },
+        before: { title: "Before", role: "Fresher" },
+        main: { img: "/img/placement/aniket.png", name: "Aniket Pawar", course: "EPGP in Data Science from IIITB<br>2019", hike: "60% Hike" },
         after: { title: "After", role: "Data Scientist" }
     },
     {

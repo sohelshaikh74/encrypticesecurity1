@@ -1,203 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap Carousel with Video Popup</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Additional CSS for responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-      /* Ensure the iframe scales properly */
-      .video-container {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
+      @keyframes title {
+        0% {
+          top: 10px;
+          opacity: 0;
+        }
+        50% {
+          top: -10px;
+          opacity: 0.5;
+        }
+        100% {
+          top: 0;
+          opacity: 1;
+        }
       }
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+
+      .container {
+        width: 80%;
+        margin: 25px auto;
+      }
+
+      /** Video Section **/
+      .main-video.active-jq.show-video {
+        display: block;
+        opacity: 1;
+      }
+      .videos.active-jq {
+        display: block;
+      }
+
+      .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        margin-top: 10px;
+        height: 0;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+      .main-video.active-jq {
+        display: none;
+      }
+      .main-video {
+        padding: 0 1em;
+      }
+      .secondary-videos {
+        padding: 3em 1em;
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+
+      .videos {
+        width: 23.1%;
+        float: left;
+        margin-right: 2.5%;
+        text-align: center;
+        opacity: 0.5;
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+        cursor: pointer;
+        display: none;
+        position: relative;
+        &:last-of-type {
+          margin: 0;
+        }
+        &:hover {
+          .information {
+            animation: title 0.75s ease forwards;
+            opacity: 1;
+            top: 0;
+          }
+        }
+        &.selected-video .information {
+          opacity: 1;
+          top: 0;
+        }
+        .information {
+          background-color: #282828;
+          padding: 8px;
+          font-size: 11px;
+          color: #f6f6f0;
+          top: 20px;
+          transition: all 0.5s cubic-bezier(0.29, 2.08, 0.73, 1.75);
+          -webkit-transition: all 0.5s cubic-bezier(0.29, 2.08, 0.73, 1.75);
+          opacity: 0;
+          position: relative;
+        }
+      }
+      .videos.selected-video,
+      .videos:hover {
+        opacity: 1;
+      }
+
+      /* Mobile Styles */
+      @media only screen and (max-width: 500px) {
+        .secondary-videos {
+          padding: 2em 1em;
+        }
+        .videos {
+          width: 100%;
+          float: none;
+          padding: 1em 0;
+          margin: 0;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- Carousel -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <!-- First Slide -->
-        <div class="carousel-item active">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal1">
-            <img src="111.jpg" class="d-block w-100 img-fluid" alt="Slide 1" />
-          </a>
-        </div>
-        <!-- Second Slide -->
-        <div class="carousel-item">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal2">
-            <img
-              src="2021-22.png"
-              class="d-block w-100 img-fluid"
-              alt="Slide 2"
-            />
-          </a>
-        </div>
-        <!-- Third Slide -->
-        <div class="carousel-item">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal3">
-            <img
-              src="2022-23.png"
-              class="d-block w-100 img-fluid"
-              alt="Slide 3"
-            />
-          </a>
+    <div class="container">
+      <div class="main-video main-video-1 active-jq">
+        <div class="video-wrapper">
+          <iframe
+            src="https://youtu.be/LviZD2NwWwM?si=qaqYd8NDzOGuN07E"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen="allowfullscreen"
+            kwframeid="1"
+          ></iframe>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-    <!-- Modals -->
-    <!-- Modal 1 -->
-    <div
-      class="modal fade"
-      id="videoModal1"
-      tabindex="-1"
-      aria-labelledby="videoModalLabel1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="videoModalLabel1">YouTube Video 1</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+      <div class="main-video main-video-2 active-jq">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/u4zb6LUehwY"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen="allowfullscreen"
+            kwframeid="2"
+          ></iframe>
+        </div>
+      </div>
+      <div class="main-video main-video-3 active-jq">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/T1-NtPDJxH0"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen="allowfullscreen"
+            kwframeid="2"
+          ></iframe>
+        </div>
+      </div>
+      <div class="main-video main-video-4 active-jq show-video">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/VwVE3dHR3t4"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen="allowfullscreen"
+            kwframeid="2"
+          ></iframe>
+        </div>
+      </div>
+      <div class="secondary-videos">
+        <div class="videos video-1 active-jq">
+          <div class="information">The Prince Warriors Cinematic Trailer</div>
+          <div class="video-wrapper">
+            <img src="img/icons/ci-1.png" />
           </div>
-          <div class="modal-body">
-            <div class="video-container">
-              <iframe
-                id="videoIframe1"
-                src="https://www.youtube.com/embed/nlNg_ZgihC0?si=yx-UzhtkePB5qSNY&amp;start=1"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
+        </div>
+        <div class="videos video-2 active-jq">
+          <div class="information">L.E.J - SUMMER 2015</div>
+          <div class="video-wrapper">
+            <img src="/img/icons/ci-2.png" />
+          </div>
+        </div>
+        <div class="videos video-3 active-jq">
+          <div class="information">Calisthenics World Cup</div>
+          <div class="video-wrapper">
+            <img src="img/icons/ci-3.png" />
+          </div>
+        </div>
+        <div class="videos video-4 active-jq selected-video">
+          <div class="information">Me Singing "Helplessly"</div>
+          <div class="video-wrapper">
+            <img src="img/icons/mcs.png" />
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Modal 2 -->
-    <div
-      class="modal fade"
-      id="videoModal2"
-      tabindex="-1"
-      aria-labelledby="videoModalLabel2"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="videoModalLabel2">YouTube Video 2</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="video-container">
-              <iframe
-                id="videoIframe2"
-                src="https://www.youtube.com/embed/nlNg_ZgihC0?si=yx-UzhtkePB5qSNY&amp;start=1"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 3 -->
-    <div
-      class="modal fade"
-      id="videoModal3"
-      tabindex="-1"
-      aria-labelledby="videoModalLabel3"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="videoModalLabel3">YouTube Video 3</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="video-container">
-              <iframe
-                id="videoIframe3"
-                src="https://www.youtube.com/embed/nlNg_ZgihC0?si=yx-UzhtkePB5qSNY&amp;start=1"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
-      const modals = ["videoModal1", "videoModal2", "videoModal3"];
-      modals.forEach((modalId) => {
-        const modal = document.getElementById(modalId);
-        const iframe = modal.querySelector("iframe");
+      // Tab Code for Video's Page video switchout functionality
 
-        modal.addEventListener("show.bs.modal", function () {
-          iframe.src += "&autoplay=1"; // Start video when modal is shown
+      // Makes sure the videos still show up if jquery does not work.
+      $(".secondary-videos .videos, .main-video").addClass("active-jq");
+
+      $(".secondary-videos .videos").click(function () {
+        // Number of video selected to use to target main video with same number
+        var number = $(this).attr("class").split(" ")[1].split("-")[1];
+
+        $(".secondary-videos .videos").removeClass("selected-video");
+        $(this).addClass("selected-video");
+
+        // This code makes sure that the previously selected video stops playing if the user played it and moved to a new video.
+        $(".main-video").each(function () {
+          if ($(this).hasClass("show-video")) {
+            var video = $(this).find(".video-wrapper iframe").attr("src");
+            $(this).find(".video-wrapper iframe").attr("src", "");
+            $(this).find(".video-wrapper iframe").attr("src", video);
+          }
         });
 
-        modal.addEventListener("hidden.bs.modal", function () {
-          iframe.src = iframe.src.replace("&autoplay=1", ""); // Stop video when modal is hidden
-        });
+        // Hides all videos and then displays only the one that was selected.
+        $(".main-video").removeClass("show-video");
+        $(".main-video-" + number).addClass("show-video");
       });
+
+      // Make sure the main videos show up if its on a mobile device, instead of the video switchout function
+      var isMobile = false;
+      if ($(".videos").css("float") == "none") {
+        isMobile = true;
+        $(".secondary-videos .videos, .main-video").removeClass("active-jq");
+      }
     </script>
   </body>
 </html>
