@@ -2,7 +2,7 @@
 const contentData = [
     {
         before: { title: "Before", role: "Software Engineer" },
-        main: { img: "/img/team/ronak-sir.jpg", name: "Mohit Singh", course: "EPGP in Data Science from IIITB<br>2019", hike: "60% Hike" },
+        main: { img: "/img/placement/aniket.png", name: "Mohit Singh", course: "EPGP in Data Science from IIITB<br>2019", hike: "60% Hike" },
         after: { title: "After", role: "Data Scientist" }
     },
     {
