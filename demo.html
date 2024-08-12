@@ -1,237 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Growth Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      @keyframes title {
-        0% {
-          top: 10px;
-          opacity: 0;
+        body {
+            font-family: Arial, sans-serif;
         }
-        50% {
-          top: -10px;
-          opacity: 0.5;
-        }
-        100% {
-          top: 0;
-          opacity: 1;
-        }
-      }
 
-      .container {
-        width: 80%;
-        margin: 25px auto;
-      }
+        .before-after-box {
+            background-color: #292B44;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease; /* Smooth transition */
+        }
 
-      /** Video Section **/
-      .main-video.active-jq.show-video {
-        display: block;
-        opacity: 1;
-      }
-      .videos.active-jq {
-        display: block;
-      }
+        .profile-card {
+            background-color: #292B44;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            transition: all 0.5s ease; /* Smooth transition */
+        }
 
-      .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        margin-top: 10px;
-        height: 0;
-        iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+        .profile-img img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transition: all 0.5s ease; /* Smooth transition */
         }
-        img {
-          width: 100%;
-        }
-      }
 
-      .main-video.active-jq {
-        display: none;
-      }
-      .main-video {
-        padding: 0 1em;
-      }
-      .secondary-videos {
-        padding: 3em 1em;
-        &::after {
-          content: "";
-          display: table;
-          clear: both;
+        .prev-next {
+            background-color: #44476A;
+            color: white;
+            margin: 0 10px;
         }
-      }
 
-      .videos {
-        width: 23.1%;
-        float: left;
-        margin-right: 2.5%;
-        text-align: center;
-        opacity: 0.5;
-        transition: opacity 0.5s;
-        -webkit-transition: opacity 0.5s;
-        cursor: pointer;
-        display: none;
-        position: relative;
-        &:last-of-type {
-          margin: 0;
+        .primary-btn {
+            background-color: #ff5c5c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
         }
-        &:hover {
-          .information {
-            animation: title 0.75s ease forwards;
-            opacity: 1;
-            top: 0;
-          }
-        }
-        &.selected-video .information {
-          opacity: 1;
-          top: 0;
-        }
-        .information {
-          background-color: #282828;
-          padding: 8px;
-          font-size: 11px;
-          color: #f6f6f0;
-          top: 20px;
-          transition: all 0.5s cubic-bezier(0.29, 2.08, 0.73, 1.75);
-          -webkit-transition: all 0.5s cubic-bezier(0.29, 2.08, 0.73, 1.75);
-          opacity: 0;
-          position: relative;
-        }
-      }
-      .videos.selected-video,
-      .videos:hover {
-        opacity: 1;
-      }
 
-      /* Mobile Styles */
-      @media only screen and (max-width: 500px) {
-        .secondary-videos {
-          padding: 2em 1em;
+        .primary-btn:hover {
+            background-color: #ff3a3a;
         }
-        .videos {
-          width: 100%;
-          float: none;
-          padding: 1em 0;
-          margin: 0;
+
+        .modal-content {
+            background-color: #292B44;
+            color: white;
         }
-      }
+
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+
+        .column-form {
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .before-after-box {
+                min-height: 120px;
+            }
+
+            .profile-img img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile-card {
+                padding: 15px;
+            }
+
+            .prev-next {
+                margin: 0 5px;
+            }
+
+            .primary-btn {
+                padding: 8px 16px;
+            }
+
+            #current-slide {
+                display: block;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .before-after-box, .profile-card {
+                min-height: 100px;
+            }
+
+            .profile-img img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .profile-card {
+                padding: 10px;
+            }
+
+            .prev-next {
+                margin: 0 3px;
+            }
+
+            #current-slide {
+                display: block;
+                margin-top: 8px;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
+<section style="background-color: #100028;">
     <div class="container">
-      <div class="main-video main-video-1 active-jq">
-        <div class="video-wrapper">
-          <iframe
-            src="https://youtu.be/LviZD2NwWwM?si=qaqYd8NDzOGuN07E"
-            width="560"
-            height="315"
-            frameborder="0"
-            allowfullscreen="allowfullscreen"
-            kwframeid="1"
-          ></iframe>
+        <div class="row">
+            <!-- Before Box -->
+            <div class="col-md-3 col-6 d-flex justify-content-center align-items-center">
+                <div id="before-content" class="before-after-box">
+                    <div>
+                        <h5>Before</h5>
+                        <p id="before-text">Fresher</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <img id="profile-img" src="/img/placement/aniket.png" alt="Profile Image">
+                    </div>
+                    <h3 id="main-name" class="text-light">Aniket Pawar</h3>
+                    <p id="main-course">EPGP in Data Science from IIITB<br>2019</p>
+                    <p id="main-hike"><strong>60% Hike</strong></p>
+                    <!-- Carousel Controls -->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button class="btn btn-outline-secondary prev-next" onclick="prevContent()">&#8249;</button>
+                        <span id="current-slide" >1/4</span>
+                        <button class="btn btn-outline-secondary prev-next" onclick="nextContent()">&#8250;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- After Box -->
+            <div class="col-md-3 col-6 d-flex justify-content-center align-items-center">
+                <div id="after-content" class="before-after-box">
+                    <div>
+                        <h5>After</h5>
+                        <p id="after-text">Data Scientist</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="main-video main-video-2 active-jq">
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/u4zb6LUehwY"
-            width="560"
-            height="315"
-            frameborder="0"
-            allowfullscreen="allowfullscreen"
-            kwframeid="2"
-          ></iframe>
+
+        <div class="text-center">
+            <button class="primary-btn carrer-export" data-toggle="modal" data-target="#loginModal">Talk to a Career Expert</button>
         </div>
-      </div>
-      <div class="main-video main-video-3 active-jq">
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/T1-NtPDJxH0"
-            width="560"
-            height="315"
-            frameborder="0"
-            allowfullscreen="allowfullscreen"
-            kwframeid="2"
-          ></iframe>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">Let’s Talk About Your Career Growth! </h5>
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="column-form">
+                        <form>
+                            <iframe src="https://crm.aumdigitech.com/forms/wtl/0daa176b51503badfa720b543040d5bf" frameborder="0" style="width: 100%; height: 400px;" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
+                        </form>
+                    </div>
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="main-video main-video-4 active-jq show-video">
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/VwVE3dHR3t4"
-            width="560"
-            height="315"
-            frameborder="0"
-            allowfullscreen="allowfullscreen"
-            kwframeid="2"
-          ></iframe>
-        </div>
-      </div>
-      <div class="secondary-videos">
-        <div class="videos video-1 active-jq">
-          <div class="information">The Prince Warriors Cinematic Trailer</div>
-          <div class="video-wrapper">
-            <img src="img/icons/ci-1.png" />
-          </div>
-        </div>
-        <div class="videos video-2 active-jq">
-          <div class="information">L.E.J - SUMMER 2015</div>
-          <div class="video-wrapper">
-            <img src="/img/icons/ci-2.png" />
-          </div>
-        </div>
-        <div class="videos video-3 active-jq">
-          <div class="information">Calisthenics World Cup</div>
-          <div class="video-wrapper">
-            <img src="img/icons/ci-3.png" />
-          </div>
-        </div>
-        <div class="videos video-4 active-jq selected-video">
-          <div class="information">Me Singing "Helplessly"</div>
-          <div class="video-wrapper">
-            <img src="img/icons/mcs.png" />
-          </div>
-        </div>
-      </div>
     </div>
-    <script>
-      // Tab Code for Video's Page video switchout functionality
+</section>
 
-      // Makes sure the videos still show up if jquery does not work.
-      $(".secondary-videos .videos, .main-video").addClass("active-jq");
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script>
+    const data = [
+        {
+            before: 'Fresher',
+            name: 'Aniket Pawar',
+            course: 'EPGP in Data Science from IIITB<br>2019',
+            hike: '60% Hike',
+            img: '/img/placement/aniket.png',
+            after: 'Data Scientist'
+        },
+        {
+            before: 'Technical Service Engineer',
+            name: 'Kushagra Saxena',
+            course: 'EPGP in Data Science from IIITB<br>2023',
+            hike: '120% Hike',
+            img: '/img/placement/kushagra.png',
+            after: 'AI Solution Consultant'
+        },
+        {
+            before: 'Software Developer',
+            name: 'Megha Jain',
+            course: 'EPGP in Data Science from IIITB<br>2021',
+            hike: '80% Hike',
+            img: '/img/placement/megha.png',
+            after: 'Data Analyst'
+        },
+        {
+            before: 'Project Manager',
+            name: 'Rohan Sharma',
+            course: 'EPGP in Data Science from IIITB<br>2020',
+            hike: '70% Hike',
+            img: '/img/placement/rohan.png',
+            after: 'Senior Data Scientist'
+        }
+    ];
 
-      $(".secondary-videos .videos").click(function () {
-        // Number of video selected to use to target main video with same number
-        var number = $(this).attr("class").split(" ")[1].split("-")[1];
+    let currentIndex = 0;
 
-        $(".secondary-videos .videos").removeClass("selected-video");
-        $(this).addClass("selected-video");
+    function updateContent(index) {
+        const beforeContent = document.getElementById('before-content');
+        const afterContent = document.getElementById('after-content');
+        const profileImg = document.getElementById('profile-img');
+        const mainName = document.getElementById('main-name');
+        const mainCourse = document.getElementById('main-course');
+        const mainHike = document.getElementById('main-hike');
+        const beforeText = document.getElementById('before-text');
+        const afterText = document.getElementById('after-text');
+        const currentSlide = document.getElementById('current-slide');
 
-        // This code makes sure that the previously selected video stops playing if the user played it and moved to a new video.
-        $(".main-video").each(function () {
-          if ($(this).hasClass("show-video")) {
-            var video = $(this).find(".video-wrapper iframe").attr("src");
-            $(this).find(".video-wrapper iframe").attr("src", "");
-            $(this).find(".video-wrapper iframe").attr("src", video);
-          }
-        });
+        beforeContent.style.opacity = 0;
+        afterContent.style.opacity = 0;
+        profileImg.style.opacity = 0;
+        mainName.style.opacity = 0;
+        mainCourse.style.opacity = 0;
+        mainHike.style.opacity = 0;
 
-        // Hides all videos and then displays only the one that was selected.
-        $(".main-video").removeClass("show-video");
-        $(".main-video-" + number).addClass("show-video");
-      });
+        setTimeout(() => {
+            beforeText.innerHTML = data[index].before;
+            mainName.innerHTML = data[index].name;
+            mainCourse.innerHTML = data[index].course;
+            mainHike.innerHTML = data[index].hike;
+            profileImg.src = data[index].img;
+            afterText.innerHTML = data[index].after;
+            currentSlide.innerHTML = `${index + 1}/4`;
 
-      // Make sure the main videos show up if its on a mobile device, instead of the video switchout function
-      var isMobile = false;
-      if ($(".videos").css("float") == "none") {
-        isMobile = true;
-        $(".secondary-videos .videos, .main-video").removeClass("active-jq");
-      }
-    </script>
-  </body>
-</html>
+            beforeContent.style.opacity = 1;
+            afterContent.style.opacity = 1;
