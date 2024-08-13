@@ -3265,7 +3265,7 @@ body {
 
 
 /* company logo slider */
-.slider {
+/* .slider {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3294,7 +3294,7 @@ body {
   }
 
   100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
   }
 }
 
@@ -3305,7 +3305,47 @@ body {
   mix-blend-mode: color-burn;
   height: 80px;
   margin-left: 10px;
+} */
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
 }
+
+.slider-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: scrolling 10s linear infinite;
+  width: calc(100% * 17); /* Adjust width to fit all images */
+}
+
+@keyframes scrolling {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%); /* Scroll the full width */
+  }
+}
+
+.slider-items img {
+  width: 100px;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+  margin-left: 10px;
+  height: 80px; /* Adjust to fit your needs */
+}
+
 
 
  /* awards and recognition */
