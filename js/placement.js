@@ -2,27 +2,27 @@
 const contentData = [
     {
         before: { title: "Before", role: "Fresher" },
-        main: { img: "/img/placement/pallav.png", name: "Pallav Purohit", course: "Offensive Security Certified Professional from EncrypticSecurity<br>2023", hike: "60% Hike" },
+        main: { img: "/img/placement/pallav.png", name: "Pallav Purohit", course: "Offensive Security Certified Professional from EncrypticSecurity<br>2023", hike: "100% Hike" },
         after: { title: "After", role: "Senior Cybersecurity Consultant" }
     },
     {
         before: { title: "Before", role: "Fresher" },
-        main: { img: "/img/placement/aniket.png", name: "Aniket Pawar", course: "Advance Diploma in Cyber Security from EncrypticSecurity <br>2024", hike: "70% Hike" },
+        main: { img: "/img/placement/aniket.png", name: "Aniket Pawar", course: "Advance Diploma in Cyber Security from EncrypticSecurity <br>2024", hike: "100% Hike" },
         after: { title: "After", role: "Associate Cyber Security Consultant" }
     },
     {
         before: { title: "Before", role: "Fresher" },
-        main: { img: "/img/placement/pratham.png", name: "Pratham mandavkar", course: "Master's of Cyber Security from EncrypticSecurity <br>2024", hike: "50% Hike" },
+        main: { img: "/img/placement/pratham.png", name: "Pratham mandavkar", course: "Master's of Cyber Security from EncrypticSecurity <br>2024", hike: "100% Hike" },
         after: { title: "After", role: "Senior Analyst" }
     },
     {
         before: { title: "Before", role: "Fresher" },
-        main: { img: "/img/placement/shivam.png", name: "Shivam Babal", course: "Advance Diploma in Cyber Security from EncrypticSecurity <br>2024", hike: "50% Hike" },
+        main: { img: "/img/placement/shivam.png", name: "Shivam Babal", course: "Advance Diploma in Cyber Security from EncrypticSecurity <br>2024", hike: "100% Hike" },
         after: { title: "After", role: "Associate Cyber Security Consultant" }
     },
     {
         before: { title: "Before", role: "Fresher" },
-        main: { img: "/img/placement/rakshit.png", name: "Rakshit Gaikwad", course: "Advance Diploma in Cyber Security from EncrypticSecurity <br>2024", hike: "50% Hike" },
+        main: { img: "/img/placement/rakshit.png", name: "Rakshit Gaikwad", course: "Advance Diploma in Cyber Security from EncrypticSecurity <br>2024", hike: "100% Hike" },
         after: { title: "After", role: "Associate Information Security Consultant" }
     },
  

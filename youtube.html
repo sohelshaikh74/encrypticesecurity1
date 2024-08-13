@@ -3,52 +3,271 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>YouTube Video Slider</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+      /* styles.css */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .video__item {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .video__item:hover {
+        transform: scale(1.05);
+      }
+
+      .video__item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 15px;
+      }
+
+      .video-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .video-container {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        padding-top: 56.25%;
+        height: 0;
+      }
+
+      #videoPlayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+      }
+    </style>
   </head>
   <body>
-    <section style="background: #100028">
+    <section class="latest spad">
       <div class="container">
-        <div class="youtube-slider">
-          <div class="slider-items">
-            <div
-              class="video-card"
-              data-video="https://www.youtube.com/embed/VIDEO_ID_1"
-            >
-              <img src="thumbnail1.jpg" alt="Video 1" />
-              <h4>Video Title 1</h4>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title center-title">
+              <span>Our Videos</span>
+              <h2>Video Updates</h2>
             </div>
-            <div
-              class="video-card"
-              data-video="https://www.youtube.com/embed/VIDEO_ID_2"
-            >
-              <img src="thumbnail2.jpg" alt="Video 2" />
-              <h4>Video Title 2</h4>
-            </div>
-            <div
-              class="video-card"
-              data-video="https://www.youtube.com/embed/VIDEO_ID_3"
-            >
-              <img src="thumbnail3.jpg" alt="Video 3" />
-              <h4>Video Title 3</h4>
-            </div>
-            <!-- Add more video cards as needed -->
           </div>
         </div>
-
-        <!-- Video Modal -->
-        <div class="video-modal">
-          <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <iframe
-              id="videoFrame"
-              src=""
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-            ></iframe>
+        <div class="row">
+          <div class="latest__slider owl-carousel">
+            <!-- Video-1 -->
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_1">
+                <h4>1. How to Start a Career in Ethical Hacking</h4>
+                <p>
+                  Learn how to start a career in ethical hacking, including key
+                  skills and certifications.
+                </p>
+                <img src="thumbnail1.jpg" alt="Video 1" />
+              </div>
+            </div>
+            <!-- Video-2 -->
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_2">
+                <h4>2. Importance of Ethical Hacking in Cybersecurity</h4>
+                <p>
+                  Discover why ethical hacking is crucial for cybersecurity and
+                  protecting organizations.
+                </p>
+                <img src="thumbnail2.jpg" alt="Video 2" />
+              </div>
+            </div>
+            <!-- Video-3 -->
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
+                <h4>3. Role of Cryptography in Cybersecurity</h4>
+                <p>
+                  Explore how cryptography secures data and protects against
+                  cyber threats.
+                </p>
+                <img src="thumbnail3.jpg" alt="Video 3" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
+                <h4>3. Role of Cryptography in Cybersecurity</h4>
+                <p>
+                  Explore how cryptography secures data and protects against
+                  cyber threats.
+                </p>
+                <img src="thumbnail3.jpg" alt="Video 3" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
+                <h4>3. Role of Cryptography in Cybersecurity</h4>
+                <p>
+                  Explore how cryptography secures data and protects against
+                  cyber threats.
+                </p>
+                <img src="thumbnail3.jpg" alt="Video 3" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
+                <h4>3. Role of Cryptography in Cybersecurity</h4>
+                <p>
+                  Explore how cryptography secures data and protects against
+                  cyber threats.
+                </p>
+                <img src="thumbnail3.jpg" alt="Video 3" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
+                <h4>3. Role of Cryptography in Cybersecurity</h4>
+                <p>
+                  Explore how cryptography secures data and protects against
+                  cyber threats.
+                </p>
+                <img src="thumbnail3.jpg" alt="Video 3" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
+                <h4>3. Role of Cryptography in Cybersecurity</h4>
+                <p>
+                  Explore how cryptography secures data and protects against
+                  cyber threats.
+                </p>
+                <img src="thumbnail3.jpg" alt="Video 3" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
+                <h4>3. Role of Cryptography in Cybersecurity</h4>
+                <p>
+                  Explore how cryptography secures data and protects against
+                  cyber threats.
+                </p>
+                <img src="thumbnail3.jpg" alt="Video 3" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
+                <h4>3. Role of Cryptography in Cybersecurity</h4>
+                <p>
+                  Explore how cryptography secures data and protects against
+                  cyber threats.
+                </p>
+                <img src="thumbnail3.jpg" alt="Video 3" />
+              </div>
+            </div>
+            <!-- Additional videos can be added here in the same format -->
           </div>
         </div>
       </div>
     </section>
+
+    <div class="video-modal" id="videoModal">
+      <div class="video-container">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <iframe
+          id="videoPlayer"
+          width="560"
+          height="315"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script>
+      // script.js
+      $(document).ready(function () {
+        $(".latest__slider").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+
+        const videoModal = document.getElementById("videoModal");
+        const videoPlayer = document.getElementById("videoPlayer");
+        const closeBtn = document.getElementById("closeBtn");
+
+        $(".video__item").click(function () {
+          const videoId = $(this).data("video-id");
+          videoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+          videoModal.style.display = "flex";
+          document.body.style.overflow = "hidden";
+        });
+
+        closeBtn.addEventListener("click", () => {
+          videoPlayer.src = "";
+          videoModal.style.display = "none";
+          document.body.style.overflow = "auto";
+        });
+
+        videoModal.addEventListener("click", (e) => {
+          if (e.target === videoModal) {
+            videoPlayer.src = "";
+            videoModal.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
