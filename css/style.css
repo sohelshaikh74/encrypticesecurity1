@@ -3306,7 +3306,6 @@ body {
   height: 80px;
   margin-left: 10px;
 } */
-
 .slider {
   display: flex;
   justify-content: center;
@@ -3324,9 +3323,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  animation: scrolling 10s linear infinite;
-  width: calc(100% * 17); /* Adjust width to fit all images */
+  animation: scrolling 14s linear infinite;
+  width: max-content; /* Allows the container to grow with content */
 }
 
 @keyframes scrolling {
@@ -3339,11 +3337,25 @@ body {
 }
 
 .slider-items img {
-  width: 100px;
-  object-fit: contain;
-  mix-blend-mode: color-burn;
-  margin-left: 10px;
-  height: 80px; /* Adjust to fit your needs */
+  width: 100px; /* Adjust size based on screen size using media queries */
+  height: 80px; /* Adjust height */
+  object-fit: cover;
+  margin-left: 20px; /* Remove margin to avoid gaps */
+  aspect-ratio: 3/2;
+}
+
+@media (max-width: 768px) {
+  .slider-items img {
+      width: 80px; /* Smaller images for tablet and mobile screens */
+      height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-items img {
+      width: 60px; /* Even smaller images for mobile screens */
+      height: 50px;
+  }
 }
 
 
