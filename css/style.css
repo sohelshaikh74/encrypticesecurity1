@@ -3299,13 +3299,17 @@ body {
 }
 
 .slider-items img {
-  width: 9%;
+  width: 22%;
   aspect-ratio: 3/2;
   object-fit: contain;
   mix-blend-mode: color-burn;
-  height: 100px;
-  margin-left: 20px;
+  height: 80px;
+  margin-left: 10px;
 }
 
 
- 
+ /* awards and recognition */
+ .carousel-item img{
+  object-fit: cover;
+  /* aspect-ratio: 3/2; */
+ }
