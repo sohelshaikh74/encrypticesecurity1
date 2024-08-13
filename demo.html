@@ -1,272 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Growth Layout</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parallax effect</title>
+    <link rel="stylesheet" href="index.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      * {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background-color: #c9c9c9;
+        display: grid;
+        place-items: center;
+      }
+
+      section {
+        display: grid;
+        place-items: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        padding: 20px;
+        margin: 20px 0px;
+      }
+
+      .slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 80%;
+        overflow: hidden;
+        background: rgb(255, 255, 255);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.4px);
+        -webkit-backdrop-filter: blur(7.4px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+
+      .slider-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        animation: scrolling 20s linear infinite;
+      }
+
+      @keyframes scrolling {
+        0% {
+          transform: translateX(80%);
         }
 
-        .before-after-box {
-            background-color: #292B44;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            min-height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.5s ease; /* Smooth transition */
+        100% {
+          transform: translateX(-20%);
         }
+      }
 
-        .profile-card {
-            background-color: #292B44;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            color: white;
-            transition: all 0.5s ease; /* Smooth transition */
-        }
-
-        .profile-img img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            transition: all 0.5s ease; /* Smooth transition */
-        }
-
-        .prev-next {
-            background-color: #44476A;
-            color: white;
-            margin: 0 10px;
-        }
-
-        .primary-btn {
-            background-color: #ff5c5c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .primary-btn:hover {
-            background-color: #ff3a3a;
-        }
-
-        .modal-content {
-            background-color: #292B44;
-            color: white;
-        }
-
-        .modal-header {
-            border-bottom: none;
-        }
-
-        .modal-footer {
-            border-top: none;
-        }
-
-        .column-form {
-            padding: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .before-after-box {
-                min-height: 120px;
-            }
-
-            .profile-img img {
-                width: 100px;
-                height: 100px;
-            }
-
-            .profile-card {
-                padding: 15px;
-            }
-
-            .prev-next {
-                margin: 0 5px;
-            }
-
-            .primary-btn {
-                padding: 8px 16px;
-            }
-
-            #current-slide {
-                display: block;
-                margin-top: 10px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .before-after-box, .profile-card {
-                min-height: 100px;
-            }
-
-            .profile-img img {
-                width: 80px;
-                height: 80px;
-            }
-
-            .profile-card {
-                padding: 10px;
-            }
-
-            .prev-next {
-                margin: 0 3px;
-            }
-
-            #current-slide {
-                display: block;
-                margin-top: 8px;
-            }
-        }
+      .slider-items img {
+        width: 12%;
+        margin: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
 
-<section style="background-color: #100028;">
-    <div class="container">
-        <div class="row">
-            <!-- Before Box -->
-            <div class="col-md-3 col-6 d-flex justify-content-center align-items-center">
-                <div id="before-content" class="before-after-box">
-                    <div>
-                        <h5>Before</h5>
-                        <p id="before-text">Fresher</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Profile Card -->
-            <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
-                <div class="profile-card">
-                    <div class="profile-img">
-                        <img id="profile-img" src="/img/placement/aniket.png" alt="Profile Image">
-                    </div>
-                    <h3 id="main-name" class="text-light">Aniket Pawar</h3>
-                    <p id="main-course">EPGP in Data Science from IIITB<br>2019</p>
-                    <p id="main-hike"><strong>60% Hike</strong></p>
-                    <!-- Carousel Controls -->
-                    <div class="d-flex justify-content-center align-items-center">
-                        <button class="btn btn-outline-secondary prev-next" onclick="prevContent()">&#8249;</button>
-                        <span id="current-slide" >1/4</span>
-                        <button class="btn btn-outline-secondary prev-next" onclick="nextContent()">&#8250;</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- After Box -->
-            <div class="col-md-3 col-6 d-flex justify-content-center align-items-center">
-                <div id="after-content" class="before-after-box">
-                    <div>
-                        <h5>After</h5>
-                        <p id="after-text">Data Scientist</p>
-                    </div>
-                </div>
-            </div>
+  <body>
+    <section>
+      <h1>Our Partners</h1>
+      <div class="slider">
+        <div class="slider-items">
+          <img
+            src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+            alt=""
+          />
+          <img
+            src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
+            alt=""
+          />
+          <img
+            src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
+            alt=""
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
+            alt=""
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+            alt=""
+          />
+          <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="" />
+          <img
+            src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+            alt=""
+          />
+          <img
+            src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+            alt=""
+          />
+          <img
+            src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
+            alt=""
+          />
+          <img
+            src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
+            alt=""
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
+            alt=""
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+            alt=""
+          />
+          <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="" />
+          <img
+            src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+            alt=""
+          />
         </div>
-
-        <div class="text-center">
-            <button class="primary-btn carrer-export" data-toggle="modal" data-target="#loginModal">Talk to a Career Expert</button>
-        </div>
-
-        <!-- The Modal -->
-        <div class="modal fade" id="loginModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h5 class="modal-title">Let’s Talk About Your Career Growth! </h5>
-                    </div>
-                    <!-- Modal Body -->
-                    <div class="column-form">
-                        <form>
-                            <iframe src="https://crm.aumdigitech.com/forms/wtl/0daa176b51503badfa720b543040d5bf" frameborder="0" style="width: 100%; height: 400px;" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
-                        </form>
-                    </div>
-                    <!-- Modal Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-<script>
-    const data = [
-        {
-            before: 'Fresher',
-            name: 'Aniket Pawar',
-            course: 'EPGP in Data Science from IIITB<br>2019',
-            hike: '60% Hike',
-            img: '/img/placement/aniket.png',
-            after: 'Data Scientist'
-        },
-        {
-            before: 'Technical Service Engineer',
-            name: 'Kushagra Saxena',
-            course: 'EPGP in Data Science from IIITB<br>2023',
-            hike: '120% Hike',
-            img: '/img/placement/kushagra.png',
-            after: 'AI Solution Consultant'
-        },
-        {
-            before: 'Software Developer',
-            name: 'Megha Jain',
-            course: 'EPGP in Data Science from IIITB<br>2021',
-            hike: '80% Hike',
-            img: '/img/placement/megha.png',
-            after: 'Data Analyst'
-        },
-        {
-            before: 'Project Manager',
-            name: 'Rohan Sharma',
-            course: 'EPGP in Data Science from IIITB<br>2020',
-            hike: '70% Hike',
-            img: '/img/placement/rohan.png',
-            after: 'Senior Data Scientist'
-        }
-    ];
-
-    let currentIndex = 0;
-
-    function updateContent(index) {
-        const beforeContent = document.getElementById('before-content');
-        const afterContent = document.getElementById('after-content');
-        const profileImg = document.getElementById('profile-img');
-        const mainName = document.getElementById('main-name');
-        const mainCourse = document.getElementById('main-course');
-        const mainHike = document.getElementById('main-hike');
-        const beforeText = document.getElementById('before-text');
-        const afterText = document.getElementById('after-text');
-        const currentSlide = document.getElementById('current-slide');
-
-        beforeContent.style.opacity = 0;
-        afterContent.style.opacity = 0;
-        profileImg.style.opacity = 0;
-        mainName.style.opacity = 0;
-        mainCourse.style.opacity = 0;
-        mainHike.style.opacity = 0;
-
-        setTimeout(() => {
-            beforeText.innerHTML = data[index].before;
-            mainName.innerHTML = data[index].name;
-            mainCourse.innerHTML = data[index].course;
-            mainHike.innerHTML = data[index].hike;
-            profileImg.src = data[index].img;
-            afterText.innerHTML = data[index].after;
-            currentSlide.innerHTML = `${index + 1}/4`;
-
-            beforeContent.style.opacity = 1;
-            afterContent.style.opacity = 1;
+      </div>
+    </section>
+  </body>
+</html>

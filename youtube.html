@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section style="background: #100028">
+      <div class="container">
+        <div class="youtube-slider">
+          <div class="slider-items">
+            <div
+              class="video-card"
+              data-video="https://www.youtube.com/embed/VIDEO_ID_1"
+            >
+              <img src="thumbnail1.jpg" alt="Video 1" />
+              <h4>Video Title 1</h4>
+            </div>
+            <div
+              class="video-card"
+              data-video="https://www.youtube.com/embed/VIDEO_ID_2"
+            >
+              <img src="thumbnail2.jpg" alt="Video 2" />
+              <h4>Video Title 2</h4>
+            </div>
+            <div
+              class="video-card"
+              data-video="https://www.youtube.com/embed/VIDEO_ID_3"
+            >
+              <img src="thumbnail3.jpg" alt="Video 3" />
+              <h4>Video Title 3</h4>
+            </div>
+            <!-- Add more video cards as needed -->
+          </div>
+        </div>
+
+        <!-- Video Modal -->
+        <div class="video-modal">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <iframe
+              id="videoFrame"
+              src=""
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

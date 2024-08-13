@@ -153,14 +153,13 @@ ol {
   background-position: center;
   position: relative;
   height: 100%;
-  opacity: 1;
 }
 
 .big-logo img{
   position: absolute;
   right: 5%;
   top: 10%;
-  opacity: 100;
+  opacity: 1;
   filter: drop-shadow(1px 1px 20px  #00bfe7);
 }
 
@@ -3207,7 +3206,7 @@ body {
   .logo-slider {
     overflow: hidden;
     white-space: nowrap;
-    padding: 20px 0;
+    padding: 20px 10px;
   }
 
   .logo-slider .logos {
@@ -3265,3 +3264,45 @@ body {
 
 
 
+/* company logo slider */
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+}
+
+.slider-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: scrolling 20s linear infinite;
+
+}
+
+@keyframes scrolling {
+
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+.slider-items img {
+  width: 9%;
+  height: 100px;
+  margin-left: 20px;
+}
+
+
+ 
