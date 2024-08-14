@@ -2088,7 +2088,7 @@ ol {
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
-@media only screen and (min-width: 1080px ) and (max-widht:2406px) {
+@media only screen and (min-width: 1201px ) and (max-widht:2561px) {
 
   /* .container {
     max-width: 1170px;  
@@ -2098,7 +2098,33 @@ ol {
   height: 100vh;
   position: relative;
  } */
+ .hero__item{
+  position: relative;
+}
 
+.hero__logo-container {
+  /* top: 50%; */
+  bottom: 5%;
+  right: 20%;
+  width: 35%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+}
+@media only screen and (min-width: 2560px) and (max-width: 1199px){
+  .hero__item{
+    position: relative;
+  }
+
+  .hero__logo-container {
+    /* top: 50%; */
+    bottom: 5%;
+    right: 20%;
+    width: 35%;
+    opacity: 0.3;
+    z-index: -1;
+}
 }
 
 @media only screen and (min-width: 1200px) {
