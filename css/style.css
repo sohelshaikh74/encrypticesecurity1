@@ -154,6 +154,9 @@ ol {
   background-image: url('/img/hero/hero-without-logo.webp');
   background-repeat: no-repeat;
   opacity: 1;
+  padding-top: 150px;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .hero__logo-container{
@@ -174,6 +177,8 @@ ol {
   z-index: -1;
   filter: drop-shadow(1px 1px 20px  #00bfe7);
 }
+
+
 
 
 /* .big-logo img{
@@ -607,13 +612,19 @@ ol {
   position: absolute;
 }
 
+.hero__text1 h2{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
 
 .hero__item {
   /* self */
-  position: relative;
+  /* position: relative; */
 
-  height: 732px;
-  padding-top: 255px;
+  /* height: 732px; */
+  /* padding-top: 255px; */
 }
 
 .hero__text span {
