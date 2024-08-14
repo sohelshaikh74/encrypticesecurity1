@@ -162,7 +162,7 @@ ol {
   top: 32%;
   right: 10%;
   width: 26%;
-  filter: drop-shadow(1px 1px 20px  #00bfe7);
+  /* filter: drop-shadow(1px 1px 20px  #00bfe7); */
 }
 
 .big-company-logo{
