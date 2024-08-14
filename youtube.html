@@ -3,271 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YouTube Video Slider</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
-      rel="stylesheet"
-    />
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Document</title>
     <style>
-      /* styles.css */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
+      .slider-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        margin: auto;
       }
 
-      .section-title {
-        text-align: center;
-        margin-bottom: 40px;
+      .slider-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
       }
 
-      .video__item {
-        cursor: pointer;
+      .slider-card {
+        flex: 0 0 33.33%; /* Each card takes up 1/3 of the slide width */
+        box-sizing: border-box;
+        padding: 10px;
+      }
+
+      .slider-card img {
+        width: 100%;
+        border-radius: 10px;
         transition: transform 0.3s ease;
       }
 
-      .video__item:hover {
-        transform: scale(1.05);
+      .slider-card img:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
       }
 
-      .video__item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin-top: 15px;
+      .prev-btn,
+      .next-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        user-select: none;
+        z-index: 1;
       }
 
-      .video-modal {
-        display: none;
+      .prev-btn {
+        left: 10px;
+      }
+
+      .next-btn {
+        right: 10px;
+      }
+
+      .popup-overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.8);
+        display: none;
         justify-content: center;
         align-items: center;
-        z-index: 1000;
+        z-index: 2;
       }
 
-      .video-container {
+      .popup-content {
         position: relative;
         width: 80%;
         max-width: 800px;
-        padding-top: 56.25%;
-        height: 0;
+        background: white;
+        padding: 0;
+        border-radius: 10px;
+        overflow: hidden;
       }
 
-      #videoPlayer {
-        position: absolute;
-        top: 0;
-        left: 0;
+      .popup-content iframe {
         width: 100%;
-        height: 100%;
+        height: 450px;
         border: none;
       }
 
-      .close-btn {
+      .close-popup {
         position: absolute;
-        top: 15px;
-        right: 15px;
-        font-size: 24px;
+        top: 10px;
+        right: 10px;
+        background: transparent;
         color: white;
+        font-size: 30px;
         cursor: pointer;
-        z-index: 1001;
+        border: none;
+        z-index: 3;
       }
     </style>
   </head>
   <body>
-    <section class="latest spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title center-title">
-              <span>Our Videos</span>
-              <h2>Video Updates</h2>
-            </div>
+    <section style="background-color: #100028">
+      <div class="slider-wrapper">
+        <div class="slider-track">
+          <div class="slider-card">
+            <a
+              href="#"
+              data-video="https://www.youtube.com/embed/nlNg_ZgihC0?si=ztJt8VSoaudUYqV9"
+            >
+              <img src="https://via.placeholder.com/400x200" alt="Image 1" />
+            </a>
+            <p>image1</p>
+          </div>
+          <div class="slider-card">
+            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
+              <img src="https://via.placeholder.com/400x200" alt="Image 2" />
+            </a>
+          </div>
+          <div class="slider-card">
+            <a href="#" data-video="https://www.youtube.com/embed/k85mRPqvMbE">
+              <img src="https://via.placeholder.com/400x200" alt="Image 3" />
+            </a>
+          </div>
+          <div class="slider-card">
+            <a href="#" data-video="https://www.youtube.com/embed/3JZ_D3ELwOQ">
+              <img src="https://via.placeholder.com/400x200" alt="Image 4" />
+            </a>
+          </div>
+          <div class="slider-card">
+            <a href="#" data-video="https://www.youtube.com/embed/9bZkp7q19f0">
+              <img src="https://via.placeholder.com/400x200" alt="Image 5" />
+            </a>
+          </div>
+          <div class="slider-card">
+            <a href="#" data-video="https://www.youtube.com/embed/L_jWHffIx5E">
+              <img src="https://via.placeholder.com/400x200" alt="Image 6" />
+            </a>
+          </div>
+          <div class="slider-card">
+            <a href="#" data-video="https://www.youtube.com/embed/fJ9rUzIMcZQ">
+              <img src="https://via.placeholder.com/400x200" alt="Image 7" />
+            </a>
+          </div>
+          <div class="slider-card">
+            <a href="#" data-video="https://www.youtube.com/embed/2Vv-BfVoq4g">
+              <img src="https://via.placeholder.com/400x200" alt="Image 8" />
+            </a>
+          </div>
+          <div class="slider-card">
+            <a href="#" data-video="https://www.youtube.com/embed/yXQViqx6GMY">
+              <img src="https://via.placeholder.com/400x200" alt="Image 9" />
+            </a>
           </div>
         </div>
-        <div class="row">
-          <div class="latest__slider owl-carousel">
-            <!-- Video-1 -->
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_1">
-                <h4>1. How to Start a Career in Ethical Hacking</h4>
-                <p>
-                  Learn how to start a career in ethical hacking, including key
-                  skills and certifications.
-                </p>
-                <img src="thumbnail1.jpg" alt="Video 1" />
-              </div>
-            </div>
-            <!-- Video-2 -->
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_2">
-                <h4>2. Importance of Ethical Hacking in Cybersecurity</h4>
-                <p>
-                  Discover why ethical hacking is crucial for cybersecurity and
-                  protecting organizations.
-                </p>
-                <img src="thumbnail2.jpg" alt="Video 2" />
-              </div>
-            </div>
-            <!-- Video-3 -->
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
-                <h4>3. Role of Cryptography in Cybersecurity</h4>
-                <p>
-                  Explore how cryptography secures data and protects against
-                  cyber threats.
-                </p>
-                <img src="thumbnail3.jpg" alt="Video 3" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
-                <h4>3. Role of Cryptography in Cybersecurity</h4>
-                <p>
-                  Explore how cryptography secures data and protects against
-                  cyber threats.
-                </p>
-                <img src="thumbnail3.jpg" alt="Video 3" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
-                <h4>3. Role of Cryptography in Cybersecurity</h4>
-                <p>
-                  Explore how cryptography secures data and protects against
-                  cyber threats.
-                </p>
-                <img src="thumbnail3.jpg" alt="Video 3" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
-                <h4>3. Role of Cryptography in Cybersecurity</h4>
-                <p>
-                  Explore how cryptography secures data and protects against
-                  cyber threats.
-                </p>
-                <img src="thumbnail3.jpg" alt="Video 3" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
-                <h4>3. Role of Cryptography in Cybersecurity</h4>
-                <p>
-                  Explore how cryptography secures data and protects against
-                  cyber threats.
-                </p>
-                <img src="thumbnail3.jpg" alt="Video 3" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
-                <h4>3. Role of Cryptography in Cybersecurity</h4>
-                <p>
-                  Explore how cryptography secures data and protects against
-                  cyber threats.
-                </p>
-                <img src="thumbnail3.jpg" alt="Video 3" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
-                <h4>3. Role of Cryptography in Cybersecurity</h4>
-                <p>
-                  Explore how cryptography secures data and protects against
-                  cyber threats.
-                </p>
-                <img src="thumbnail3.jpg" alt="Video 3" />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="video__item latest__item" data-video-id="VIDEO_ID_3">
-                <h4>3. Role of Cryptography in Cybersecurity</h4>
-                <p>
-                  Explore how cryptography secures data and protects against
-                  cyber threats.
-                </p>
-                <img src="thumbnail3.jpg" alt="Video 3" />
-              </div>
-            </div>
-            <!-- Additional videos can be added here in the same format -->
-          </div>
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+      </div>
+
+      <!-- Popup HTML -->
+      <div class="popup-overlay">
+        <div class="popup-content">
+          <button class="close-popup">&times;</button>
+          <iframe
+            src=""
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
-    </section>
+      <script>
+        const sliderTrack = document.querySelector(".slider-track");
+        const sliderCards = document.querySelectorAll(".slider-card");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        const popupOverlay = document.querySelector(".popup-overlay");
+        const popupContent = document.querySelector(".popup-content iframe");
+        const closePopup = document.querySelector(".close-popup");
 
-    <div class="video-modal" id="videoModal">
-      <div class="video-container">
-        <span class="close-btn" id="closeBtn">&times;</span>
-        <iframe
-          id="videoPlayer"
-          width="560"
-          height="315"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+        const cardsPerSlide = 3; // Display 3 cards per slide
+        let index = 0;
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    <!-- <script src="script.js"></script> -->
-    <script>
-      // script.js
-      $(document).ready(function () {
-        $(".latest__slider").owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: true,
-          responsive: {
-            0: {
-              items: 1,
-            },
-            600: {
-              items: 2,
-            },
-            1000: {
-              items: 3,
-            },
-          },
+        nextBtn.addEventListener("click", () => {
+          index = (index + cardsPerSlide) % sliderCards.length;
+          updateSlider();
         });
 
-        const videoModal = document.getElementById("videoModal");
-        const videoPlayer = document.getElementById("videoPlayer");
-        const closeBtn = document.getElementById("closeBtn");
-
-        $(".video__item").click(function () {
-          const videoId = $(this).data("video-id");
-          videoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-          videoModal.style.display = "flex";
-          document.body.style.overflow = "hidden";
+        prevBtn.addEventListener("click", () => {
+          index =
+            (index - cardsPerSlide + sliderCards.length) % sliderCards.length;
+          updateSlider();
         });
 
-        closeBtn.addEventListener("click", () => {
-          videoPlayer.src = "";
-          videoModal.style.display = "none";
-          document.body.style.overflow = "auto";
+        function updateSlider() {
+          const offset = -index * (100 / cardsPerSlide);
+          sliderTrack.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Open popup with video
+        sliderCards.forEach((card) => {
+          card.querySelector("a").addEventListener("click", function (event) {
+            event.preventDefault();
+            const videoSrc = this.getAttribute("data-video");
+            popupContent.src = videoSrc;
+            popupOverlay.style.display = "flex";
+          });
         });
 
-        videoModal.addEventListener("click", (e) => {
-          if (e.target === videoModal) {
-            videoPlayer.src = "";
-            videoModal.style.display = "none";
-            document.body.style.overflow = "auto";
+        // Close popup
+        closePopup.addEventListener("click", () => {
+          popupOverlay.style.display = "none";
+          popupContent.src = ""; // Stop video
+        });
+
+        // Close popup when clicking outside the content
+        popupOverlay.addEventListener("click", (event) => {
+          if (event.target === popupOverlay) {
+            popupOverlay.style.display = "none";
+            popupContent.src = ""; // Stop video
           }
         });
-      });
-    </script>
+      </script>
+    </section>
   </body>
 </html>
