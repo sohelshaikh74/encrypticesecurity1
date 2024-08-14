@@ -2090,19 +2090,14 @@ ol {
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (min-width: 1080px ) and (max-widht:2406px) {
 
-
-  /* big logo begin */
-
-  /*big logo begin  */
-
-  .container {
+  /* .container {
     max-width: 1170px;  
     max-height: 1000px!important;
   }
  .hero{
   height: 100vh;
   position: relative;
- }
+ } */
 
 }
 
