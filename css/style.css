@@ -154,7 +154,7 @@ ol {
   background-image: url('/img/hero/hero-without-logo.webp');
   background-repeat: no-repeat;
   opacity: 1;
-  padding-top: 150px;
+  padding-top: 250px;
   flex-wrap: nowrap;
   overflow: hidden;
 }
@@ -424,14 +424,18 @@ ol {
 }
 
 .header {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 120px;
-  background: transparent;
+  /* background: transparent; */
+  background: #00bfe7;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
   z-index: 9;
+  background-image: url(/img/hero/hero-without-logo.webp);
 }
 
 .header__logo {
@@ -2279,6 +2283,9 @@ ol {
       right: 130px;
       opacity: 0.4;
   }
+  .hero__text1 h2{
+    font-size: 24px;
+  }
   
 }
 /* Tablet Device = 768px */
@@ -2479,6 +2486,11 @@ ol {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+
+  .hero__text1 h2{
+    font-size: 34px;
+  }
+
   /* big-logo begin */
   .hero__item{
     position: relative;
@@ -2640,6 +2652,8 @@ ol {
     line-height: 40px;
   }
 
+
+
   .grid-sizer {
     width: calc(50% - 10px);
   }
@@ -2763,6 +2777,16 @@ ol {
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
 
+
+  .hero{
+    padding-top: 180px;
+  }
+  .hero iframe{
+    height: 150px;
+  }
+  .hero h2{
+    font-size: 24px;
+  }
   /* big logo begin */
   .hero__item{
     position: relative;
@@ -2868,6 +2892,13 @@ ol {
   }
 
   @media only screen and (max-width:383px){
+    .hero{
+padding-top: 140px;
+    }
+    .hero h2{
+      font-size: 20px;
+    }
+
     .testimonial__author__pic img {
       height: 50px;
       width: 50px;
