@@ -3,224 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fixed Navbar and Header with Background Image</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <style>
-      .slider-wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        margin: auto;
-      }
-
-      .slider-track {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-
-      .slider-card {
-        flex: 0 0 33.33%; /* Each card takes up 1/3 of the slide width */
-        box-sizing: border-box;
-        padding: 10px;
-      }
-
-      .slider-card img {
-        width: 100%;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-      }
-
-      .slider-card img:hover {
-        transform: scale(1.05); /* Slight zoom on hover */
-      }
-
-      .prev-btn,
-      .next-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 50%;
-        user-select: none;
-        z-index: 1;
-      }
-
-      .prev-btn {
-        left: 10px;
-      }
-
-      .next-btn {
-        right: 10px;
-      }
-
-      .popup-overlay {
+      /* Navbar Styles */
+      .navbar {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 2;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
       }
 
-      .popup-content {
-        position: relative;
-        width: 80%;
-        max-width: 800px;
-        background: white;
-        padding: 0;
-        border-radius: 10px;
-        overflow: hidden;
+      /* Add some margin-top to ensure content starts below the fixed navbar */
+      body {
+        padding-top: 56px; /* Adjust based on navbar height */
       }
 
-      .popup-content iframe {
-        width: 100%;
-        height: 450px;
-        border: none;
-      }
-
-      .close-popup {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: transparent;
+      /* Header Styles */
+      .header {
+        background: url("/img/hero/hero-without-logo.jpg") no-repeat center
+          center/cover;
         color: white;
-        font-size: 30px;
-        cursor: pointer;
+        padding: 60px 15px; /* Adjust padding as needed */
+      }
+
+      .header .row {
+        height: 100%;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .header-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .header-content p {
+        font-size: 1rem;
+      }
+
+      .iframe-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .iframe-container iframe {
+        width: 100%;
+        max-width: 800px; /* Limit width to fit nicely */
+        aspect-ratio: 16 / 9; /* Maintain aspect ratio */
         border: none;
-        z-index: 3;
+        border-radius: 8px;
+        background: transparent;
+      }
+
+      @media (max-width: 768px) {
+        .header-content h2 {
+          font-size: 2rem;
+        }
+
+        .header-content p {
+          font-size: 0.9rem;
+        }
+
+        .iframe-container iframe {
+          height: 180px; /* Adjust height for smaller screens */
+        }
       }
     </style>
   </head>
   <body>
-    <section style="background-color: #100028">
-      <div class="slider-wrapper">
-        <div class="slider-track">
-          <div class="slider-card">
-            <a
-              href="#"
-              data-video="https://www.youtube.com/embed/nlNg_ZgihC0?si=ztJt8VSoaudUYqV9"
-            >
-              <img src="https://via.placeholder.com/400x200" alt="Image 1" />
-            </a>
-            <p>image1</p>
+    <!-- Fixed Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <!-- First Column: Content -->
+          <div
+            class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center"
+          >
+            <div class="header-content">
+              <div>
+                <h2>EncrypticSecurity</h2>
+                <p>
+                  Join our premier Ethical Hacking and Cybersecurity Training
+                  Institute and transform your career with our expert-led
+                  courses and practical experience. With a 100% job placement
+                  guarantee, we are committed to your success and future in
+                  cybersecurity.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
-              <img src="https://via.placeholder.com/400x200" alt="Image 2" />
-            </a>
-          </div>
-          <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/k85mRPqvMbE">
-              <img src="https://via.placeholder.com/400x200" alt="Image 3" />
-            </a>
-          </div>
-          <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/3JZ_D3ELwOQ">
-              <img src="https://via.placeholder.com/400x200" alt="Image 4" />
-            </a>
-          </div>
-          <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/9bZkp7q19f0">
-              <img src="https://via.placeholder.com/400x200" alt="Image 5" />
-            </a>
-          </div>
-          <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/L_jWHffIx5E">
-              <img src="https://via.placeholder.com/400x200" alt="Image 6" />
-            </a>
-          </div>
-          <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/fJ9rUzIMcZQ">
-              <img src="https://via.placeholder.com/400x200" alt="Image 7" />
-            </a>
-          </div>
-          <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/2Vv-BfVoq4g">
-              <img src="https://via.placeholder.com/400x200" alt="Image 8" />
-            </a>
-          </div>
-          <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/yXQViqx6GMY">
-              <img src="https://via.placeholder.com/400x200" alt="Image 9" />
-            </a>
+
+          <!-- Second Column: Iframe -->
+          <div
+            class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center"
+          >
+            <div class="iframe-container">
+              <iframe
+                src="https://crm.aumdigitech.com/forms/wtl/a713c0447cac68a8a390850d49bd2eba"
+                frameborder="0"
+                sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
           </div>
         </div>
-        <button class="prev-btn">&#10094;</button>
-        <button class="next-btn">&#10095;</button>
       </div>
+    </header>
 
-      <!-- Popup HTML -->
-      <div class="popup-overlay">
-        <div class="popup-content">
-          <button class="close-popup">&times;</button>
-          <iframe
-            src=""
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-      <script>
-        const sliderTrack = document.querySelector(".slider-track");
-        const sliderCards = document.querySelectorAll(".slider-card");
-        const prevBtn = document.querySelector(".prev-btn");
-        const nextBtn = document.querySelector(".next-btn");
-        const popupOverlay = document.querySelector(".popup-overlay");
-        const popupContent = document.querySelector(".popup-content iframe");
-        const closePopup = document.querySelector(".close-popup");
-
-        const cardsPerSlide = 3; // Display 3 cards per slide
-        let index = 0;
-
-        nextBtn.addEventListener("click", () => {
-          index = (index + cardsPerSlide) % sliderCards.length;
-          updateSlider();
-        });
-
-        prevBtn.addEventListener("click", () => {
-          index =
-            (index - cardsPerSlide + sliderCards.length) % sliderCards.length;
-          updateSlider();
-        });
-
-        function updateSlider() {
-          const offset = -index * (100 / cardsPerSlide);
-          sliderTrack.style.transform = `translateX(${offset}%)`;
-        }
-
-        // Open popup with video
-        sliderCards.forEach((card) => {
-          card.querySelector("a").addEventListener("click", function (event) {
-            event.preventDefault();
-            const videoSrc = this.getAttribute("data-video");
-            popupContent.src = videoSrc;
-            popupOverlay.style.display = "flex";
-          });
-        });
-
-        // Close popup
-        closePopup.addEventListener("click", () => {
-          popupOverlay.style.display = "none";
-          popupContent.src = ""; // Stop video
-        });
-
-        // Close popup when clicking outside the content
-        popupOverlay.addEventListener("click", (event) => {
-          if (event.target === popupOverlay) {
-            popupOverlay.style.display = "none";
-            popupContent.src = ""; // Stop video
-          }
-        });
-      </script>
-    </section>
+    <!-- Scripts for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
