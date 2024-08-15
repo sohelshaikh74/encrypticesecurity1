@@ -431,7 +431,7 @@ ol {
   width: 100%;
   height: 120px;
   /* background: transparent; */
-  background: #00bfe7;
+  /* background: #00bfe7; */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
   z-index: 9;
@@ -2779,10 +2779,10 @@ ol {
 
 
   .hero{
-    padding-top: 180px;
+    padding-top: 160px;
   }
   .hero iframe{
-    height: 150px;
+    /* height: 120px; */
   }
   .hero h2{
     font-size: 24px;
@@ -2893,10 +2893,14 @@ ol {
 
   @media only screen and (max-width:383px){
     .hero{
-padding-top: 140px;
+    padding-top: 130px;
     }
     .hero h2{
-      font-size: 20px;
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    .hero iframe{
+      height: 180px;
     }
 
     .testimonial__author__pic img {
