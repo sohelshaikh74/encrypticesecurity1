@@ -154,7 +154,7 @@ ol {
   background-image: url('/img/hero/hero-without-logo.webp');
   background-repeat: no-repeat;
   opacity: 1;
-  padding-top: 250px;
+  padding-top: 150px;
   flex-wrap: nowrap;
   overflow: hidden;
 }
@@ -206,7 +206,8 @@ ol {
 */
 
 .spad {
-  padding-top: 80px;
+  /* padding-top: 80px; */
+  padding-top: 50px;
   /* padding-bottom: 50px; */
   margin-top: -50px;
   /* margin-bottom: -50px; */
@@ -431,7 +432,7 @@ ol {
   width: 100%;
   height: 120px;
   /* background: transparent; */
-  /* background: #00bfe7; */
+  /*background: #00bfe7;*/
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
   z-index: 9;
@@ -1745,7 +1746,7 @@ ol {
   Blog Details Hero
 -----------------------*/
 .blog-hero {
-  padding: 300px 0 230px;
+  padding: 200px 0 80px;
 }
 
 .blog__hero__text {
@@ -2283,22 +2284,10 @@ ol {
       right: 130px;
       opacity: 0.4;
   }
-  .hero__text1 h2{
-    font-size: 24px;
-  }
   
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
-  .hero{
-    padding: 120px;
-  }
-
-  .hero__text1 h2{
-    font-size: 34px;
-  }
-  
 
   /* big logobegin */
   .hero__item{
@@ -2495,14 +2484,6 @@ ol {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
-
-  .hero__text1 h2{
-    font-size: 34px;
-  }
-  .hero{
-    padding-top: 55%;
-  }
-
   /* big-logo begin */
   .hero__item{
     position: relative;
@@ -2664,8 +2645,6 @@ ol {
     line-height: 40px;
   }
 
-
-
   .grid-sizer {
     width: calc(50% - 10px);
   }
@@ -2789,23 +2768,6 @@ ol {
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
 
-  
- .hero span{
-  letter-spacing: normal;
- }
-  .hero{
-    padding-top: 65%;
-  }
-  .hero iframe{
-    /* height: 120px; */
-  }
-  .hero h2{
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  .hero__text1 p{
-    letter-spacing: normal;
-  }
   /* big logo begin */
   .hero__item{
     position: relative;
@@ -2911,16 +2873,6 @@ ol {
   }
 
   @media only screen and (max-width:383px){
-   
-    .hero{
-      /* padding-top: 120px; */
-    }
-    .hero h2{
-      font-size: 17px;
-      margin-bottom: 10px;
-    }
-  
-
     .testimonial__author__pic img {
       height: 50px;
       width: 50px;
@@ -2991,11 +2943,6 @@ ol {
 .section-padding-01 {
   padding-top: 70px;
   padding-bottom: 70px;
-}
-
-/* hero section and iframe */
-.hero{
-  /* padding-top: 50%; */
 }
 /* media query */
 @media only screen and (min-width: 1500px), only screen and (min-width: 1200px) and (max-width: 1499px) {
