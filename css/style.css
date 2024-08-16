@@ -48,7 +48,8 @@ h6 {
 }
 
 h1 {
-  font-size: 70px;
+  /* font-size: 70px; */
+  font-size: 36px;
 }
 
 h2 {
@@ -1675,7 +1676,7 @@ ol {
 }
 
 .blog__item {
-  border: 1px solid #222222;
+  border: 1px solid #00bfe7;
   padding: 40px 48px 35px 30px;
   position: relative;
   z-index: 1;
