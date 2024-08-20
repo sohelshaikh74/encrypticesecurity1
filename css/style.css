@@ -428,7 +428,7 @@ ol {
 /* ṣelf */
 .for__contact{
   color: #fff;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 .header {
@@ -3538,6 +3538,7 @@ body {
 
   /* Responsive Styles */
   @media (max-width: 768px) {
+    .for__contact
     .logo-slider .logo-item img {
       max-height: 50px;
     }
@@ -4003,38 +4004,4 @@ body {
   .popup-content iframe {
       height: 35vh;
   }
-}
-
-
-@media (max-width: 768px) {
-  .header{
-    height: 80px;
-  }
-  .header__logo img{
-    width: 28%;
-
-  }
- .hero{
-  padding-top: 90px;
-  overflow: hidden;
- }
- .hero h2{
-  padding-bottom: -2px;
- }
- .hero p{
-  font-size: 12px;
-  letter-spacing: 0.1px;
-  margin-bottom: 10px;
- }
- .hero button{
-  margin-top: 8px;
-  font-size: 14px;
-  /* margin-bottom: 10px; */
- }
- .hero iframe{
-  height: 200px;
-  /* filter: drop-shadow(1px 1px 10px #00bfe7 ); */
-  border-radius: 8px;
- }
- 
 }
