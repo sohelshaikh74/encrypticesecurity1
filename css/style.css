@@ -155,7 +155,7 @@ ol {
   background-image: url('/img/hero/hero-without-logo.webp');
   background-repeat: no-repeat;
   opacity: 1;
-  padding-top: 150px;
+  padding-top: 180px;
   flex-wrap: nowrap;
   overflow: hidden;
 }
@@ -2187,6 +2187,18 @@ ol {
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
+
+  .hero__text1 h2{
+    font-size: 26px;
+  }
+  .hero__text1 p {
+    font-size: 18px;
+  }
+  .hero__text1 iframe{
+    height: 380px;
+  }
+
+
   /* big-logo begin */
   .hero__item{
     position: relative;
@@ -2292,6 +2304,24 @@ ol {
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  /* form */
+  .hero__text1 h2{
+    font-size: 26px;
+  }
+  .hero__text1 p {
+    font-size: 18px;
+  }
+  .hero__text1 iframe{
+    height: 380px;
+  }
+  .hero {
+  padding-top: 250px;
+  }
+  .hero iframe{
+    /* display: none; */
+    height: 220px;
+  }
 
   /* big logobegin */
   .hero__item{
@@ -2488,6 +2518,24 @@ ol {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+
+  .hero__text1 h2{
+    font-size: 36px;
+  }
+  .hero__text1 p {
+    font-size: 18px;
+  }
+  .hero__text1 iframe{
+    height: 380px;
+  }
+  .hero {
+  padding-top: 250px;
+  }
+  .hero iframe{
+    /* display: none; */
+    padding-top: 30px;
+    height: 50%;
+  }
   /* big-logo begin */
   .hero__item{
     position: relative;
@@ -2772,6 +2820,24 @@ ol {
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
 
+  .hero__text1 h2{
+    font-size: 36px;
+  }
+  .hero__text1 p {
+    font-size: 16px;
+  }
+  .hero__text1 iframe{
+    height: 380px;
+  }
+  .hero {
+  padding-top: 250px;
+  }
+  .hero iframe{
+    /* display: none; */
+    padding-top: 30px;
+    /* height: 100%; */
+  }
+
   /* big logo begin */
   .hero__item{
     position: relative;
@@ -2877,6 +2943,26 @@ ol {
   }
 
   @media only screen and (max-width:383px){
+    /* frame section */
+    .hero__text1 h2{
+      font-size: 28px;
+    }
+    .hero__text1 p {
+      font-size: 14px;
+    }
+    .hero__text1 iframe{
+      height: 380px;
+    }
+    .hero {
+    padding-top: 250px;
+    }
+    .hero iframe{
+      /* display: none; */
+      padding-top: 30px;
+      height: 50%;
+    }
+
+
     .testimonial__author__pic img {
       height: 50px;
       width: 50px;
@@ -3867,3 +3953,4 @@ body {
       height: 35vh;
   }
 }
+
