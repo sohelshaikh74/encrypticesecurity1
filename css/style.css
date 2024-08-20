@@ -2520,21 +2520,32 @@ ol {
 @media only screen and (max-width: 767px) {
 
   .hero__text1 h2{
-    font-size: 36px;
+    font-size: 28px;
   }
   .hero__text1 p {
-    font-size: 18px;
+    font-size: 12px;
   }
-  .hero__text1 iframe{
-    height: 380px;
+  .hero__text1 h2{
+    margin-bottom: 10px;
   }
+ 
   .hero {
   padding-top: 250px;
   }
   .hero iframe{
     /* display: none; */
-    padding-top: 30px;
-    height: 50%;
+    padding-top: 10px;
+    /* height: 50%; */
+    height: 220px;
+  }
+
+  .hero{
+    padding-top: 140px;
+  }
+
+  .hero .hero__text1 p{
+    margin-top: 0;
+    margin-bottom: 10px;
   }
   /* big-logo begin */
   .hero__item{
@@ -2821,10 +2832,10 @@ ol {
 @media only screen and (max-width: 479px) {
 
   .hero__text1 h2{
-    font-size: 36px;
+    font-size: 28px;
   }
   .hero__text1 p {
-    font-size: 16px;
+    font-size: 12px;
   }
   .hero__text1 iframe{
     height: 380px;
@@ -2834,10 +2845,18 @@ ol {
   }
   .hero iframe{
     /* display: none; */
-    padding-top: 30px;
-    /* height: 100%; */
+    padding-top: 10px;
+    height: 50%;
   }
 
+  .hero{
+    padding-top: 140px;
+  }
+
+  .hero .hero__text1 p{
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
   /* big logo begin */
   .hero__item{
     position: relative;
@@ -2944,11 +2963,12 @@ ol {
 
   @media only screen and (max-width:383px){
     /* frame section */
+    
     .hero__text1 h2{
       font-size: 28px;
     }
     .hero__text1 p {
-      font-size: 14px;
+      font-size: 12px;
     }
     .hero__text1 iframe{
       height: 380px;
@@ -2962,7 +2982,20 @@ ol {
       height: 50%;
     }
 
+    .hero{
+      padding-top: 140px;
+    }
 
+    .hero .hero__text1 p{
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+
+
+
+    /* end */
+    
     .testimonial__author__pic img {
       height: 50px;
       width: 50px;
