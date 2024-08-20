@@ -428,6 +428,7 @@ ol {
 /* ṣelf */
 .for__contact{
   color: #fff;
+  font-size: 24px;
 }
 
 .header {
@@ -2224,7 +2225,7 @@ ol {
     margin-bottom: 50px;
   }
   .for__contact{
-    font-size: 36px;
+    font-size: 34px;
   }
   /* ty-end */
   .course-heading{
@@ -2569,7 +2570,7 @@ ol {
   margin-bottom: 40px;
 }
 .for__contact{
-  font-size: 26px;
+  font-size: 22px;
 }
 /* end */
 .course-heading{
@@ -2887,7 +2888,7 @@ ol {
   }
 
   .for__contact{
-    font-size: 22px;
+    font-size: 18px;
   }
   /* end */
   .section-title.team__title{
@@ -3036,7 +3037,7 @@ ol {
     }
   }
   .for__contact{
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 
