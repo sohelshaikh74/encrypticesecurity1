@@ -27,6 +27,11 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html,
 body {
   height: 100vh;
@@ -149,10 +154,10 @@ ol {
 }
 .hero{
   position: relative;
+  background-image: url('/img/hero/hero-without-logo.webp');
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  background-image: url('/img/hero/hero-without-logo.webp');
+  min-height: 100vh;
   background-repeat: no-repeat;
   opacity: 1;
   padding-top: 180px;
@@ -625,13 +630,6 @@ ol {
   margin-bottom: 30px;
 }
 
-.hero__item {
-  /* self */
-  /* position: relative; */
-
-  /* height: 732px; */
-  /* padding-top: 255px; */
-}
 
 .hero__text span {
   /* color: #ffffff; */
@@ -2961,6 +2959,25 @@ ol {
     opacity: 0.2;
   }
 
+  @media (min-width: 393px) and (min-height: 852px) {
+    .hero__text1 h2{
+      font-size: 28px;
+    }
+    .hero__text1 p {
+      font-size: 10px;
+    }
+    .hero__text1 iframe{
+      height: 380px;
+    }
+    .hero {
+    padding-top: 140px;
+    }
+    .hero iframe{
+      padding-top: 10px;
+      height: 50%;
+    }
+  }
+
   @media only screen and (max-width:383px){
     /* frame section */
     
@@ -3987,3 +4004,36 @@ body {
   }
 }
 
+
+@media (max-width: 768px) {
+  .header{
+    height: 80px;
+  }
+  .header__logo img{
+    width: 28%;
+
+  }
+ .hero{
+  padding-top: 90px;
+  overflow: hidden;
+ }
+ .hero h2{
+  padding-bottom: -2px;
+ }
+ .hero p{
+  font-size: 12px;
+  letter-spacing: 0.1px;
+  margin-bottom: 10px;
+ }
+ .hero button{
+  margin-top: 8px;
+  font-size: 14px;
+  /* margin-bottom: 10px; */
+ }
+ .hero iframe{
+  height: 200px;
+  /* filter: drop-shadow(1px 1px 10px #00bfe7 ); */
+  border-radius: 8px;
+ }
+ 
+}
