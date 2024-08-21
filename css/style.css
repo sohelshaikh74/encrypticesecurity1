@@ -164,6 +164,16 @@ ol {
   flex-wrap: nowrap;
   overflow: hidden;
 }
+.hero iframe{
+  border-radius: 10px;
+}
+
+/* hero center purpoer demo */
+.hero .container .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .hero__logo-container{
   position: absolute;
@@ -1676,20 +1686,26 @@ ol {
 
 .blog__item {
   border: 1px solid #00bfe7;
-  /* padding: 40px 48px 35px 30px; */
+  padding: 10px 30px 20px;
   /* padding: 10px 18px 35px 30px; */
-  padding: 10px;
+  /* padding: 10px; */
   position: relative;
   z-index: 1;
   margin-bottom: 45px;
+  transition: all ease-in-out 0.2s;
+  border-radius: 12px;
+
 }
 .blog__item:hover {
-  border: 1px solid transparent !important;
+  /* border: 1px solid transparent !important; */
   /* background: url(../img/blog/logo.png) no-repeat; */
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(2px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 7px 20px 7px rgba(0, 0, 0, 0.5); */
+    box-shadow:0 4px 12px rgba(0, 0, 0, 2);;
+  cursor: pointer;
+  border: 1px solid grey;
 }
 .blog__item:hover ul li {
   color: #ffffff;
@@ -2315,7 +2331,7 @@ ol {
     height: 380px;
   }
   .hero {
-  padding-top: 250px;
+  /* padding-top: 250px; */
   }
   .hero iframe{
     /* display: none; */
@@ -2532,10 +2548,7 @@ ol {
   padding-top: 250px;
   }
   .hero iframe{
-    /* display: none; */
-    padding-top: 10px;
-    /* height: 50%; */
-    height: 220px;
+    margin-top: 50px;
   }
 
   .hero{
@@ -2807,7 +2820,7 @@ ol {
   width: 200px;
 }
 .hero{
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
  }
 .big-logo{
@@ -2844,7 +2857,7 @@ ol {
   }
   .hero iframe{
     /* display: none; */
-    padding-top: 10px;
+    /* padding-top: 10px; */
     height: 50%;
   }
 
@@ -2949,7 +2962,7 @@ ol {
     font-size: 36px;
   }
   .hero{
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
    }
   .big-logo{
@@ -2974,7 +2987,8 @@ ol {
     padding-top: 140px;
     }
     .hero iframe{
-      padding-top: 10px;
+      /* padding-top: 10px; */
+      margin-top: 50px;
       height: 50%;
     }
   }
@@ -2996,7 +3010,8 @@ ol {
     }
     .hero iframe{
       /* display: none; */
-      padding-top: 30px;
+      /* padding-top: 30px; */
+      margin-top: 50px;
       height: 50%;
     }
 
@@ -3023,7 +3038,7 @@ ol {
     margin-bottom: 20px;
   }
   .hero{
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
    }
 
