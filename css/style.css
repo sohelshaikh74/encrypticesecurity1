@@ -166,6 +166,7 @@ ol {
 }
 .hero iframe{
   border-radius: 10px;
+  filter: drop-shadow(2px 5px 10px  #00bfe7);
 }
 
 /* hero center purpoer demo */
