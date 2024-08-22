@@ -57,46 +57,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
     />
-    <style>
-      ul,
-      ol {
-        list-style: none;
-        /* color: white; */
-        color: #adadad;
-        margin-bottom: 10px;
-      }
-      strong {
-        color: white;
-      }
-
-      .module {
-        margin-bottom: 10px;
-      }
-
-      .module-header {
-        cursor: pointer;
-        padding: 10px;
-        background-color: #f1f1f1;
-        /* background-color: red; */
-        border: 1px solid #ccc;
-        border-radius: 8px;
-      }
-
-      .module-content {
-        display: none;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-top: none;
-      }
-    </style>
   </head>
 
   <body>
-    <!-- Page Preloder -->
-    <!-- <div id="preloder">
-      <div class="loader"></div>
-    </div> -->
-
     <!-- Header Section Begin -->
     <header class="header">
       <div class="container">
@@ -570,76 +533,104 @@
                   measures, organizations can bolster their defenses against
                   evolving threats in the mobile landscape.
                 </p>
-
                 <h2 class="text-light">FAQ</h2>
-                <br />
-                <p>
-                  <strong
-                    >What are the key objectives of mobile penetration
-                    testing?</strong
-                  >
-                  <br />
-                  The primary objectives include identifying vulnerabilities,
-                  assessing security controls, validating compliance with
-                  security policies, and enhancing overall security posture.
-                </p>
-                <p>
-                  <strong>
-                    How often should mobile penetration testing be conducted?
-                  </strong>
-                  <br />
-                  Testing frequency depends on factors like app complexity,
+                <div class="course-section">
+                  <div class="module">
+                      <div class="module-header" onclick="toggleModule('module1')">
+                          <span id="icon-module1" class="icon">+</span>1. What are the key objectives of mobile penetration
+                          testing?
+                      </div>
+                      <div id="module1" class="module-content">
+                          <ul class="tutor-course-segment__list-style-02">
+                            <div>Answer :</div>
+                            <p>The primary objectives include identifying vulnerabilities,
+                              assessing security controls, validating compliance with
+                              security policies, and enhancing overall security posture.</p>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="module">
+                      <div class="module-header" onclick="toggleModule('module2')">
+                          <span id="icon-module2" class="icon">+</span> 2. How often should mobile penetration testing be conducted?
+                      </div>
+                      <div id="module2" class="module-content">
+                          <ul class="tutor-course-segment__list-style-02">
+                            <div>Answer :</div>
+                            <p>   Testing frequency depends on factors like app complexity,
                   updates, regulatory requirements, and threat landscape
                   changes. Generally, annual or bi-annual testing is
                   recommended, with additional tests after significant updates
                   or security incidents.
-                </p>
-                <p>
-                  <strong
-                    >What are some common tools used in mobile penetration
-                    testing?</strong
-                  >
-                  <br />
-                  Popular tools include Burp Suite, OWASP ZAP, MobSF (Mobile
-                  Security Framework), Drozer, and Frida, among others, each
-                  offering specific functionalities for testing mobile app
-                  security.
-                </p>
-                <p>
-                  <strong
-                    >How can organizations ensure the confidentiality of
-                    sensitive data during testing?</strong
-                  >
-                  <br />
-                  Organizations should anonymize or use dummy data in testing
-                  environments, restrict access to testing results, and
-                  implement encryption and access controls to safeguard
-                  sensitive information
-                </p>
-
-                <p>
-                  <strong>
-                    What role does user education play in mobile app
-                    security?</strong
-                  >
-                  <br />
-                  Educating users about security best practices, such as strong
-                  password hygiene, recognizing phishing attempts, and updating
-                  apps regularly, can significantly enhance overall security
-                  posture.
-                </p>
-
-                <p>
-                  <strong>
-                    How can companies stay proactive in addressing emerging
-                    mobile security threats?</strong
-                  >
-                  <br />
-                  Companies should stay abreast of security trends, participate
+                              </p>
+                          </ul>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="module">
+                      <div class="module-header" onclick="toggleModule('module3')">
+                          <span id="icon-module3" class="icon">+</span>3. What are some common tools used in mobile penetration
+                          testing?
+                      </div>
+                      <div id="module3" class="module-content">
+                          <ul class="tutor-course-segment__list-style-02">
+                            <div>Answer :</div>
+                            <p>Popular tools include Burp Suite, OWASP ZAP, MobSF (Mobile
+                              Security Framework), Drozer, and Frida, among others, each
+                              offering specific functionalities for testing mobile app
+                              security.</p>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="module">
+                      <div class="module-header" onclick="toggleModule('module4')">
+                          <span id="icon-module4" class="icon">+</span>4. How can organizations ensure the confidentiality of
+                          sensitive data during testing?
+                      </div>
+                      <div id="module4" class="module-content">
+                          <ul class="tutor-course-segment__list-style-02">
+                            <div>Answer :</div>
+                            <p>Organizations should anonymize or use dummy data in testing
+                              environments, restrict access to testing results, and
+                              implement encryption and access controls to safeguard
+                              sensitive information</p>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="module">
+                      <div class="module-header" onclick="toggleModule('module5')">
+                          <span id="icon-module5" class="icon">+</span>   5. What role does user education play in mobile app
+                          security?
+                      </div>
+                      <div id="module5" class="module-content">
+                          <ul class="tutor-course-segment__list-style-02">
+                            <div>Answer :</div>
+                            <p>
+                              Educating users about security best practices, such as strong
+                              password hygiene, recognizing phishing attempts, and updating
+                              apps regularly, can significantly enhance overall security
+                              posture.
+                             </p>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="module">
+                      <div class="module-header" onclick="toggleModule('module6')">
+                          <span id="icon-module5" class="icon">+</span> 6.  How can companies stay proactive in addressing emerging
+                          mobile security threats?
+                      </div>
+                      <div id="module6" class="module-content">
+                          <ul class="tutor-course-segment__list-style-02">
+                            <div>Answer :</div>
+                            <p>
+                              Companies should stay abreast of security trends, participate
                   in threat intelligence sharing communities, conduct regular
                   risk assessments, and invest in security awareness training
                   for employees.
-                </p>
+                             </p>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
               </div>
               <div class="blog__details__option">
                 <div class="row">
