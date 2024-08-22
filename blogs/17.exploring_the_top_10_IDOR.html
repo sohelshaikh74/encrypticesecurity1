@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content=" Discover about IDOR Vulnerabilities Insights You Need to Know To safeguard your apps against these attacks, be aware of the dangers, countermeasures, and best practices.
+
+
+
+      " />
+    <meta name="keywords" content=" 
+In the cybersecurity landscape, Insecure Direct Object References (IDOR) are critical vulnerabilities that can compromise system integrity and expose sensitive data. This article explores essential insights into IDOR vulnerabilities, including their impact and effective strategies for mitigation. Encryptic Security emphasizes the importance of understanding IDOR vulnerabilities to enhance access control and cybersecurity posture.
+
+ " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="img/png" href="/img/favicon/fav-icon.png" />
+    <title>
+        Best Cybersecurity and Ethical Hacking Training Institute in Thane
+    </title>
+    <link rel="canonical" href="https://encrypticsecurity.com/index.html" />
+    <link rel="icon" href="img/Untitled-1.png" type="image/x-icon" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+    <!-- new lins for this-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <style>
+        ul,
+        ol {
+            list-style: none;
+            /* color: white; */
+            color: #adadad;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: white;
+        }
+
+        .module {
+            margin-bottom: 10px;
+        }
+
+        .module-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            /* background-color: red; */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .module-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+      <div class="loader"></div>
+    </div> -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="/index.html"><img src="/img/logo.webp" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/courses.html">Courses</a></li>
+                                <li><a href="/about.html">About</a></li>
+                                <li class="active"><a href="/blog.html">Blog</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <a href="https://www.facebook.com/encsec">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/81829612/admin/feed/posts/">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/encrypticsecurity/"><i class="fa fa-instagram"> </i>
+                            </a>
+                            <a href="https://www.youtube.com/@Encryptic_cybersecurity/videos">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Details Hero Begin -->
+
+    <!-- <section class="blog-hero spad set-bg" data-setbg="/img/blog/blog-hero.jpg"> -->
+    <section class="blog-hero spad set-bg" data-setbg="/img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__hero__text">
+                        <h1 class="text-light">
+                            Exploring the Top 10 IDOR Vulnerabilities Insights You Need to Know
+                        </h1>
+                        <div class="breadcrumb__links">
+                            <a href="/index.html">Home</a>
+                            <a href="/blog.html">Blog</a>
+                            <!-- <span>Blog /</span> -->
+                            <span>
+                                Exploring the Top 10 IDOR Vulnerabilities Insights You Need to Know</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Begin -->
+    <!-- Breadcrumb End -->
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <div class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__text">
+
+
+                            <h2 class="text-light">
+                                What is IDOR Attack
+
+                            </h2>
+                            <p>
+                                IDOR (Insecure Direct Object Reference) attacks are a type of security vulnerability
+                                where an attacker can manipulate object references to access unauthorized data or
+                                resources. This typically occurs when an application uses user-supplied input to access
+                                objects directly, such as files, directories, database records, or URLs, without proper
+                                authorization checks. Attackers exploit IDOR vulnerabilities by tampering with object
+                                references in requests to gain access to sensitive information or perform actions they
+                                are not authorized to do. Proper access controls and validation of user input are
+                                essential to prevent IDOR attacks and protect against unauthorized data access or
+                                manipulation.
+                            </p>
+
+
+
+                            <h3 class="text-light">
+                                Examples of IDOR Vulnerabilities
+                            </h3>
+                            <br />
+
+                            <p><strong>Direct Reference to Objects in Online Applications </strong></p>
+                            <p>
+                                When objects like files, directories, or database records are directly referenced in web
+                                applications using sequential numbers or predictable IDs, this is known as Direct Object
+                                Reference, or DOR. To obtain a specific resource, a URL could have a parameter like
+                                "?id=123" in it. Users may manipulate these identifiers to gain access to unauthorised
+                                data if they are not properly validated and authorised.
+                            </p>
+
+                            <p><strong>IDOR Vulnerabilities' Effect
+                                </strong></p>
+                            <p>
+                                IDOR vulnerabilities carry serious repercussions, such as account takeover, illegal data
+                                access, monetary losses from data theft or manipulation, and harm to the affected
+                                organization's reputation. By gaining access to private data or carrying out
+                                unauthorised actions, attackers take use of IDOR to escalate privileges and launch more
+                                comprehensive assaults.
+
+                            </p>
+
+                            <p><strong>Common Mistakes Leading to IDOR Issues
+                                </strong></p>
+                            <p>
+                                The main causes of IDOR vulnerabilities are poorly designed access controls, lack of
+                                input validation, and insufficient security testing during the development phase.
+                                Developers must implement robust access control mechanisms, validate user input
+                                effectively, and conduct thorough security testing to identify and mitigate IDOR risks
+                                effectively.
+
+                            </p>
+
+
+
+                            <h2 class="text-light">
+                                How IDOR Vulnerabilities Are Exploited
+
+                            </h2>
+
+                            <p>Attackers who manipulate URLs change certain parameters, like "?id=123" to "?id=124," in
+                                order to get access to unapproved content. They can examine or update data that they
+                                shouldn't be able to access with this small adjustment.</p>
+
+                            <p>
+                                <strong>Tampering with API queries:</strong>
+                            </p>
+
+
+                            <p> In order to manipulate object references, attackers intercept and modify API queries.
+                                They can access confidential information without authorization or carry out actions
+                                without the necessary authorization by changing the request parameters.</p>
+
+                            <p>Attackers that modify parameters in requests or forms do so in order to take advantage of
+                                direct object references. For instance, changing query parameters or hidden form fields
+                                can circumvent access safeguards and reveal confidential data.</p>
+                            <p>
+                                <strong>
+                                    Using Automated techniques:
+                                </strong>
+                            </p>
+                            <p>To find and detect IDOR vulnerabilities, attackers use automated techniques. By
+                                methodically testing different object references, these programmes look for
+                                vulnerabilities that can be taken advantage of.</p>
+
+
+
+
+
+                            <p>
+                                <strong>
+                                    Manual Testing Techniques:
+                                </strong>
+                            </p>
+                            <p>Attackers employ manual testing techniques, such as reviewing application logic and
+                                manipulating inputs, to uncover and exploit IDOR vulnerabilities. This approach helps
+                                them identify security gaps that automated tools might miss.</p>
+
+
+
+
+
+
+                            property.</strong></span><br>
+
+
+
+                            <h2 class="text-light">
+                                How to Preventing IDOR Vulnerabilities
+                            </h2>
+                            <p><strong>
+                                    Preventing Vulnerabilities in IDOR
+                                </strong></p>
+                            <p>
+                                Developers need to use strong security procedures to prevent IDOR vulnerabilities. This
+                                include making sure that access controls are in place, checking inputs, and carrying out
+                                frequent security audits. Maintaining secure online apps requires proactively detecting
+                                and fixing possible vulnerabilities.
+                            </p>
+
+                            <p><strong>
+                                    Top Techniques for Safe Development
+                                </strong></p>
+                            <p>
+                                Using safe development best practices is essential to reducing IDOR risks. It is
+                                recommended that developers adhere to security rules, utilise secure coding frameworks,
+                                and conduct comprehensive testing protocols. Software patching and updates on a regular
+                                basis also aid in defending against new threats.
+                            </p>
+
+                            <p><strong>
+                                    The Value of Validation in Input
+                                </strong></p>
+                            <p>
+                                It is impossible to exaggerate the significance of input validation in preventing IDOR
+                                vulnerabilities. Through user input validation and sanitization, developers may stop
+                                dangerous data from being processed. This is an essential step in safeguarding sensitive
+                                data and web applications.
+                            </p>
+
+                            <p><strong>
+                                    Implementing Proper Access Controls
+                                </strong></p>
+                            <p>
+                                Implementing proper access controls is essential to safeguard against IDOR
+                                vulnerabilities. Ensuring that only authorized users can access specific resources helps
+                                prevent unauthorized data access. Developers should use role-based access controls and
+                                regularly review permissions to maintain security.
+                            </p>
+
+                            <p><strong>
+                                    Regular Security Audits and Testing
+                                </strong></p>
+                            <p>
+                                Conducting regular security audits and testing is a key strategy to identify and
+                                mitigate IDOR vulnerabilities. By performing thorough assessments and using automated
+                                tools, organizations can detect weaknesses and apply necessary fixes. Continuous
+                                monitoring and testing are critical for maintaining a secure environment.
+                            </p>
+
+
+
+
+                            <br />
+                            <h2 class="text-light">
+                                IDOR Vulnerabilities in Different Industries
+                            </h2>
+
+
+                            <span class="text-light"><strong>Healthcare Industry</strong></span>
+                            <p>
+                                The delicate nature of patient data makes the healthcare industry especially susceptible
+                                to IDOR vulnerabilities. Via direct object reference vulnerabilities, unauthorised
+                                access to medical records can result in data breaches that jeopardise patient privacy
+                                and may have serious legal and financial ramifications. Protecting sensitive health
+                                information requires the use of strict access control insecure direct object reference
+                                solutions.
+                            </p>
+
+
+
+                            <span class="text-light"><strong>Banking and Related Services
+                                </strong></span>
+
+                            <p>IDOR vulnerabilities in the financial services sector have the potential to cause major
+                                financial loss and reputational harm by granting unauthorised access to bank data.
+                                Attackers can alter transaction details or get access to account information by taking
+                                advantage of unsecured direct object reference vulnerabilities. Financial institutions
+                                need to implement comprehensive IDOR cyber security measures, such as frequent security
+                                assessments and strong access control systems, to reduce these risks.</p>
+
+
+
+                            <span class="text-light"><strong>E-commerce Platforms
+                                </strong></span>
+                            <p>E-commerce platforms are prime targets for IDOR attacks, where attackers can access and
+                                manipulate user data, order details, and payment information. These direct object
+                                reference vulnerabilities can lead to unauthorized transactions and identity theft.
+                                Implementing proper access control and validating user inputs are essential steps in
+                                securing e-commerce platforms against IDOR vulnerabilities and ensuring customer trust
+                                and safety.</p>
+
+
+
+                            <h2 class="text-light">
+                                Ethical Considerations in Preventing IDOR Attacks
+                            </h2>
+                            <br>
+                            <span class="text-light">
+
+                                <strong> Protecting User Confidentiality </strong></span>
+                            <br> <br>
+
+
+                            <p><strong>Respecting User Data:</strong></p>
+
+                            <p>
+                                Businesses need to put user privacy first by making sure that personal data is handled
+                                ethically and protecting it against IDOR risks.
+                            </p>
+
+
+
+
+                            <p><strong>Transparent rules:</strong></p>
+
+                            <p>
+                                The foundation of trust is upholding transparent data protection rules and providing
+                                users with information about how their data is shielded from unsafe direct object
+                                reference vulnerabilities.
+                            </p>
+
+
+
+
+                            <p><strong>Ethical Hacking:</strong></p>
+
+                            <p>
+                                A proactive approach to security is to utilise ethical hacking techniques to find and
+                                fix IDOR issues without jeopardising user data.
+                            </p>
+
+
+
+                            <span class="text-light"><strong>Implementing Ethical Security Practices</strong></span>
+
+                            <p><strong>Proactive Vulnerability Management:</strong></p>
+                            <p>Continuously monitoring and updating security practices to address IDOR vulnerabilities
+                                ethically is essential for maintaining system integrity.
+                            </p>
+                            <p><strong>Employee Training: </strong></p>
+                            <p> Educating employees about the ethical implications of data breaches and the importance
+                                of adhering to security protocols can help prevent IDOR attacks.
+                            </p>
+                            <p><strong>Ethical Disclosure:</strong></p>
+                            <p> Encouraging ethical disclosure of direct object reference vulnerabilities by researchers
+                                and promptly addressing reported issues reflects a commitment to ethical cyber security
+                                practices.
+                            </p>
+
+
+                            <h2 class="text-light">Conclusion</h2>
+                            <p>
+                                IDOR vulnerabilities pose significant risks to organizations, necessitating proactive
+                                measures to mitigate and prevent security breaches. Secure development practices, robust
+                                access control, insecure direct object reference solutions, and continuous security
+                                assessments are vital for defending against IDOR attacks, OWASP standards highlight. By
+                                implementing effective insecure direct object reference vulnerability solutions,
+                                organizations can protect sensitive data and ensure a strong cyber security posture.
+                                Encryptic Security emphasizes the importance of addressing direct object reference
+                                vulnerabilities to maintain system integrity and compliance with regulatory
+                                requirements.
+
+                            </p>
+                            <h2 class="text-light">FAQ</h2>
+                            <div class="course-section">
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module1')">
+                                        <span id="icon-module1" class="icon">+</span>What are the main challenges in
+                                        detecting IDOR vulnerabilities?
+                                    </div>
+                                    <div id="module1" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p>Detecting IDOR vulnerabilities is challenging due to their reliance on
+                                                business logic flaws, the need for thorough input validation, and the
+                                                complexity of access control mechanisms. Automated tools may miss these
+                                                vulnerabilities, requiring manual testing and a deep understanding of
+                                                application logic.</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module2')">
+                                        <span id="icon-module2" class="icon">+</span> How can organizations improve
+                                        their incident response to IDOR attacks?
+                                    </div>
+                                    <div id="module2" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p> Organizations can improve their incident response to IDOR attacks by
+                                                developing comprehensive incident response plans, conducting regular
+                                                security training, performing continuous monitoring, and establishing
+                                                clear communication channels for quick action and mitigation.
+                                            </p>
+                                        </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module3')">
+                                        <span id="icon-module3" class="icon">+</span>What role does encryption play in
+                                        mitigating IDOR risks?
+                                    </div>
+                                    <div id="module3" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p>Encryption helps mitigate IDOR risks by protecting data at rest and in
+                                                transit, making it harder for attackers to exploit compromised data.
+                                                However, encryption alone is not sufficient and must be complemented
+                                                with robust access controls and regular security assessments.</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module4')">
+                                        <span id="icon-module4" class="icon">+</span>Are there any industry-specific
+                                        guidelines for addressing IDOR vulnerabilities?
+                                    </div>
+                                    <div id="module4" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p>Yes, industry-specific guidelines such as OWASP for web applications,
+                                                HIPAA for healthcare, and PCI-DSS for financial services provide best
+                                                practices for addressing IDOR vulnerabilities and ensuring compliance
+                                                with security standards.</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module5')">
+                                        <span id="icon-module5" class="icon">+</span>What are the key considerations for
+                                        choosing a cybersecurity partner to address IDOR risks?
+                                    </div>
+                                    <div id="module5" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p>
+                                                Key considerations for choosing a cybersecurity partner include
+                                                expertise in identifying and mitigating IDOR vulnerabilities, a proven
+                                                track record in cybersecurity, comprehensive service offerings,
+                                                adherence to industry standards, and the ability to provide tailored
+                                                solutions that fit the organization's specific needs.
+                                            </p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="blog__details__option">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="/blogs/16.the_top_tools_for_identifying_file_inclusion_vulnerabilities.html"
+                                        class="blog__details__option__item">
+                                        <h5><i class="fa fa-angle-left"></i> Previous Blog</h5>
+                                        <div class="blog__details__option__item__img">
+                                            <img src="img/blog/prev.jpg" alt="" />
+                                        </div>
+                                        <div class="blog__details__option__item__text">
+                                            <h6>
+                                                Why Business Logic Security Is Crucial for Your
+                                                Business...
+                                            </h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="/blogs/18.the_techniques_and_tools_for_IDOR_ethical_hacking.html" class="blog__details__option__item blog__details__option__item--right">
+                                        <h5>Next Blog <i class="fa fa-angle-right"></i></h5>
+                                        <div class="blog__details__option__item__img">
+                                            <img src="img/blog/next.jpg" alt="" />
+                                        </div>
+                                        <div class="blog__details__option__item__text">
+                                            <h6>
+                                                Why Ethical Hacking is Important for Cybersecurity...
+                                            </h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Details Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="/index.html"><img src="/img/logo.webp" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <a href="https://www.facebook.com/encsec"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/81829612/admin/feed/posts/"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/encrypticsecurity/"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Encryptic_cybersecurity/videos"><i
+                                    class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer__option__item">
+                            <h5>About Us:</h5>
+                            <p>
+                                Since 2016, EncrypticSecurity has been a top Ethical Hacking
+                                training institute offering courses like CEH V12 from EC
+                                Council, Advanced Diploma in CyberSecurity, Master's in
+                                CyberSecurity, and OSCP Certification renowned globally in
+                                this Domain. We provide High-quality knowledgeable education
+                                and live/Practical hands on experience in the field of
+                                CyberSecurity.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer__option__item">
+                            <h5>Our Courses</h5>
+                            <p>
+                                <a href="./ceh12.html" class="read__more">CEH v12 EC Council</a>
+                            </p>
+                            <p>
+                                <a href="./adcs.html" class="read__more">Advance Diploma in Cyber Security</a>
+                            </p>
+                            <p>
+                                <a href="./mcs.html" class="read__more">Masters in Cyber Security</a>
+                            </p>
+                            <p>
+                                <a href="./oscp.html" class="read__more">OSCP</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer__option__item">
+                            <h5>
+                                Thane Branch Address, <br />
+                                <span style="font-size: 14px; color: #adadad">Headquarters</span>
+                            </h5>
+                            <i class="fa-solid fa-location-dot" style="color: gainsboro"></i>
+                            <a class="addresss"
+                                href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                                6th Floor, ARK7 Tower, <br />
+                                Near Kazari Saree, <br />
+                                Thane Railway Station, <br />
+                                Thane West - 400601
+                            </a>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+918828282171">+91 8828282171 / 7071777789</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:ceo.pravin@encrypticsec.com">enroll@encrypticsecurity.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer__option__item">
+                            <h5>
+                                Andheri Branch Address, <br />
+                                <span style="font-size: 14px; color: #adadad">Sub Branch</span>
+                            </h5>
+                            <i class="fa-solid fa-location-dot" style="color: gainsboro"></i>
+                            <a class="addresss"
+                                href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                                3rd Floor 303 DCB Bank,<br />
+                                Opposite Andheri Subway Bridge,<br />
+                                58 West society, <br />
+                                Swami Vivekananda Rd, <br />
+                                Adheri West, Mumbai,<br />
+                                Maharashtra 400058
+                            </a>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+918828282171">+918828282171/ 7071777789</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:ceo.pravin@encrypticsec.com">enroll@encrypticsecurity.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p class="footer_copyright_text">
+                            &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            EncrypticSecurity Pvt Ltd. All rights reserved.
+                            <br />
+                            <a href="https://encrypticsecurity.com/index.html">www.encrypticsecurity.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/masonry.pkgd.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/course.js"></script>
+</body>
+
+</html>

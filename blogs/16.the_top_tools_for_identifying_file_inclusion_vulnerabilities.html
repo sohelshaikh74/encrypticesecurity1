@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="  Discover Tools for Identifying File Inclusion Vulnerabilities: Learn about essential tools and techniques to detect and prevent security risks in your applications.
+
+
+
+      " />
+  <meta name="keywords"
+    content="  The security of online applications is crucial in the current digital environment. Local file inclusion (LFI) and remote file inclusion (RFI) are two examples of file inclusion vulnerabilities that present serious risks and can result in serious breaches, data theft, and system compromise. Maintaining the security and integrity of online applications requires identifying and fixing these vulnerabilities. Protecting against file inclusion attacks involves using sophisticated tools for identifying file inclusion vulnerabilities, such as those suggested by the Encryptic Security. " />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" type="img/png" href="/img/favicon/fav-icon.png" />
+  <title>
+    Best Cybersecurity and Ethical Hacking Training Institute in Thane
+  </title>
+  <link rel="canonical" href="https://encrypticsecurity.com/index.html" />
+  <link rel="icon" href="img/Untitled-1.png" type="image/x-icon" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css" />
+  <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+  <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+  <!-- new lins for this-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- Magnific Popup CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+  <style>
+    ul,
+    ol {
+      list-style: none;
+      /* color: white; */
+      color: #adadad;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: white;
+    }
+
+    .module {
+      margin-bottom: 10px;
+    }
+
+    .module-header {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #f1f1f1;
+      /* background-color: red; */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .module-content {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page Preloder -->
+  <!-- <div id="preloder">
+      <div class="loader"></div>
+    </div> -->
+
+  <!-- Header Section Begin -->
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="header__logo">
+            <a href="/index.html"><img src="/img/logo.webp" alt="logo" /></a>
+          </div>
+        </div>
+        <div class="col-lg-10">
+          <div class="header__nav__option">
+            <nav class="header__nav__menu mobile-menu">
+              <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/courses.html">Courses</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li class="active"><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="header__nav__social">
+              <a href="https://www.facebook.com/encsec">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/81829612/admin/feed/posts/">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.instagram.com/encrypticsecurity/"><i class="fa fa-instagram"> </i>
+              </a>
+              <a href="https://www.youtube.com/@Encryptic_cybersecurity/videos">
+                <i class="fa fa-youtube-play"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu-wrap"></div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Blog Details Hero Begin -->
+
+  <!-- <section class="blog-hero spad set-bg" data-setbg="/img/blog/blog-hero.jpg"> -->
+  <section class="blog-hero spad set-bg" data-setbg="/img/breadcrumb-bg.jpg">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <div class="blog__hero__text">
+            <h1 class="text-light">
+              What Are the Top Tools for Identifying File Inclusion Vulnerabilities?
+            </h1>
+            <div class="breadcrumb__links">
+              <a href="/index.html">Home</a>
+              <a href="/blog.html">Blog</a>
+              <!-- <span>Blog /</span> -->
+              <span>
+                What Are the Top Tools for Identifying File Inclusion Vulnerabilities?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Begin -->
+  <!-- Breadcrumb End -->
+  <!-- Blog Details Hero End -->
+
+  <!-- Blog Details Section Begin -->
+  <div class="blog-details spad">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <div class="blog__details__content">
+            <div class="blog__details__text">
+
+
+              <h2 class="text-light">
+                What are File Inclusion Vulnerabilities ?
+              </h2>
+              <p>
+                When a web application permits the inclusion of files without the necessary validation, file inclusion
+                vulnerabilities arise. This may result in the disclosure of private data, the execution of arbitrary
+                code, and other nefarious actions. Local File Inclusion (LFI) and Remote File Inclusion (RFI) are the
+                two primary categories of file inclusion vulnerabilities.
+              </p>
+
+
+
+              <h3 class="text-light">
+                What are Types of File Inclusion Vulnerabilities
+              </h3>
+              <br />
+
+              <p><strong>Local File Inclusion (LFI): </strong></p>
+              <p>
+                When a hacker manipulates a web application to include files from the local server, it's known as local
+                file inclusion (LFI). This exposes private data, including configuration files and logs, and may even
+                permit arbitrary code execution. Encryptic security highlights how crucial it is to use tools to find
+                file inclusion flaws in order to stop local file inclusion attacks and protect important data.
+              </p>
+
+              <p><strong>Remote File Inclusion (RFI):</strong></p>
+              <p>
+                When an attacker adds files from an external server, it's known as remote file inclusion (RFI), which
+                allows remote scripts to be executed on the targeted server and ultimately compromises the system.
+                Strong security measures are needed to guard against remote file inclusion vulnerabilities. Encryptic
+                Security advises using sophisticated tools to find file inclusion vulnerabilities, as the OWASP
+                recommendations emphasise, in order to stop these destructive file inclusion attacks.
+              </p>
+
+
+
+              <h2 class="text-light">
+                Why File Inclusion Vulnerabilities Are Dangerous
+              </h2>
+
+              <p>
+                <strong>Potential Impacts of File Inclusion Attacks </strong>
+              </p>
+              <p>
+                <strong>File inclusion vulnerabilities can have devastating effects on a web application. They can allow
+                  attackers to </strong>
+              </p>
+
+              <span class="text-light"><strong>1. Run any random code on the server
+                </strong></span><br>
+              <span class="text-light"><strong>2. Access private information, including configuration files and
+                  passwords</strong></span><br>
+              <span class="text-light"><strong>3. Take total command of the server.</strong></span><br>
+              <span class="text-light"><strong>4. Continue attacking other linked systems.</strong></span><br>
+              <span class="text-light"><strong>5. Vandalise the website, harming its reputation</strong></span><br>
+              <span class="text-light"><strong>6. Install backdoors or malware to gain continuous
+                  access.</strong></span><br>
+              <span class="text-light"><strong>7. Increase credentials to obtain the ability to
+                  administer</strong></span><br>
+              <span class="text-light"><strong>8. Get around authentication systems</strong></span><br>
+              <span class="text-light"><strong>9. Sabotage operations and induce downtime</strong></span><br>
+              <span class="text-light"><strong>10. Steal confidential user information</strong></span><br>
+              <span class="text-light"><strong>11. Change or remove database entries</strong></span><br>
+              <span class="text-light"><strong>12. Take confidential information and intellectual
+                  property.</strong></span><br>
+
+
+
+              <h2 class="text-light">
+                Top Tools for Identifying File Inclusion Vulnerabilities
+              </h2>
+
+              <p>
+                Manually locating file inclusion vulnerabilities can be laborious and prone to mistakes. Thankfully,
+                this procedure may be automated with the aid of a few tools. The best tools for finding file inclusion
+                vulnerabilities are listed below.
+              </p>
+
+
+
+              <br />
+              <h3 class="text-light">
+                Burp Suite
+              </h3>
+
+
+              <span class="text-light"><strong>Features and Functionalities</strong></span>
+              <p>
+                Burp Suite is an extensive tool for web application security testing with many capabilities. Numerous
+                vulnerabilities, including file inclusion flaws, can be found by its potent scanner. A repeater for
+                altering and resending requests, an extender for adding custom functionality, an intercepting proxy, an
+                intruder for automated attacks, and more are important features. Because of its powerful features and
+                easy-to-use interface, security experts frequently choose Burp Suite to discover dangers such as file
+                inclusion attacks.
+              </p>
+
+
+
+              <span class="text-light"><strong>How to Use Burp Suite for Detecting File Inclusion Vulnerabilities
+                </strong></span>
+
+              <p><strong>Burp Suite configuration involves setting up your browser's proxy settings to route through
+                  Burp Suite in order to allow Burp Suite to intercept traffic from your browser.
+
+                </strong></p>
+              <p><strong>Explore the Web Application: To gather and record requests, browse the web application.
+                </strong></p>
+              <p><strong>
+                  Analyse Requests: Focus on parameters that might be vulnerable to file inclusion vulnerabilities when
+                  using the scanner module to examine the requests that have been gathered.
+                </strong></p>
+              <p><strong>
+                  Find Vulnerabilities: Both local file inclusion (LFI) and remote file inclusion (RFI) possible
+                  vulnerabilities will be highlighted by the scanner.
+                </strong></p>
+
+              <p><strong>Manual Validation: Examine the scanner's results and manually confirm the validity of any
+                  findings by trying to exploit any vulnerabilities that are found.
+                </strong></p>
+
+              <h3 class="text-light">
+                OWASP ZAP
+              </h3>
+              <span class="text-light">
+
+                <strong> Key Features </strong></span>
+              <p>
+                An open-source web application security scanner known for its potent capabilities is called OWASP ZAP
+                (Zed Attack Proxy). It offers a range of tools and automated scanners for identifying security flaws in
+                online applications. A programming interface, fuzzing, spidering, passive and active scanning, and an
+                intercepting proxy are some of the important features. Because of its great degree of customisation,
+                OWASP ZAP is an effective tool for locating both LFI and RFI file inclusion vulnerabilities.
+              </p>
+
+
+
+              <span class="text-light"><strong>Step-by-Step Guide to Using OWASP ZAP for File Inclusion
+                  Detection</strong></span>
+
+              <p><strong>Configure OWASP ZAP:</strong></p>
+              <p>Set up OWASP ZAP to act as a proxy so that your browser may log and intercept traffic.
+              </p>
+              <p><strong>Capture Requests:</strong></p>
+              <p> To record HTTP and HTTPS requests, navigate the target web application.
+                Execute Passive Scanning: Permit OWASP ZAP to search for possible vulnerabilities, such as file
+                inclusion vulnerabilities, by passively scanning the traffic that has been recorded.
+              </p>
+              <p><strong>Active Scan:</strong></p>
+              <p>To completely examine the web application for file inclusion vulnerabilities, make use of the active
+                scan capability. Sending custom requests to check for LFI and RFI is required for this.
+              </p>
+              <p><strong>Examine the outcomes:</strong></p>
+              <p>Pay close attention to any file inclusion vulnerabilities that are detected as you go over the scan
+                results. OWASP ZAP will point out potential targets for file inclusion attacks.
+              </p>
+              <p><strong>Verify Vulnerabilities:</strong></p>
+              <p>Verify manually if LFI or RFI is present in the vulnerabilities found by reproducing the scanner's
+                results.
+
+              </p>
+
+
+
+              <h3 class="text-light"> Nikto</h3>
+
+              <span class="text-light"><strong>Description of Nikto</strong></span>
+
+              <p>
+                An open-source web server scanner called Nikto is made to run extensive tests on web servers to check
+                for a variety of vulnerabilities, including file inclusion. More than 6700 potentially harmful files and
+                programmes, out-of-date server versions, and particular server issues are all checked for. Nikto is an
+                indispensable tool for finding file inclusion vulnerabilities because of its great degree of
+                customisation and ability to check for security flaws in a variety of web servers and web applications.
+              </p>
+              <span class="text-light"><strong>Using Nikto to Identify File Inclusion Vulnerabilities
+                </strong></span><br>
+              <span class="text-light"><strong>Install Nikto: </strong></span>
+              <p>Download and install Nikto on your system from its official website or through a package manager.
+              </p>
+              <span class="text-light"><strong>Run Nikto: </strong></span>
+              <p> Execute Nikto against the target web application by specifying the target URL and any additional
+                parameters to refine the scan.</p>
+              <span class="text-light"><strong>Review Scan Report: </strong></span>
+              <p> Once the scan is complete, review the detailed report generated by Nikto for any file inclusion
+                vulnerabilities, both local file inclusion (LFI) and remote file inclusion (RFI).</p>
+              <span class="text-light"><strong>Validate Findings: </strong></span>
+              <p>Manually validate the identified vulnerabilities to confirm their existence and assess their impact.
+                This involves testing the reported vulnerabilities by attempting to exploit them.</p>
+
+
+
+              <h3 class="text-light">Acunetix</h3>
+              <span class="text-light"><strong>Overview of Acunetix</strong></span>
+
+              <p>Acunetix is a powerful web vulnerability scanner known for its comprehensive detection and reporting of
+                a wide range of vulnerabilities, including file inclusion. It offers both automated and manual testing
+                capabilities, and its advanced scanning engine can identify vulnerabilities with high accuracy. Acunetix
+                also provides detailed reports and remediation advice, making it a valuable tool for securing web
+                applications against file inclusion attacks.
+              </p>
+
+              <p><strong>Detecting File Inclusion Vulnerabilities with Acunetix</strong></p>
+
+              <span class="text-light"><strong>Configure Acunetix:</strong></span>
+              <p>To guarantee thorough scanning, set up Acunetix using the target URL and adjust any required settings,
+                like authentication credentials.
+              </p>
+
+              <span class="text-light"><strong>Start the Complete Scan:</strong></span>
+              <p> Launch a comprehensive examination of the web application to identify various vulnerabilities, such as
+                remote file inclusion (RFI) and local file inclusion (LFI).
+              </p>
+              <span class="text-light"><strong>Examine Findings:</strong></span>
+              <p>After the scan is finished, examine the findings. A thorough report outlining any found file inclusion
+                vulnerabilities, along with an indication of their severity, will be supplied by Acunetix.
+              </p>
+              <span class="text-light"><strong>Verify Potential Weaknesses:</strong></span>
+              <p>Verify the results by manually executing the indicated vulnerabilities to ascertain their existence and
+                possible consequences. This stage guarantees that the problems found are real and need to be fixed.</p>
+
+
+
+
+
+
+
+
+
+
+              <h3 class="text-light"> OpenVAS</h3>
+              <span class="text-light"><strong>Overview of OpenVAS</strong></span>
+
+              <p>An extensive database of security tests, including ones for file inclusion vulnerabilities, may be
+                found in OpenVAS (Open Vulnerability Assessment System), an open-source vulnerability scanner. It offers
+                thorough scanning capabilities, instantaneous vulnerability discovery, and a wealth of reporting tools.
+                An important tool for locating and fixing file inclusion vulnerabilities, OpenVAS is used extensively
+                for evaluating the security of servers, networks, and online apps.
+              </p>
+
+              <p><strong>
+                  Steps to Detect File Inclusion Vulnerabilities with OpenVAS
+
+                </strong></p>
+
+              <span class="text-light"><strong>Configure and Install OpenVAS:</strong></span>
+              <p> Install and set up OpenVAS on your computer. This entails establishing the target online application,
+                updating the vulnerability database, and setting up the scanner.
+              </p>
+
+              <span class="text-light"><strong>Set up the Objective:</strong></span>
+              <p> For the purpose of guaranteeing a thorough scan of the online application, specify the target URL and
+                any required settings, such as authentication credentials.
+              </p>
+              <span class="text-light"><strong>Perform a Complete Scan:</strong></span>
+              <p> Start an OpenVAS full scan to find several vulnerabilities, such as remote file inclusion (RFI) and
+                local file inclusion (LFI). After a comprehensive analysis of the target application, OpenVAS will
+                produce a comprehensive report.
+              </p>
+              <span class="text-light"><strong>Examine and confirm the findings:</strong></span>
+              <p> Look for any vulnerabilities related to file inclusion in the scan findings. OpenVAS offers
+                comprehensive details on every problem found, including its potential impact and degree of severity.
+                Verify the vulnerabilities that have been found by manually testing them.
+              </p>
+
+
+
+
+              <h3 class="text-light">Wfuzz</h3>
+              <span class="text-light"><strong>Overview of Acunetix</strong></span>
+
+              <p>Wfuzz is a flexible tool for web application security that may be used to brute-force web applications
+                in order to find different types of vulnerabilities, such as file inclusion. It may be used to automate
+                the process of evaluating web apps for potential security flaws and is quite customisable. Wfuzz is a
+                crucial tool for locating local file inclusion (LFI) and remote file inclusion (RFI) vulnerabilities
+                since it can be very helpful in locating hidden files and folders.
+
+              </p>
+
+              <p><strong>How to Utilize Wfuzz for File Inclusion Testing</strong></p>
+
+              <span class="text-light"><strong>Install Wfuzz:</strong></span>
+              <p>Download and install Wfuzz on your system from its official repository.
+              </p>
+
+              <span class="text-light"><strong>Create a Wordlist:</strong></span>
+              <p> Generate a wordlist of potential file paths and filenames that might be used in a file inclusion
+                attack. This can include common file paths, configuration files, and other potentially sensitive files.
+
+              </p>
+              <span class="text-light"><strong>Brute-Force File Inclusion Points:</strong></span>
+              <p>Use Wfuzz to brute-force potential file inclusion points in the web application by specifying the
+                target URL and the wordlist. This process involves sending numerous requests to the server, attempting
+                to include each file in the wordlist.
+              </p>
+              <span class="text-light"><strong>Analyze Output:</strong></span>
+              <p> Review the output generated by Wfuzz to identify any successful file inclusions. This analysis will
+                help you pinpoint vulnerabilities that could be exploited in a file inclusion attack</p>
+
+
+
+
+
+              <h3 class="text-light">Nessus</h3>
+              <span class="text-light"><strong>Key Aspects of Nessus</strong></span>
+
+              <p>Nessus is a popular vulnerability scanner that can identify a wide range of security issues, including
+                file inclusion vulnerabilities. It offers detailed scanning capabilities, an intuitive user interface,
+                and comprehensive reporting features. Nessus is widely used by security professionals to detect
+                vulnerabilities in web applications, servers, and network devices, making it an invaluable tool for
+                maintaining robust security.
+              </p>
+
+              <p><strong>Process of Identifying File Inclusion Vulnerabilities with Nessus</strong></p>
+
+              <span class="text-light"><strong>Set Up Nessus:</strong></span>
+              <p>Install Nessus on your system and configure it to scan the target web application. This involves
+                specifying the target URL and setting up any necessary authentication credentials.
+              </p>
+
+              <span class="text-light"><strong>Run a Comprehensive Scan:</strong></span>
+              <p> Initiate a full scan using Nessus to detect various vulnerabilities, including local file inclusion
+                (LFI) and remote file inclusion (RFI). Nessus will analyze the target application and generate a
+                detailed report of its findings.
+              </p>
+              <span class="text-light"><strong>Examine Scan Results:</strong></span>
+              <p> Review the scan results to identify any file inclusion vulnerabilities. Nessus provides a clear and
+                detailed overview of each identified issue, along with its severity and potential impact.
+              </p>
+              <span class="text-light"><strong>Validate Findings:</strong></span>
+              <p> Manually validate the identified vulnerabilities to ensure their accuracy. This step involves testing
+                the reported vulnerabilities to confirm their presence and understand their potential impact on the web
+                application.</p>
+
+
+
+
+
+              <h3 class="text-light">Arachni</h3>
+              <span class="text-light"><strong>Features of Arachni
+                </strong></span>
+
+              <p>Arachni is an open-source web application security scanner that can find vulnerabilities related to
+                file inclusion among other security concerns. It provides a powerful scanning engine, an adaptable
+                design, and a wide range of reporting options. Arachni can identify many security flaws, including local
+                file inclusion (LFI) and remote file inclusion (RFI) vulnerabilities. It facilitates both automated and
+                manual testing. For security experts, its sophisticated detection methods and adaptable scan choices
+                make it an invaluable tool.
+              </p>
+
+              <p><strong>Using Arachni for Detecting File Inclusion Vulnerabilities</strong></p>
+
+              <span class="text-light"><strong>Install Arachni:</strong></span>
+              <p>Download and install Arachni on your system from its official website or repository.</p>
+
+              <span class="text-light"><strong>Configure Arachni: </strong></span>
+              <p> Set up Arachni with the target web application by specifying the target URL and configuring any
+                necessary settings, such as authentication details and scan depth.
+              </p>
+              <span class="text-light"><strong>Start a Scan:</strong></span>
+              <p>Initiate a scan to detect file inclusion vulnerabilities. Arachni will analyze the target web
+                application for potential security issues, focusing on both LFI and RFI vulnerabilities.
+              </p>
+              <span class="text-light"><strong>Review and Validate Findings:</strong></span>
+              <p>Once the scan is complete, review the detailed report generated by Arachni. Validate any identified
+                file inclusion vulnerabilities by manually testing them to confirm their presence and assess their
+                impact.</p>
+
+
+
+              <h2 class="text-light">Conclusion</h2>
+              <p>
+                File inclusion vulnerabilities are a significant threat to web application security. Incorporating tools
+                like Burp Suite, OWASP ZAP, Nikto, Acunetix, Wfuzz, Nessus, Arachni, and OpenVAS into security practices
+                enhances vulnerability detection and mitigation. Proactive scanning using these tools is crucial for
+                maintaining robust security against file inclusion attacks and protecting web applications from
+                potential exploits. Encryptic Security emphasizes the importance of using these advanced tools to
+                strengthen overall security posture and mitigate file inclusion vulnerabilities effectively.
+              </p>
+              <h2 class="text-light">FAQ</h2>
+              <div class="course-section">
+                <div class="module">
+                  <div class="module-header" onclick="toggleModule('module1')">
+                    <span id="icon-module1" class="icon">+</span>What is the difference between LFI and RFI?
+                  </div>
+                  <div id="module1" class="module-content">
+                    <ul class="tutor-course-segment__list-style-02">
+                      <div>Answer :</div>
+                      <p>Local File Inclusion (LFI) involves including files from the local server, whereas Remote File
+                        Inclusion (RFI) includes files from external servers.</p>
+                    </ul>
+                  </div>
+                </div>
+                <div class="module">
+                  <div class="module-header" onclick="toggleModule('module2')">
+                    <span id="icon-module2" class="icon">+</span> How often should I scan my website for
+                    vulnerabilities?
+                  </div>
+                  <div id="module2" class="module-content">
+                    <ul class="tutor-course-segment__list-style-02">
+                      <div>Answer :</div>
+                      <p> It is recommended to scan your website at least once a month or after any significant changes
+                        to the web application.
+                      </p>
+                    </ul>
+                    </ul>
+                  </div>
+                </div>
+                <div class="module">
+                  <div class="module-header" onclick="toggleModule('module3')">
+                    <span id="icon-module3" class="icon">+</span>Can these tools fix the vulnerabilities they find?
+                  </div>
+                  <div id="module3" class="module-content">
+                    <ul class="tutor-course-segment__list-style-02">
+                      <div>Answer :</div>
+                      <p>No, these tools are designed to identify vulnerabilities. Fixing the vulnerabilities requires
+                        manual intervention and coding updates.</p>
+                    </ul>
+                  </div>
+                </div>
+                <div class="module">
+                  <div class="module-header" onclick="toggleModule('module4')">
+                    <span id="icon-module4" class="icon">+</span>Are there free versions of these tools available?
+                  </div>
+                  <div id="module4" class="module-content">
+                    <ul class="tutor-course-segment__list-style-02">
+                      <div>Answer :</div>
+                      <p>Yes, many of these tools offer free versions with limited features. Tools like OWASP ZAP,
+                        Nikto, and OpenVAS are completely free and open-source.</p>
+                    </ul>
+                  </div>
+                </div>
+                <div class="module">
+                  <div class="module-header" onclick="toggleModule('module5')">
+                    <span id="icon-module5" class="icon">+</span> What should I do if I find a file inclusion
+                    vulnerability?
+                  </div>
+                  <div id="module5" class="module-content">
+                    <ul class="tutor-course-segment__list-style-02">
+                      <div>Answer :</div>
+                      <p>
+                        If you find a file inclusion vulnerability, immediately assess the risk and take steps to patch
+                        the vulnerability. This may involve sanitizing user inputs, updating code, or applying security
+                        patches.
+                      </p>
+                    </ul>
+                  </div>
+                </div>
+                <div class="module">
+                  <div class="module-header" onclick="toggleModule('module6')">
+                    <span id="icon-module5" class="icon">+</span> 6. How often should I review my business processes for
+                    vulnerabilities?
+                  </div>
+                  <div id="module6" class="module-content">
+                    <ul class="tutor-course-segment__list-style-02">
+                      <div>Answer :</div>
+                      <p>
+                        You should review your business processes for vulnerabilities
+                        regularly, ideally during each development cycle, and conduct
+                        thorough web application security testing at least annually or
+                        whenever significant changes are made to the application.
+                      </p>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog__details__option">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <a href="/blogs/5.how_to_identify_business_logic_vulnerabilities_in_your_systems.html"
+                    class="blog__details__option__item">
+                    <h5><i class="fa fa-angle-left"></i> Previous Blog</h5>
+                    <div class="blog__details__option__item__img">
+                      <img src="img/blog/prev.jpg" alt="" />
+                    </div>
+                    <div class="blog__details__option__item__text">
+                      <h6>
+                        Why Business Logic Security Is Crucial for Your
+                        Business...
+                      </h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <a href="/blogs/17.exploring_the_top_10_IDOR.html" class="blog__details__option__item blog__details__option__item--right">
+                    <h5>Next Blog <i class="fa fa-angle-right"></i></h5>
+                    <div class="blog__details__option__item__img">
+                      <img src="img/blog/next.jpg" alt="" />
+                    </div>
+                    <div class="blog__details__option__item__text">
+                      <h6>
+                        Why Ethical Hacking is Important for Cybersecurity...
+                      </h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Blog Details Section End -->
+
+  <!-- Footer Section Begin -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="footer__top__logo">
+              <a href="/index.html"><img src="/img/logo.webp" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="footer__top__social">
+              <a href="https://www.facebook.com/encsec"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/company/81829612/admin/feed/posts/"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/encrypticsecurity/"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@Encryptic_cybersecurity/videos"><i class="fa fa-youtube-play"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__option">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="footer__option__item">
+              <h5>About Us:</h5>
+              <p>
+                Since 2016, EncrypticSecurity has been a top Ethical Hacking
+                training institute offering courses like CEH V12 from EC
+                Council, Advanced Diploma in CyberSecurity, Master's in
+                CyberSecurity, and OSCP Certification renowned globally in
+                this Domain. We provide High-quality knowledgeable education
+                and live/Practical hands on experience in the field of
+                CyberSecurity.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="footer__option__item">
+              <h5>Our Courses</h5>
+              <p>
+                <a href="./ceh12.html" class="read__more">CEH v12 EC Council</a>
+              </p>
+              <p>
+                <a href="./adcs.html" class="read__more">Advance Diploma in Cyber Security</a>
+              </p>
+              <p>
+                <a href="./mcs.html" class="read__more">Masters in Cyber Security</a>
+              </p>
+              <p>
+                <a href="./oscp.html" class="read__more">OSCP</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="footer__option__item">
+              <h5>
+                Thane Branch Address, <br />
+                <span style="font-size: 14px; color: #adadad">Headquarters</span>
+              </h5>
+              <i class="fa-solid fa-location-dot" style="color: gainsboro"></i>
+              <a class="addresss"
+                href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                6th Floor, ARK7 Tower, <br />
+                Near Kazari Saree, <br />
+                Thane Railway Station, <br />
+                Thane West - 400601
+              </a>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+918828282171">+91 8828282171 / 7071777789</a>
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:ceo.pravin@encrypticsec.com">enroll@encrypticsecurity.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="footer__option__item">
+              <h5>
+                Andheri Branch Address, <br />
+                <span style="font-size: 14px; color: #adadad">Sub Branch</span>
+              </h5>
+              <i class="fa-solid fa-location-dot" style="color: gainsboro"></i>
+              <a class="addresss"
+                href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                3rd Floor 303 DCB Bank,<br />
+                Opposite Andheri Subway Bridge,<br />
+                58 West society, <br />
+                Swami Vivekananda Rd, <br />
+                Adheri West, Mumbai,<br />
+                Maharashtra 400058
+              </a>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+918828282171">+918828282171/ 7071777789</a>
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:ceo.pravin@encrypticsec.com">enroll@encrypticsecurity.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p class="footer_copyright_text">
+              &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              EncrypticSecurity Pvt Ltd. All rights reserved.
+              <br />
+              <a href="https://encrypticsecurity.com/index.html">www.encrypticsecurity.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
+
+  <!-- Js Plugins -->
+  <script src="/js/jquery-3.3.1.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquery.magnific-popup.min.js"></script>
+  <script src="/js/mixitup.min.js"></script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script src="/js/jquery.slicknav.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/course.js"></script>
+</body>
+
+</html>

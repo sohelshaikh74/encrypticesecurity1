@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content=" Explore Techniques and Tools for IDOR Ethical Hacking: Learn how to identify, exploit, and secure against IDOR vulnerabilities to protect your applications effectively.
+
+
+
+      " />
+    <meta name="keywords" content=" 
+Securing web applications is crucial, especially against IDOR vulnerabilities. These vulnerabilities can lead to unauthorized access to sensitive information, highlighting the need to understand the techniques and tools for IDOR ethical hacking. Ethical hackers target these weaknesses to prevent IDOR attacks and improve cyber security. This article explores the insecure direct object reference vulnerability solution, methods to identify direct object reference vulnerabilities, and tools to assist ethical hackers in their mission. Encryptic Security emphasizes the importance of addressing access control insecure direct object references, using OWASP examples to illustrate effective strategies.
+
+
+ " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="img/png" href="/img/favicon/fav-icon.png" />
+    <title>
+        Best Cybersecurity and Ethical Hacking Training Institute in Thane
+    </title>
+    <link rel="canonical" href="https://encrypticsecurity.com/index.html" />
+    <link rel="icon" href="img/Untitled-1.png" type="image/x-icon" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+    <!-- new lins for this-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <style>
+        ul,
+        ol {
+            list-style: none;
+            /* color: white; */
+            color: #adadad;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: white;
+        }
+
+        .module {
+            margin-bottom: 10px;
+        }
+
+        .module-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            /* background-color: red; */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .module-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+      <div class="loader"></div>
+    </div> -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="/index.html"><img src="/img/logo.webp" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/courses.html">Courses</a></li>
+                                <li><a href="/about.html">About</a></li>
+                                <li class="active"><a href="/blog.html">Blog</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <a href="https://www.facebook.com/encsec">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/81829612/admin/feed/posts/">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/encrypticsecurity/"><i class="fa fa-instagram"> </i>
+                            </a>
+                            <a href="https://www.youtube.com/@Encryptic_cybersecurity/videos">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Details Hero Begin -->
+
+    <!-- <section class="blog-hero spad set-bg" data-setbg="/img/blog/blog-hero.jpg"> -->
+    <section class="blog-hero spad set-bg" data-setbg="/img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__hero__text">
+                        <h1 class="text-light">
+                            What Are the Techniques and Tools for IDOR Ethical Hacking?
+                        </h1>
+                        <div class="breadcrumb__links">
+                            <a href="/index.html">Home</a>
+                            <a href="/blog.html">Blog</a>
+                            <!-- <span>Blog /</span> -->
+                            <span>
+                                What Are the Techniques and Tools for IDOR Ethical Hacking?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Begin -->
+    <!-- Breadcrumb End -->
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <div class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__text">
+
+
+                            <h2 class="text-light">
+                                What are IDOR
+
+                            </h2>
+                            <p>
+                                Insecure Direct Object Reference (IDOR) is a type of access control vulnerability that
+                                occurs when an application provides direct access to objects based on user-supplied
+                                input. Without proper validation, attackers can manipulate these inputs to access
+                                unauthorized data.
+                            </p>
+
+
+
+                            <h3 class="text-light">
+                                H3 Common Examples of IDOR
+                            </h3>
+                            <p>IDOR vulnerabilities can manifest in various forms. For instance, a URL might contain a
+                                user ID that an attacker can modify to access another user's data. Similarly, changing a
+                                parameter in a POST request might grant access to restricted resources.</p>
+                            <br />
+
+
+
+                            <h2 class="text-light">What are the Techniques for Identifying IDOR Vulnerabilities</h2>
+
+                            <p><strong>Manual Testing</strong></p>
+                            <p>
+                                Manual testing is a fundamental technique in identifying IDOR vulnerabilities. Ethical
+                                hackers often rely on the following methods
+                            </p>
+
+                            <p><strong>URL Manipulation:
+                                </strong></p>
+                            <p>
+                                Changing a URL's parameters allows you to access content that is banned. This is known
+                                as URL manipulation. When testing for vulnerabilities related to unsafe direct object
+                                reference in access control, ethical hackers frequently employ this technique. They are
+                                able to detect possible IDOR attacks by altering the textual or numerical information in
+                                the URL. Finding these flaws makes it easier to create secure solutions for insecure
+                                direct object reference vulnerabilities and protect the application from exploitation.
+
+                            </p>
+
+                            <p><strong>URL Manipulation
+                                </strong></p>
+                            <p>
+                                Parameter tampering is a critical method in Techniques and Tools for IDOR Ethical
+                                Hacking, where hackers modify input parameters to access unauthorized data. By
+                                manipulating parameters sent through HTTP requests, they can exploit access control
+                                insecure direct object reference examples. Ethical hackers use this technique to reveal
+                                IDOR vulnerabilities and develop strategies to mitigate them. Addressing these
+                                vulnerabilities is essential for robust IDOR cyber security, as highlighted by OWASP
+                                guidelines.
+                            </p>
+
+
+                            <p><strong>Automated Testing
+                                </strong></p>
+                            <p>
+                                Automated tools streamline the process of identifying IDOR vulnerabilities. Some of the
+                                commonly used tools include:
+                            </p>
+
+
+                            <span class="text-light"><strong>Vulnerability Scanners:
+                                </strong></span>
+                            <p>
+                                By automating the identification of IDOR vulnerabilities, vulnerability scanners are
+                                essential components of Techniques and Tools for IDOR Ethical Hacking. Known
+                                vulnerabilities like direct object reference vulnerabilities are found by means of these
+                                tools, which methodically change the input settings and examine the application's
+                                outcome. Viability scanners improve IDOR cyber security by proactively identifying and
+                                mitigating potential vulnerabilities by utilising access control insecure direct object
+                                reference checks.
+                            </p>
+
+
+                            <span class="text-light"><strong>Burp Suite Intruder
+                                </strong></span>
+                            <p>
+                                Burp Suite's Intruder tool is a powerful asset in IDOR ethical hacking efforts. It
+                                automates the process of parameter manipulation in HTTP requests, streamlining the
+                                identification of IDOR vulnerabilities. By efficiently testing for access control
+                                insecure direct object reference examples, Burp Suite Intruder aids in crafting
+                                effective insecure direct object reference vulnerability solutions. This tool aligns
+                                with OWASP guidelines for IDOR attack prevention, reinforcing IDOR cyber security
+                                measures in web applications.
+                            </p>
+
+
+
+                            <h2 class="text-light">
+                                Tools for IDOR Ethical Hacking
+
+                            </h2>
+
+
+
+                            <h3 class="text-light">
+                                Burp Suite
+
+                            </h3>
+                            <p>Burp Suite is a key component of the IDOR Ethical Hacking Techniques and Tools arsenal,
+                                which is well-known worldwide among ethical hackers. With its wide variety of
+                                capabilities, this all-inclusive web vulnerability scanner equips experts with the tools
+                                they need to protect online apps from IDOR vulnerabilities. For ethical hacking
+                                projects, its extensive functionality and user-friendly interface make it the preferred
+                                option.</p>
+
+                            <p>
+                                <strong>Key Features of Burp Suite:</strong>
+                            </p>
+
+                            <span class="text-light"><strong>Proxy</strong></span>
+                            <p>An essential tool for IDOR cyber security is Burp Suite's Proxy function. It makes it
+                                easier to analyse data flows between clients and servers by intercepting and modifying
+                                HTTP requests and answers. This feature facilitates the detection and resolution of
+                                insecure direct object reference problems related to access control.</p>
+                            <span class="text-light"><strong>Scanner:</strong></span>
+                            <p>By automatically identifying vulnerabilities in web applications, the Burp Suite Scanner
+                                component is essential to IDOR ethical hacking. It contributes to a proactive strategy
+                                in unsafe direct object reference vulnerability solutions by carefully scanning for
+                                direct object reference vulnerabilities and other relevant problems</p>
+                            <span class="text-light"><strong>Intruder:</strong></span>
+                            <p> Burp Suite's Intruder tool revolutionizes the process of IDOR attack simulations. It
+                                automates custom attacks by manipulating request parameters, enabling ethical hackers to
+                                identify access control insecure direct object reference examples efficiently. This
+                                feature is instrumental in crafting targeted and effective IDOR cyber security
+                                strategies.</p>
+                            <span class="text-light"><strong>Repeater:</strong></span>
+                            <p> The Repeater function in Burp Suite empowers ethical hackers with the ability to
+                                manually modify and resend HTTP requests. This hands-on approach allows for meticulous
+                                testing and validation of IDOR vulnerability solutions before implementation, ensuring
+                                robust access control and insecure direct object reference measures are in place.</p>
+
+
+
+
+
+
+                            <h3 class="text-light">
+                                OWASP ZAP
+
+                            </h3>
+                            <p>Zed Attack Proxy, sometimes known as OWASP ZAP, is a well-known open-source web
+                                application security scanner that ethical hackers use all around the world. Finding idor
+                                vulnerabilities and other security flaws in web applications is its main goal,
+                                especially when the apps are still in the development and testing stages. OWASP ZAP is
+                                an open-source tool that encourages cooperation across different projects and
+                                organisations in order to improve IDOR cyber security.</p>
+
+                            <p>
+                                <strong>Key Features of OWASP ZAP:</strong>
+                            </p>
+
+                            <span class="text-light"><strong>Automated Scanner: </strong></span>
+                            <p>One of OWASP ZAP's standout features, the Automated Scanner quickly checks web
+                                applications for security flaws. In order to identify potential security threats and
+                                insecure direct object reference vulnerabilities, it utilises sophisticated algorithms
+                                and procedures. This results in a thorough assessment of the application's security
+                                posture.</p>
+                            <span class="text-light"><strong>Tools for Manual Testing:</strong></span>
+                            <p> For a thorough examination and evaluation of web application security, OWASP ZAP
+                                provides a variety of tools for manual testing. With the aid of these tools, ethical
+                                hackers can carry out thorough inspections, spot problems with access control that
+                                result in insecure direct object reference, and provide exact remedies for insecure
+                                direct object reference vulnerabilities that are suited to the needs of the particular
+                                application.</p>
+                            <span class="text-light"><strong>Passive Scanning: </strong></span>
+                            <p> IDOR ethical hacking efforts greatly benefit from OWASP ZAP's Passive Scanning
+                                functionality. It keeps an eye on web traffic without making any changes to it, making
+                                it possible to identify possible security vulnerabilities without interfering with the
+                                application's regular operation. By continuously scanning in real-time for
+                                vulnerabilities, this passive strategy improves IDOR cyber security.p>
+
+
+
+
+                            <h3 class="text-light">
+                                Acunetix
+
+                            </h3>
+                            <p>Acunetix is a robust web vulnerability scanner renowned for its ability to detect and
+                                report a wide range of web application vulnerabilities, including idor vulnerabilities.
+                                It serves as a valuable asset in the realm of Techniques and Tools for IDOR Ethical
+                                Hacking, providing comprehensive insights into security weaknesses that could compromise
+                                IDOR cyber security.</p>
+
+                            <p>
+                                <strong>Key Features of Acunetix:</strong>
+                            </p>
+
+                            <span class="text-light"><strong>Scanning Engine:</strong></span>
+                            <p>Acunetix boasts a powerful Scanning Engine capable of identifying over 6,500
+                                vulnerabilities within web applications. This includes insecure direct object reference
+                                vulnerabilities and other critical security flaws, enabling ethical hackers to
+                                prioritize remediation efforts effectively.</p>
+                            <span class="text-light"><strong>Comprehensive Reports:</strong></span>
+                            <p>Acunetix provides actionable insights into the web application landscape of direct object
+                                reference vulnerabilities by generating thorough and comprehensive vulnerability
+                                reports. For development teams and ethical hackers, these reports are a huge help in
+                                setting priorities for security measures and guaranteeing that strong cyber security
+                                measures are in place.</p>
+                            <span class="text-light"><strong>Integration:</strong></span>
+                            <p>Acunetix seamlessly integrates with Continuous Integration/Continuous Deployment (CI/CD)
+                                pipelines, facilitating automated security testing throughout the development lifecycle.
+                                This integration streamlines the process of identifying access control insecure direct
+                                object reference issues and implementing insecure direct object reference vulnerability
+                                solutions promptly.</p>
+
+
+
+
+
+                            <h3 class="text-light">
+                                Postman
+
+                            </h3>
+                            <p>
+                                Postman is a popular tool that is mostly used for API development, but it also has
+                                several features that are useful for IDOR ethical hacking and IDOR cyber security
+                                initiatives. Postman's value extends beyond its programming skills, as users may
+                                manipulate API requests and carefully examine answers for potential vulnerabilities and
+                                other security flaws. This makes Postman an invaluable tool for security testing.
+                            </p>
+
+                            <p>
+                                <strong>Key Features of Postman:</strong>
+                            </p>
+
+                            <span class="text-light"><strong>Request Builder:</strong></span>
+                            <p>Postman makes it easier to create and deliver API requests with its Request Builder. This
+                                capability can be used by ethical hackers to create personalised requests and run
+                                scenarios in order to find vulnerabilities related to direct object reference, including
+                                unsafe access control.</p>
+                            <span class="text-light"><strong>Test Automation:</strong></span>
+                            <p>Postman facilitates test automation by means of scripting, which permits the development
+                                of automated tests for APIs. This feature is essential to IDOR ethical hacking since it
+                                makes it easier to test APIs systematically for IDOR vulnerabilities and helps create
+                                remedies for insecure direct object reference vulnerabilities.</p>
+                            <span class="text-light"><strong>Environment Management:</strong></span>
+                            <p>Postman's Environment Management capabilities allow users to manage different
+                                environments for testing purposes. This includes configuring variables, headers, and
+                                authentication settings, providing a controlled environment to simulate various access
+                                control insecure direct object reference examples and evaluate idor cyber security
+                                measures</p>
+
+
+
+
+
+
+
+
+                            <h2 class="text-light">
+                                Case Studies of IDOR Vulnerabilities
+                            </h2>
+                            <p><strong>
+
+                                    Real-World Examples
+
+                                </strong></p>
+                            <p>
+                                In a widely-publicized case, a major e-commerce platform suffered from an idor
+                                vulnerability that allowed attackers to access customer order details directly by
+                                manipulating the order ID parameter in the URL. This breach led to unauthorized access
+                                to sensitive information such as billing addresses and payment details. Similarly, a
+                                healthcare application encountered an idor vulnerability where users could access
+                                medical records of other patients by modifying the patient ID parameter in the API
+                                requests. These real-world examples highlight the severity of insecure direct object
+                                reference vulnerabilities and the potential risks they pose to user privacy and data
+                                security.
+                            </p>
+
+                            <p><strong>
+
+                                    Lessons Learned:
+
+                                </strong></p>
+                            <p>
+                                These idor vulnerability case studies emphasize the importance of thorough IDOR ethical
+                                hacking and proactive security testing. Organizations must implement robust access
+                                controls and validation mechanisms to prevent access control insecure direct object
+                                reference issues. Regular security audits and penetration testing can help identify and
+                                address idor vulnerabilities before they are exploited. Additionally, educating
+                                developers and security teams about direct object reference vulnerabilities and best
+                                practices in secure coding can significantly reduce the risk of idor attacks and
+                                strengthen overall idor cyber security.
+
+
+                            </p>
+
+
+
+                            <h2 class="text-light">Conclusion</h2>
+                            <p>
+                                IDOR vulnerabilities represent a significant threat to web application security,
+                                requiring a deep understanding of Techniques and Tools for IDOR Ethical Hacking. Ethical
+                                hackers must employ a combination of manual and automated testing methods, utilizing
+                                tools like Burp Suite, OWASP ZAP, Acunetix, and Postman to identify and mitigate these
+                                vulnerabilities effectively. Staying vigilant and continuously learning about idor
+                                vulnerability solutions is paramount in safeguarding applications from unauthorized
+                                access and enhancing idor cyber security in the face of evolving cybersecurity
+                                challenges. Encryptic Security plays a crucial role in fortifying defenses against
+                                access control insecure direct object reference issues and idor attacks.
+
+
+                            </p>
+                            <h2 class="text-light">FAQ</h2>
+                            <div class="course-section">
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module1')">
+                                        <span id="icon-module1" class="icon">+</span>What is IDOR in ethical hacking?
+                                    </div>
+                                    <div id="module1" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p>IDOR stands for Insecure Direct Object Reference, a type of vulnerability
+                                                that allows attackers to access unauthorized data by manipulating input
+                                                parameters.
+                                            </p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module2')">
+                                        <span id="icon-module2" class="icon">+</span> How can IDOR vulnerabilities be
+                                        identified?
+                                    </div>
+                                    <div id="module2" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p> IDOR vulnerabilities can be identified through manual testing techniques
+                                                like URL manipulation and parameter tampering, as well as automated
+                                                tools like vulnerability scanners.
+
+                                            </p>
+                                        </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module3')">
+                                        <span id="icon-module3" class="icon">+</span>What are some popular tools for
+                                        IDOR ethical hacking?
+                                    </div>
+                                    <div id="module3" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p> Popular tools include Burp Suite, OWASP ZAP, Acunetix, and Postman, each
+                                                offering various features for identifying and exploiting
+                                                vulnerabilities.</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module4')">
+                                        <span id="icon-module4" class="icon">+</span>Why is responsible disclosure
+                                        important in ethical hacking?
+                                    </div>
+                                    <div id="module4" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p>Responsible disclosure ensures that vulnerabilities are reported to the
+                                                affected organization, allowing them to fix the issues before malicious
+                                                actors can exploit them.</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="module">
+                                    <div class="module-header" onclick="toggleModule('module5')">
+                                        <span id="icon-module5" class="icon">+</span>How can ethical hackers stay
+                                        updated with the latest trends and tools?
+                                    </div>
+                                    <div id="module5" class="module-content">
+                                        <ul class="tutor-course-segment__list-style-02">
+                                            <div>Answer :</div>
+                                            <p>
+                                                Ethical hackers can stay updated by participating in cybersecurity
+                                                forums, attending conferences, taking courses, and following industry
+                                                blogs and publications.
+                                            </p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="blog__details__option">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="/blogs/5.how_to_identify_business_logic_vulnerabilities_in_your_systems.html"
+                                        class="blog__details__option__item">
+                                        <h5><i class="fa fa-angle-left"></i> Previous Blog</h5>
+                                        <div class="blog__details__option__item__img">
+                                            <img src="img/blog/prev.jpg" alt="" />
+                                        </div>
+                                        <div class="blog__details__option__item__text">
+                                            <h6>
+                                                Why Business Logic Security Is Crucial for Your
+                                                Business...
+                                            </h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="" class="blog__details__option__item blog__details__option__item--right">
+                                        <h5>Next Blog <i class="fa fa-angle-right"></i></h5>
+                                        <div class="blog__details__option__item__img">
+                                            <img src="img/blog/next.jpg" alt="" />
+                                        </div>
+                                        <div class="blog__details__option__item__text">
+                                            <h6>
+                                                Why Ethical Hacking is Important for Cybersecurity...
+                                            </h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Details Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="/index.html"><img src="/img/logo.webp" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <a href="https://www.facebook.com/encsec"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/81829612/admin/feed/posts/"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/encrypticsecurity/"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@Encryptic_cybersecurity/videos"><i
+                                    class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer__option__item">
+                            <h5>About Us:</h5>
+                            <p>
+                                Since 2016, EncrypticSecurity has been a top Ethical Hacking
+                                training institute offering courses like CEH V12 from EC
+                                Council, Advanced Diploma in CyberSecurity, Master's in
+                                CyberSecurity, and OSCP Certification renowned globally in
+                                this Domain. We provide High-quality knowledgeable education
+                                and live/Practical hands on experience in the field of
+                                CyberSecurity.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer__option__item">
+                            <h5>Our Courses</h5>
+                            <p>
+                                <a href="./ceh12.html" class="read__more">CEH v12 EC Council</a>
+                            </p>
+                            <p>
+                                <a href="./adcs.html" class="read__more">Advance Diploma in Cyber Security</a>
+                            </p>
+                            <p>
+                                <a href="./mcs.html" class="read__more">Masters in Cyber Security</a>
+                            </p>
+                            <p>
+                                <a href="./oscp.html" class="read__more">OSCP</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer__option__item">
+                            <h5>
+                                Thane Branch Address, <br />
+                                <span style="font-size: 14px; color: #adadad">Headquarters</span>
+                            </h5>
+                            <i class="fa-solid fa-location-dot" style="color: gainsboro"></i>
+                            <a class="addresss"
+                                href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                                6th Floor, ARK7 Tower, <br />
+                                Near Kazari Saree, <br />
+                                Thane Railway Station, <br />
+                                Thane West - 400601
+                            </a>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+918828282171">+91 8828282171 / 7071777789</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:ceo.pravin@encrypticsec.com">enroll@encrypticsecurity.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer__option__item">
+                            <h5>
+                                Andheri Branch Address, <br />
+                                <span style="font-size: 14px; color: #adadad">Sub Branch</span>
+                            </h5>
+                            <i class="fa-solid fa-location-dot" style="color: gainsboro"></i>
+                            <a class="addresss"
+                                href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                                3rd Floor 303 DCB Bank,<br />
+                                Opposite Andheri Subway Bridge,<br />
+                                58 West society, <br />
+                                Swami Vivekananda Rd, <br />
+                                Adheri West, Mumbai,<br />
+                                Maharashtra 400058
+                            </a>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+918828282171">+918828282171/ 7071777789</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:ceo.pravin@encrypticsec.com">enroll@encrypticsecurity.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p class="footer_copyright_text">
+                            &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            EncrypticSecurity Pvt Ltd. All rights reserved.
+                            <br />
+                            <a href="https://encrypticsecurity.com/index.html">www.encrypticsecurity.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/masonry.pkgd.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/course.js"></script>
+</body>
+
+</html>
