@@ -1697,6 +1697,10 @@ ol {
   border-radius: 12px;
 
 }
+.blog__item img{
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 .blog__item:hover {
   /* border: 1px solid transparent !important; */
   /* background: url(../img/blog/logo.png) no-repeat; */
