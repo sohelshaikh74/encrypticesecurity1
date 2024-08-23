@@ -2285,16 +2285,6 @@ ol {
     padding-left: 25px;
   }
 
-/* header social links hover */
-/* .header__nav__social a i:hover{
-  color: #00bfe7;
-} */
-
-
-
-
-
-
 .custom-link:hover {
   color: #00bfe7;
 }
@@ -2342,11 +2332,6 @@ ol {
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-    /* big-logo */
-      /* big-logo */
-      /* .hero__text1{
-        position: relative;
-      } */
       .big-company-logo{
         position: absolute;
         width: 32%;
@@ -2588,6 +2573,8 @@ ol {
 .for__contact{
   font-size: 26px;
 }
+
+
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
 
