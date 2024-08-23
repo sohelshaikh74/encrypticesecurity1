@@ -178,33 +178,23 @@ ol {
 
 .hero__logo-container{
   position: absolute;
-  /* bottom: 20%; */
   top: 32%;
   right: 10%;
   width: 26%;
-  /* filter: drop-shadow(1px 1px 20px  #00bfe7); */
 }
-
+.hero__text1{
+  position: relative;
+}
 .big-company-logo{
   position: absolute;
-  top: -2%;
-  width: 50%;
+  width: 45%;
+  top: 0;
   left: 20%;
   opacity: 0.3;
-  z-index: -1;
+  z-index: 1;
   filter: drop-shadow(1px 1px 20px  #00bfe7);
 }
 
-
-
-
-/* .big-logo img{
-  position: absolute;
-  right: 5%;
-  top: 10%;
-  opacity: 1;
-  filter: drop-shadow(1px 1px 20px  #00bfe7);
-} */
 
 /*
 
@@ -630,10 +620,6 @@ ol {
   margin-right: 0;
 }
 
-/* big-company-logo */
-.big-company-logo{
-  position: absolute;
-}
 
 .hero__text1 h2{
   font-size: 40px;
@@ -2160,10 +2146,7 @@ ol {
   position: relative;
 }
 
-.big-company-logo{
-  position: absolute;
-  
-}
+
 
 .hero__logo-container {
   /* top: 50%; */
@@ -2189,10 +2172,39 @@ ol {
     width: 28%;
 
 }
+  /* big-logo */
+      /* big-logo */
+      .hero__text1{
+        position: relative;
+      }
+      .big-company-logo{
+        position: absolute;
+        width: 55%;
+        top: 0;
+        left: 20%;
+        opacity: 0.3;
+        z-index: 1;
+        filter: drop-shadow(1px 1px 20px  #00bfe7);
+      }
 
 }
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* big-logo */
+      /* big-logo */
+      .hero__text1{
+        position: relative;
+      }
+      .big-company-logo{
+        position: absolute;
+        width: 55%;
+        top: 0;
+        left: 20%;
+        opacity: 0.3;
+        z-index: 1;
+        filter: drop-shadow(1px 1px 20px  #00bfe7);
+      }
+
 
 /* blog section */
 .blog__hero__text h1{
@@ -2329,6 +2341,22 @@ ol {
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* big-logo */
+      /* big-logo */
+      /* .hero__text1{
+        position: relative;
+      } */
+      .big-company-logo{
+        position: absolute;
+        width: 32%;
+        top: 0;
+        left: 20%;
+        opacity: 0.3;
+        z-index: 1;
+        filter: drop-shadow(1px 1px 20px  #00bfe7);
+      }
+
   /* blog-section */
   .blog__hero__text h1{
     font-size: 24px;
@@ -2562,6 +2590,21 @@ ol {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+
+    /* big-logo */
+      /* big-logo */
+      .hero__text1{
+        position: relative;
+      }
+      .big-company-logo{
+        position: absolute;
+        width: 42%;
+        top: 0;
+        left: 20%;
+        opacity: 0.3;
+        z-index: 1;
+        filter: drop-shadow(1px 1px 20px  #00bfe7);
+      }
   /* blog-section */
   .blog__hero__text h1{
     font-size: 22px;
@@ -2890,6 +2933,21 @@ ol {
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
 
+    /* big-logo */
+      /* big-logo */
+      .hero__text1{
+        position: relative;
+      }
+      .big-company-logo{
+        position: absolute;
+        width: 45%;
+        top: 0;
+        left: 20%;
+        opacity: 0.3;
+        z-index: 1;
+        filter: drop-shadow(1px 1px 20px  #00bfe7);
+      }
+
   /* blog-section */
   .blog__hero__text h1{
     font-size: 20px;
@@ -3060,6 +3118,20 @@ ol {
   }
 
   @media only screen and (max-width:383px){
+    /* big-logo */
+      /* big-logo */
+  .hero__text1{
+    position: relative;
+  }
+  .big-company-logo{
+    position: absolute;
+    width: 55%;
+    top: 0;
+    left: 20%;
+    opacity: 0.3;
+    z-index: 1;
+    filter: drop-shadow(1px 1px 20px  #00bfe7);
+  }
 
     /* blog-section */
     .blog__hero__text h1{
