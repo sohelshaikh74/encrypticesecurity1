@@ -4194,3 +4194,11 @@ padding: 10px;
 border: 1px solid #ccc;
 border-top: none;
 }
+
+/* blog-banner */
+.blog__details__text img{
+  border-radius: 12px;
+  margin-bottom: 20px;
+  filter: drop-shadow(1px 1px 20px  #00bfe7);
+
+}
