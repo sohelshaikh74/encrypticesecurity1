@@ -189,7 +189,7 @@ ol {
   position: absolute;
   width: 45%;
   top: 0;
-  left: 20%;
+  left: 22%;
   opacity: 0.3;
   z-index: 1;
   filter: drop-shadow(1px 1px 20px  #00bfe7);
@@ -2585,9 +2585,12 @@ ol {
       }
       .big-company-logo{
         position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 42%;
         top: 0;
-        left: 20%;
+        /* left: 20%; */
         opacity: 0.3;
         z-index: 1;
         filter: drop-shadow(1px 1px 20px  #00bfe7);
@@ -2927,9 +2930,12 @@ ol {
       }
       .big-company-logo{
         position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 45%;
         top: 0;
-        left: 20%;
+        /* left: 20%; */
         opacity: 0.3;
         z-index: 1;
         filter: drop-shadow(1px 1px 20px  #00bfe7);
@@ -3085,6 +3091,7 @@ ol {
   }
 
   @media (min-width: 393px) and (min-height: 852px) {
+
     .hero__text1 h2{
       font-size: 28px;
     }
@@ -3114,7 +3121,8 @@ ol {
     position: absolute;
     width: 55%;
     top: 0;
-    left: 20%;
+    /* left: 20%; */
+    align-items: center;
     opacity: 0.3;
     z-index: 1;
     filter: drop-shadow(1px 1px 20px  #00bfe7);
@@ -4199,7 +4207,7 @@ border-top: none;
 .blog__details__text img{
   border-radius: 12px;
   margin-bottom: 20px;
-  filter: drop-shadow(1px 1px 20px  #00bfe7);
+  filter: drop-shadow(1px 1px 10px  #00bfe7);
  
 }
 
