@@ -2336,7 +2336,7 @@ ol {
         position: absolute;
         width: 32%;
         top: 0;
-        left: 20%;
+        left: 34%;
         opacity: 0.3;
         z-index: 1;
         filter: drop-shadow(1px 1px 20px  #00bfe7);
@@ -2590,7 +2590,7 @@ ol {
         justify-content: center;
         width: 42%;
         top: 0;
-        /* left: 20%; */
+        left: 27%;
         opacity: 0.3;
         z-index: 1;
         filter: drop-shadow(1px 1px 20px  #00bfe7);
@@ -2935,7 +2935,7 @@ ol {
         justify-content: center;
         width: 45%;
         top: 0;
-        /* left: 20%; */
+        left: 26%;
         opacity: 0.3;
         z-index: 1;
         filter: drop-shadow(1px 1px 20px  #00bfe7);
@@ -3121,7 +3121,7 @@ ol {
     position: absolute;
     width: 55%;
     top: 0;
-    /* left: 20%; */
+    left: 22%;
     align-items: center;
     opacity: 0.3;
     z-index: 1;
