@@ -1008,7 +1008,8 @@
 
             // Function to create the tel URI and initiate the call
             const initiateCall = () => {
-                const combinedNumber = `${number1},${number2}`; // Combine numbers with a comma
+                // const combinedNumber = `${number1},${number2}`; // Combine numbers with a comma
+                const combinedNumber = `${number1}`; // Combine numbers with a comma
                 window.location.href = `tel:${combinedNumber}`;
             };
 
