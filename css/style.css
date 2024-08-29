@@ -196,6 +196,10 @@ ol {
 }
 
 
+.carousel-inner .carousel-item img{
+  object-fit: cover;
+}
+
 /*
 
 .set-bg {
@@ -2190,6 +2194,19 @@ ol {
 }
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* placement profile */
+  .before-after-box {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00bfe7;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 20px auto;
+}
+
   /* big-logo */
       /* big-logo */
       .hero__text1{
@@ -2331,6 +2348,21 @@ ol {
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* placement profile  */
+  .before-after-box p,strong{
+    /* width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00bfe7;
+    border-radius: 8px; */
+    font-size: 14px;
+}
+.before-after-box p{
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
 
       .big-company-logo{
         position: absolute;
@@ -3484,6 +3516,10 @@ body {
   height: 100vh;
 } */
 
+.carousel-item img{
+  object-fit: cover;
+}
+
 .contact .container {
   display: flex;
   width: 100%;
@@ -3632,14 +3668,21 @@ body {
 
   .before-after-box {
       width: 100%;
-      height: 100px;
+      height: 120px;
       display: flex;
       justify-content: center;
       align-items: center;
       border: 1px solid #00bfe7;
       border-radius: 8px;
-      margin: 20px 0;
+      margin: 10px 0;
+      padding: 20px auto;
   }
+
+  .before-after-box .after-content p{
+    /* padding: 16px; */
+    margin: 16px;
+  }
+
   .profile-card span{
    color: #adadad;
   }

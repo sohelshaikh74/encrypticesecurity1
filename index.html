@@ -44,7 +44,7 @@
   <!-- Magnific Popup CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
 
-  <!-- Google Tag Manager Begin-->
+  <!--Google Tag Manager Begin-->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
@@ -56,7 +56,8 @@
   </script>
   <!--Google Tag Manager End-->
 
-  <!-- Google Tag Manager Begin -->
+
+  <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
@@ -64,9 +65,10 @@
       }); var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-MXGGM8VF');
-  </script>
-  <!--Google Tag Manager End-->
+    })(window, document, 'script', 'dataLayer', 'GTM-MXGGM8VF');</script>
+  <!-- End Google Tag Manager -->
+
+
 
   <style>
     body.blur .overlay {
@@ -211,12 +213,10 @@
 <body>
 
   <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXGGM8VF" height="0" width="0"
-      style="display:none;visibility:hidden">
-    </iframe>
-  </noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXGGM8VF" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
 
   <!-- Google Tag Manager (noscript) -->
   <noscript>
@@ -274,7 +274,8 @@
               <ul>
                 <li class="active"><a href="./index.html">Home</a></li>
                 <li><a href="./courses.html">Courses</a></li>
-                <li><a href="./about.html">About</a></li>
+                <!--<li><a href="./about.html">About</a></li>-->
+                <li><a href="#">About</a></li>
                 <li><a href="/blog.html">Blog</a></li>
                 <li><a href="./contact.html">Contact</a></li>
               </ul>
@@ -490,21 +491,20 @@
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/awards/award1.png" class="d-block w-100" alt="Award">
+                <img src="/awards/award-1.png" class="d-block w-100" alt="Award">
               </div>
               <div class="carousel-item">
-                <img src="/awards/award2.png" class="d-block w-100" alt="Team Member 1">
+                <img src="/awards/award-2.jpg" class="d-block w-100" alt="Team Member 1">
               </div>
               <div class="carousel-item">
-                <img src="/awards/award3.png" class="d-block w-100" alt="Team Member 2">
+                <img src="/awards/award-3.png" class="d-block w-100" alt="Team Member 2">
               </div>
               <div class="carousel-item">
-                <img src="/awards/award4.png" class="d-block w-100" alt="Team Member 3">
+                <img src="/awards/award-4.png" class="d-block w-100" alt="Team Member 3">
               </div>
               <div class="carousel-item">
-                <img src="/awards/award5.png" class="d-block w-100" alt="Team Member 4">
+                <img src="/awards/award-5.png" class="d-block w-100" alt="Team Member 3">
               </div>
-
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -543,7 +543,7 @@
           <h5 class="text-light">Before</h5>
           <div id="before-content" class="before-after-box">
             <div>
-              <p>Fresher</p>
+              <p>FRESHER</p>
             </div>
           </div>
         </div>
@@ -567,17 +567,17 @@
         <!-- After Box -->
         <div class="col-md-3 d-flex justify-content-center align-items-center flex-column">
           <h5 class="text-light">After</h5>
-          <div id="after-content" class="before-after-box">
-            <div>
+          <div id="after-content" class="before-after-box p-2">
+            <div class="after-content">
               <p>Data Scientist</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <!-- <div class="text-center">
         <button class="primary-btn carrer-export" data-toggle="modal" data-target="#loginModal">Talk to a Carrer
           Expert</button>
-      </div>
+      </div> -->
       <!-- The Modal -->
       <div class="modal fade" id="loginModal">
         <div class="modal-dialog">
@@ -723,19 +723,19 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-title team__title">
-            <span>Nice to meet</span>
-            <h2>OUR Trainers</h2>
+            <!--<span>Nice to meet</span>-->
+            <h2>meet OUR Trainers</h2>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 p-3">
-          <div class="team__item team__item--second set-bg" data-setbg="img/team/pravin-sir.webp">
+          <div class="team__item team__item--second set-bg" data-setbg="/img/team/our-team/sonali-maam.png">
             <div class="team__item__text">
-              <h4>PRAVIN NAGARE</h4>
+              <h4>SONALI AVHAD</h4>
               <p>CEO, Encrypticsecurity</p>
               <div class="team__item__social">
-                <a href="https://www.linkedin.com/in/pravin-nagare-a84434106/"><i
+                <a href="https://www.linkedin.com/in/sonali-kakad-86b927249/"><i
                     class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#"><i class="fa fa-facebook"></i></a>
               </div>
@@ -768,9 +768,9 @@
           </div>
         </div>
         <div class="col-lg-12 p-0">
-          <div class="team__btn">
-            <a href="#ourtrainer" class="primary-btn">Meet Our Trainer</a>
-          </div>
+          <!--<div class="team__btn">-->
+          <!--  <a href="#ourtrainer" class="primary-btn">Meet Our Trainers</a>-->
+          <!--</div>-->
         </div>
       </div>
     </div>
@@ -783,8 +783,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-title center-title">
-            <h2>Students Say
-              About Encryptic Security
+            <h2>What Students Say
+              About EncrypticSecurity
             </h2>
           </div>
         </div>
@@ -806,9 +806,10 @@
                 </div>
                 <div class="testimonial__author__text">
                   <h5>Pallav Purohit</h5>
-                  <span style="color: #adadad;">Senior Cybersecurity Consultant at</span>
+                  <span style="color: #adadad;">Senior Cybersecurity Consultant at
+                  </span>
                   <br>
-                  <span style="color: #adadad;">Accenture Services Pvt Ltd</span>
+                  <span style="color: #adadad;">KPMG India Private Limited</span>
                 </div>
               </div>
             </div>
@@ -980,47 +981,48 @@
             </a>
           </div>
           <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
-              <img src="img/thumbnails/darkweb-3.jpg" alt="Image 2">
+            <a href="#" data-video="https://www.youtube.com/embed/npz14kHp33I?si=hDn3tgSiVDqBEnhP">
+              <img src="img/thumbnails/darkweb-3.jpg" alt="Image 3">
               <p>The Dark Web</p>
             </a>
           </div>
           <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
-              <img src="img/thumbnails/firewall-4.jpg" alt="Image 2">
+            <a href="#" data-video="https://www.youtube.com/embed/2DruyvT3SRI?si=GaCgSv7bTC9-L1WC">
+              <img src="img/thumbnails/firewall-4.jpg" alt="Image 4">
               <p>The FireWall</p>
             </a>
           </div>
           <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
-              <img src="img/thumbnails/breaking-windows-5.jpeg" alt="Image 2">
-              <p>Breaking Windows Security</p>
+            <a href="#" data-video="#">
+              <img src="img/thumbnails/breaking-windows-5.jpeg" alt="Image 5">
+              <p>Breaking Windows Security </p>
             </a>
           </div>
           <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
-              <img src="img/thumbnails/honeypot-2.jpg" alt="Image 2">
+            <a href="#" data-video="#">
+              <img src="img/thumbnails/honeypot-2.jpg" alt="Image 6">
               <p>Image 6</p>
             </a>
           </div>
           <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
-              <img src="img/thumbnails/darkweb-3.jpg" alt="Image 2">
+            <a href="#" data-video="#">
+              <img src="img/thumbnails/darkweb-3.jpg" alt="Image 7">
               <p>Image 7</p>
             </a>
           </div>
           <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
-              <img src="img/thumbnails/pt-vs-wd-1.jpg" alt="Image 2">
+            <a href="#" data-video="#">
+              <img src="img/thumbnails/pt-vs-wd-1.jpg" alt="Image 8">
               <p>Image 8</p>
             </a>
           </div>
           <div class="slider-card">
-            <a href="#" data-video="https://www.youtube.com/embed/C0DPdy98e4c">
-              <img src="img/thumbnails/honeypot-2.jpg" alt="Image 2">
+            <a href="#" data-video="#">
+              <img src="img/thumbnails/honeypot-2.jpg" alt="Image 9">
               <p>Image 9</p>
             </a>
           </div>
+
           <!-- Repeat other cards -->
         </div>
         <button class="prev-btn">&#10094;</button>
@@ -1043,8 +1045,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-title center-title">
-            <span>Our Blog</span>
-            <h2>Blog Update</h2>
+            <!--<span>Our Blog</span>-->
+            <h2>our Blogs </h2>
           </div>
         </div>
       </div>
@@ -1167,71 +1169,79 @@
   <!--map section end  -->
 
   <!-- meet our team Begin-->
+  <!-- meet our team Begin-->
   <section class="team-section" style="background-color: #100028;">
     <div class="container">
       <div class="section-title center-title">
         <h2>Meet our team</h2>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-3 col-sm-6 team-member">
-          <img src="/img/team/our-team/pravin-sir.jpg" alt="PRAVIN NAGARE">
-          <h5 class="text-light">PRAVIN NAGARE</h5>
+      <div class=" row  justfy-content-center">
+        <div class="col-md-12 team-member">
+          <img src="/img/team/our-team/sonali-maam.png" alt="PRAVIN NAGARE">
+          <h5 class="text-light">SONALI AVHAD</h5>
           <p class=" text-muted">CEO</p>
         </div>
-        <div class="col-md-3 col-sm-6 team-member">
-          <img src="" alt="sonali avhad">
+      </div>
+      <div class="row justify-content-center">
+        <!--<div class="col-md-3 col-sm-6 team-member">-->
+        <!--  <img src="/img/team/our-team/pravin-sir.jpg" alt="PRAVIN NAGARE">-->
+        <!--  <h5 class="text-light">PRAVIN NAGARE</h5>-->
+        <!--  <p class=" text-muted">CEO</p>-->
+        <!--</div>-->
+        <!-- <div class="col-md-3 col-sm-6 team-member">
+          <img src="/img/team/our-team/sonali-maam.png" alt="sonali avhad">
           <h5 class="text-light">SONALI AVHAD</h5>
-          <p class="text-muted">COO</p>
-        </div>
+          <p class="text-muted">CEO</p>
+        </div> -->
         <div class="col-md-3 col-sm-6 team-member">
           <img src="/img/team/our-team/sushrut.jpg" alt="Sushrut Mahajan">
-          <h5 class="text-light">Sushrut Mahajan</h5>
+          <h5 class="text-light">SUSHRUT MAHAJAN</h5>
           <p class="text-muted">Manager</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
           <img src="/img/team/our-team/kadambari.jpg" alt="Kadambari Sarmale">
-          <h5 class="text-light">Kadambari Sarmale</h5>
+          <h5 class="text-light">KADAMBARI SARMALE</h5>
           <p class="text-muted">Lead Counselor</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
-          <img src="/img/team/our-team/kaushalya.jpg" alt="Kaushalya Suryavanshi">
-          <h5 class="text-light">Kaushalya Suryavanshi</h5>
+          <img src="/img/team/our-team/kaushalya.png" alt="Kaushalya Suryavanshi">
+          <h5 class="text-light">KAUSHALYA SURYAVANSHI</h5>
           <p class="text-muted">Sr. Video Editor</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
-          <img src="/img/team/our-team/" alt="Ronak Sharma">
-          <h5 class="text-light">Ronak Sharma</h5>
+          <img src="/img/team/our-team/ronak.png" alt="Ronak Sharma">
+          <h5 class="text-light">RONAK SHARMA</h5>
           <p class="text-muted">Lead Cybersecurity Trainer</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
-          <img src="/img/team/our-team/shivam-sir.jpg" alt="Shivam Angaitkar">
-          <h5 class="text-light">Shivam Angaitkar</h5>
+          <img src="/img/team/our-team/shivam-sir.png" alt="Shivam Angaitkar">
+          <h5 class="text-light">SHIVAM ANGAITKAR</h5>
           <p class="text-muted">Sr. Cybersecurity Trainer</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
           <img src="/img/team/our-team/sushant.png" alt="Sushant Phad ">
-          <h5 class="text-light">Sushant Phad </h5>
+          <h5 class="text-light">SUSHANT PHAD </h5>
           <p class="text-muted"> Digital Marketing Associate</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
           <img src="/img/team/our-team/nitesh.jpg" alt="Nitesh Saroj">
-          <h5 class="text-light">Nitesh Saroj</h5>
+          <h5 class="text-light">NITESH SAROJ</h5>
           <p class="text-muted">Finance Associate</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
-          <img src="/img/team/our-team/priyanka.jpg" alt="Priyanka Aware">
-          <h5 class="text-light">Priyanka Aware</h5>
+          <img src="/img/team/our-team/priyanka.png" alt="Priyanka Aware">
+          <h5 class="text-light">PRIYANKA AWARE</h5>
           <p class="text-muted">Junior Graphic Designer</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
           <img src="/img/team/our-team/sohel.jpg" alt="Sohel Shaikh">
-          <h5 class="text-light">Sohel Shaikh</h5>
-          <p class="text-muted">FullStack Developer Intern</p>
+          <h5 class="text-light">SOHEL SHAIKH</h5>
+          <p class="text-muted">Full-stack Developer Intern</p>
         </div>
         <div class="col-md-3 col-sm-6 team-member">
           <img src="/img/team/our-team/raj.jpg" alt="Raj Shribato">
-          <h5 class="text-light">Raj Shribatho</h5>
-          <p class="text-muted">FullStack Developer Intern</p>
+          <h5 class="text-light">RAJ SHIRBATHO</h5>
+          <p class="text-muted">Full-stack Developer Intern</p>
           <!-- <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1242,6 +1252,8 @@
     </div>
   </section>
   <!-- meet our team end-->
+  <!-- meet our team end-->
+
 
 
   <!-- Footer Section Begin -->
