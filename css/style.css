@@ -2137,7 +2137,9 @@ ol {
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (min-width: 1201px ) and (max-widht:2561px) {
-
+  .before-after-box p,strong{
+    font-size: 16px;
+}
   /* .container {
     max-width: 1170px;  
     max-height: 1000px!important;
@@ -2165,6 +2167,10 @@ ol {
 
 
 @media only screen and (min-width: 1200px) {
+  /* placement profile */
+  .before-after-box p,strong{
+    font-size: 16px;
+}
   /* big-logo start*/
   .hero__item{
     position: relative;

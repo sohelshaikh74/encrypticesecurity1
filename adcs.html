@@ -7,7 +7,7 @@
     <meta name="keywords" content="education" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon"  type="img/png" href="img/favicon/fav-icon.png">
+    <link rel="icon" type="img/png" href="img/favicon/fav-icon.png">
     <title>
         Cyber Security Ethical Hacking Training Institute Thane and Mumbai
     </title>
@@ -103,65 +103,157 @@
             color: #adadad;
             border-radius: 8px;
         }
+
         /* enquire-now */
-        .popup{
-  position: absolute;
-  top: -150%;
-  left: 50%;
-  transform: translate(-50% , -50%) scale(1.25);
-  opacity: 1;
-  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0,0.2);
-  transition: top 0ms ease-in-out 200ms,
-          opacity  200ms ease-in-out 0ms,
-          transform  20ms ease-in-out 0ms;
-}
-        .popup.active{
-  top: 50%;
-  opacity: 1;
-  transform: translate(-50% , -50%) scale(1);
-  transition: top 0ms ease-in-out 0ms,
-  opacity  200ms ease-in-out 0ms,
-  transform  20ms ease-in-out 0ms;
+        /* .popup {
+            position: absolute;
+            top: -150%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.25);
+            opacity: 1;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+            transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+        }
 
-}
-.popup .close-btn{
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  background: #888;
-  color: #eee;
-  text-align: center;
-  line-height: 30px;
-  border-radius: 15px;
-  cursor: pointer;
-}
-.popup .form h2{
-  text-align: center;
-  color: #222;
-  margin: 10px 12px 20px;
-  font-size: 25px;
-  padding-top: 15px;
-}
+        .popup.active {
+            top: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
 
+        }
 
-/*media quires  */
-@media (max-width: 575.98px) {
-    .courses-entry-sidebar {
-        margin-top: 20px;
-    }
-    .sidebar-sticky {
-        position: static;
-        width: 100%;
-    }
-}
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .sidebar-sticky {
-        position: relative;
-        width: auto;
-    }
-}
+        .popup .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background: #888;
+            color: #eee;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .popup .form h2 {
+            text-align: center;
+            color: #222;
+            margin: 10px 12px 20px;
+            font-size: 25px;
+            padding-top: 15px;
+        }
+ */
+
+        /*media quires  */
+        @media (max-width: 575.98px) {
+            .courses-entry-sidebar {
+                margin-top: 20px;
+            }
+
+            .sidebar-sticky {
+                position: static;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .sidebar-sticky {
+                position: relative;
+                width: auto;
+            }
+        }
+
+        /* contact pop up */
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            /* Slightly enlarge on hover */
+        }
+
+        .popup {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 90%;
+            /* Responsive width */
+            max-width: 500px;
+            /* Maximum width of the popup */
+            position: relative;
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+            overflow: auto;
+            /* Handle overflow if content is too large */
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #fff;
+            /* background: red; */
+            background-color: #dc3545;
+            border-color: #dc3545;
+            padding: 5px 10px 5px;
+            border-radius: 5px;
+        }
+
+        .close-btn:hover {
+            /* color: #007bff; */
+
+        }
+
+        .popup-content h2 {
+            margin-top: 0;
+        }
+
+        .popup-content p {
+            margin: 10px 0;
+        }
+
+        #call-button {
+            /* background-color: #28a745; */
+            background: linear-gradient(#000, #100028);
+            /* Green background for call button */
+        }
+
+        #call-button:hover {
+            background-color: #218838;
+            /* Darker green on hover */
+        }
     </style>
 </head>
 
@@ -241,7 +333,8 @@
                                     <div class="courses-entry-content col-12 col-xl-8 description">
                                         <div class="courses-entry-meta mb-32">
                                             <div>
-                                                <h4 class="about-this-course my-3 text-light mt-5">About This Course:</h4>
+                                                <h4 class="about-this-course my-3 text-light mt-5">About This Course:
+                                                </h4>
                                                 <div class="text-sh2 my-2">
                                                     <div class="tutor-course-segment__content-wrap">
                                                         <p>The Advanced Diploma in Cyber Security by Encryptic Security
@@ -551,7 +644,7 @@
                                     </div>
                                     <div class="courses-entry-sidebar col-12 col-xl-4">
                                         <div class="courses-entry-summary  d-xl-block rounded border border-5 mb-5">
-                                        <img class="rounded-top-3 w-100 " src="./img/course/adcs-course-logo.png"
+                                            <img class="rounded-top-3 w-100 " src="./img/course/adcs-course-logo.png"
                                                 width="612" height="306" alt="">
                                             <div class="bg-light-200 p-4 p-lg-32 rounded-bottom-3  mb-3">
                                                 <div
@@ -580,25 +673,57 @@
                                                     Hindi, English
                                                 </div>
                                                 <div class="links mt-3 mt-lg-20">
-                                                    <button class="btn btn-primary w-100" data-toggle="modal" data-target="#loginModal">Enquire Now</button>
+                                                    <!-- <button class="btn btn-primary w-100" data-toggle="modal"
+                                                        data-target="#loginModal">Enquire Now</button> -->
+
+                                                    <!-- <button id="open-popup">Enquire Now</button> -->
+                                                    <button class="btn btn-primary w-100" id="open-popup">Enquire
+                                                        Now</button>
+
+                                                    <div id="popup" class="popup">
+                                                        <div class="popup-content">
+                                                            <span class="close-btn" id="close-popup">close</span>
+                                                            <h3>Enquire Now</h3>
+                                                            <!-- <p>This is the content of the popup window.</p> -->
+                                                            <button id="call-button" class="mb-2">Thane<a
+                                                                    href="tel:+91 8828282171">
+                                                                    +91
+                                                                    8828282171</a></button>
+                                                            <button id="call-button">Andheri<a
+                                                                    href="tel:+91 7071777789">
+                                                                    +91
+                                                                    7071777789</a></button>
+
+
+                                                            <!-- Button to make the call -->
+                                                        </div>
+                                                    </div>
+
+
                                                     <!-- The Modal -->
                                                     <div class="modal fade" id="loginModal">
                                                         <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                 <!-- Modal Header -->
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title">Let’s Talk About Your Career Growth! </h5>
+                                                                    <h5 class="modal-title">Let’s Talk About Your Career
+                                                                        Growth! </h5>
                                                                     <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                                                                 </div>
                                                                 <!-- Modal Body -->
                                                                 <div class="column-form">
                                                                     <form>
-                                                                        <iframe src="https://crm.aumdigitech.com/forms/wtl/0daa176b51503badfa720b543040d5bf" frameborder="0" style="width: 100%; height: 400px;" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
+                                                                        <iframe
+                                                                            src="https://crm.aumdigitech.com/forms/wtl/0daa176b51503badfa720b543040d5bf"
+                                                                            frameborder="0"
+                                                                            style="width: 100%; height: 400px;"
+                                                                            sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
                                                                     </form>
                                                                 </div>
                                                                 <!-- Modal Footer -->
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-dismiss="modal">Close</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -620,10 +745,11 @@
                                             <div class="courses-entry-summary  d-xl-block rounded border border-5 ">
                                                 <div class="bg-light-200 p-4 p-lg-32 rounded-bottom-3">
                                                     <div
-                                                    class="mb-20 fw-medium d-flex align-items-center justify-content-center">
-                                                    <img src="/img/icons/certificate.png" width="45" height="45"  alt="" class="white-image p-2" >
-                                                    Certified Courses
-                                                </div>
+                                                        class="mb-20 fw-medium d-flex align-items-center justify-content-center">
+                                                        <img src="/img/icons/certificate.png" width="45" height="45"
+                                                            alt="" class="white-image p-2">
+                                                        Certified Courses
+                                                    </div>
                                                     <div class="mb-2 d-flex align-items-center justify-content-center ">
                                                         <ul class="sidebar-widget__link">
                                                             <li>Advance Diploma in Cyber Security</li>
@@ -639,21 +765,30 @@
                                                         </ul>
                                                     </div>
                                                     <div class="links mt-3 mt-lg-20">
-                                                        <button class="btn btn-primary w-100" data-toggle="modal" data-target="#loginModal"><i class="fas fa-download"></i>  Download Brochure Now</button>
+                                                        <button class="btn btn-primary w-100" data-toggle="modal"
+                                                            data-target="#loginModal"><i class="fas fa-download"></i>
+                                                            Download Brochure Now</button>
                                                         <div class="modal fade" id="loginModal">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h5 class="modal-title">Let’s Talk About Your Career Growth! </h5>
-                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h5 class="modal-title">Let’s Talk About Your
+                                                                            Career Growth! </h5>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal">&times;</button>
                                                                     </div>
                                                                     <div class="column-form">
                                                                         <form>
-                                                                            <iframe src="https://crm.aumdigitech.com/forms/wtl/0daa176b51503badfa720b543040d5bf" frameborder="0" style="width: 100%; height: 400px;" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
+                                                                            <iframe
+                                                                                src="https://crm.aumdigitech.com/forms/wtl/0daa176b51503badfa720b543040d5bf"
+                                                                                frameborder="0"
+                                                                                style="width: 100%; height: 400px;"
+                                                                                sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
                                                                         </form>
                                                                     </div>
-=                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                    = <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-danger"
+                                                                            data-dismiss="modal">Close</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -671,8 +806,8 @@
                                     <div class="col my-1">
                                         <div class="card bg-white card-light-shadow"><img
                                                 class="card-img-top object-fit-cover "
-                                                src="/img/course/ceh-v12-course-card.jpg" width="612"
-                                                height="306" alt="" style="height: 153px">
+                                                src="/img/course/ceh-v12-course-card.jpg" width="612" height="306"
+                                                alt="" style="height: 153px">
                                             <div class="card-body py-4 px-32">
                                                 <div class="card-text text-overline-blog-card text-dark-200 mb-2">
                                                     CEH v12 EC Council
@@ -692,12 +827,12 @@
                                                 </button>
                                             </div>
                                         </div>
-                                    </div>                                     
+                                    </div>
                                     <div class="col my-1">
                                         <div class="card bg-white card-light-shadow"><img
                                                 class="card-img-top object-fit-cover "
-                                                src="./img/course/mcs-course-card.png" width="612"
-                                                height="306" alt="" style="height: 153px">
+                                                src="./img/course/mcs-course-card.png" width="612" height="306" alt=""
+                                                style="height: 153px">
                                             <div class="card-body py-4 px-32 "">
                                                     <div class=" card-text text-overline-blog-card text-dark-200 mb-2">
                                                 Masters in Cyber Security
@@ -721,8 +856,8 @@
                                 <div class="col my-1">
                                     <div class="card bg-white card-light-shadow"><img
                                             class="card-img-top object-fit-cover "
-                                            src="./img/course/oscp-course-card.png" width="612" height="306"
-                                            alt="" style="height: 153px">
+                                            src="./img/course/oscp-course-card.png" width="612" height="306" alt=""
+                                            style="height: 153px">
                                         <div class="card-body py-4 px-32">
                                             <div class="card-text text-overline-blog-card text-dark-200 mb-2">
                                                 OSCP
@@ -750,7 +885,7 @@
                 </div>
             </div>
     </section>
-  
+
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -764,9 +899,11 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__top__social">
                             <a href="https://www.facebook.com/encsec"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.linkedin.com/company/81829612/admin/feed/posts/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/company/81829612/admin/feed/posts/"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
                             <a href="https://www.instagram.com/encrypticsecurity/"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@Encryptic_cybersecurity/videos"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.youtube.com/@Encryptic_cybersecurity/videos"><i
+                                    class="fa fa-youtube-play"></i></a>
                         </div>
                     </div>
                 </div>
@@ -777,7 +914,10 @@
                         <div class="footer__option__item">
                             <h5>About us</h5>
                             <p>
-                                Since 2016, Encryptic Security in Thane has been a top cyber security training institute, offering courses like Advanced Diploma, Masters in Cyber Security, and OSCP certification. Renowned in Mumbai, we provide high-quality education and hands-on experience in ethical hacking and cyber security.
+                                Since 2016, Encryptic Security in Thane has been a top cyber security training
+                                institute, offering courses like Advanced Diploma, Masters in Cyber Security, and OSCP
+                                certification. Renowned in Mumbai, we provide high-quality education and hands-on
+                                experience in ethical hacking and cyber security.
                             </p>
                         </div>
                     </div>
@@ -790,16 +930,20 @@
                             <p><a href="./oscp.html" class="read__more">OSCP</a></p>
                         </div>
                     </div>
-  
-                    <div class="col-lg-3 col-md-6" >
+
+                    <div class="col-lg-3 col-md-6">
                         <div class="footer__option__item">
-                            <h5>Contact Details</h5>                            
+                            <h5>Contact Details</h5>
                             <i class="fa-solid fa-location-dot" style="color: gainsboro;"></i>
-                            <a class="addresss" href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
-                                 6th Floor, ARK7 Tower,    <br> Near Kazari Saree ,   <br> Thane Railway Station,  <br> Thane West - 400601
+                            <a class="addresss"
+                                href="https://www.google.com/maps/place/Encryptic+Security+Pvt+Ltd/@19.1894025,72.9359188,13z/data=!4m6!3m5!1s0x3be7b9d129ad91ab:0x3c6e0f964c676049!8m2!3d19.1894071!4d72.9771187!16s%2Fg%2F11vl4wpmrw?authuser=0&amp;entry=ttu">
+                                6th Floor, ARK7 Tower, <br> Near Kazari Saree , <br> Thane Railway Station, <br> Thane
+                                West - 400601
                             </a>
-                            <p><i class="fas fa-phone"></i> <a href="tel:+918828282171">+918828282171/ 7071777789</a></p>
-                            <p><i class="fas fa fa-envelope"></i><a href="mailto:ceo.pravin@encrypticsec.com"> info@encrypticsecurity.com</a></p>                         
+                            <p><i class="fas fa-phone"></i> <a href="tel:+918828282171">+918828282171/ 7071777789</a>
+                            </p>
+                            <p><i class="fas fa fa-envelope"></i><a href="mailto:ceo.pravin@encrypticsec.com">
+                                    info@encrypticsecurity.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -808,13 +952,13 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <p class="footer_copyright_text">
-                          &copy;
-                          <script>
-                            document.write(new Date().getFullYear());
-                          </script>
-                          Encryptic Security. All rights reserved.
-                           <br>
-                           <a href="#">www.encrypticsecurity.com</a>
+                            &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            Encryptic Security. All rights reserved.
+                            <br>
+                            <a href="#">www.encrypticsecurity.com</a>
                         </p>
                     </div>
                 </div>
@@ -833,6 +977,48 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const openButton = document.getElementById('open-popup');
+            const closeButton = document.getElementById('close-popup');
+            const popup = document.getElementById('popup');
+            const callButton = document.getElementById('call-button');
+
+            // Define the phone numbers
+            const number1 = '+918828282171'; // Ensure numbers are formatted correctly for dialing
+            const number2 = '+917071777789';
+
+            // Show the popup
+            openButton.addEventListener('click', () => {
+                popup.style.display = 'flex'; // Flexbox for centering
+            });
+
+            // Hide the popup
+            closeButton.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+
+            // Hide the popup if clicking outside of it
+            window.addEventListener('click', (event) => {
+                if (event.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+
+            // Function to create the tel URI and initiate the call
+            const initiateCall = () => {
+                const combinedNumber = `${number1},${number2}`; // Combine numbers with a comma
+                window.location.href = `tel:${combinedNumber}`;
+            };
+
+            // Add click event listener to the call button
+            callButton.addEventListener('click', initiateCall);
+        });
+
+
+    </script>
+
 </body>
 
 </html>
