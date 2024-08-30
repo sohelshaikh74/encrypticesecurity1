@@ -2135,8 +2135,85 @@ ol {
   border-color: #e1e1e1;
 }
 
+/* contact pop up */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  /* background-color: #007bff; */
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+}
+
+.popup {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  /* Responsive width */
+  max-width: 400px;
+  /* Maximum width of the popup */
+  position: relative;
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+  overflow: auto;
+  /* Handle overflow if content is too large */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  /* background: red; */
+  background-color: #dc3545;
+  border-color: #dc3545;
+  padding: 5px 10px 5px;
+  border-radius: 5px;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content p {
+  margin: 10px 0;
+}
+
+#call-button {
+  background: linear-gradient(#000, #100028);
+}
+
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (min-width: 1201px ) and (max-widht:2561px) {
+  .carousel-inner .carousel-item img{
+    object-fit: contain;
+  }
   .before-after-box p,strong{
     font-size: 16px;
 }
@@ -2167,6 +2244,9 @@ ol {
 
 
 @media only screen and (min-width: 1200px) {
+  .carousel-inner .carousel-item img{
+    object-fit: contain;
+  }
   /* placement profile */
   .before-after-box p,strong{
     font-size: 16px;
@@ -2200,6 +2280,10 @@ ol {
 }
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .carousel-inner .carousel-item img{
+    object-fit: contain;
+  }
+  
   /* placement profile */
   .before-after-box {
     width: 100%;
@@ -2354,6 +2438,9 @@ ol {
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-inner .carousel-item img{
+    object-fit: contain;
+  }
   /* placement profile  */
   .before-after-box p,strong{
     /* width: 100%;
@@ -2615,6 +2702,9 @@ ol {
 
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+  .carousel-inner .carousel-item img{
+    object-fit: contain;
+  }
 
     /* big-logo */
       /* big-logo */
@@ -2960,6 +3050,9 @@ ol {
 }
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
+  .carousel-inner .carousel-item img{
+    object-fit: contain;
+  }
 
     /* big-logo */
       /* big-logo */
@@ -3130,6 +3223,9 @@ ol {
 
   @media (min-width: 393px) and (min-height: 852px) {
 
+    .carousel-inner .carousel-item img{
+      object-fit: contain;
+    }
     .hero__text1 h2{
       font-size: 28px;
     }
@@ -3152,6 +3248,9 @@ ol {
   @media only screen and (max-width:383px){
     /* big-logo */
       /* big-logo */
+      .carousel-inner .carousel-item img{
+        object-fit: contain;
+      }
   .hero__text1{
     position: relative;
   }

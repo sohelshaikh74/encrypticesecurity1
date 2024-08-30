@@ -180,3 +180,44 @@
     });
 
 })(jQuery);
+
+
+// contact popup of courses
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openButton = document.getElementById('open-popup');
+    const closeButton = document.getElementById('close-popup');
+    const popup = document.getElementById('popup');
+    const callButton = document.getElementById('call-button');
+
+    // Define the phone numbers
+    const number1 = '+918828282171'; // Ensure numbers are formatted correctly for dialing
+    const number2 = '+917071777789';
+
+    // Show the popup
+    openButton.addEventListener('click', () => {
+        popup.style.display = 'flex'; // Flexbox for centering
+    });
+
+    // Hide the popup
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    // Hide the popup if clicking outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+
+    // Function to create the tel URI and initiate the call
+    const initiateCall = () => {
+        // const combinedNumber = `${number1},${number2}`; // Combine numbers with a comma
+        const combinedNumber = `${number1}`; // Combine numbers with a comma
+        window.location.href = `tel:${combinedNumber}`;
+    };
+
+    // Add click event listener to the call button
+    callButton.addEventListener('click', initiateCall);
+});
