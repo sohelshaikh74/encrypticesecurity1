@@ -197,13 +197,14 @@ ol {
 
 
 .carousel-inner .carousel-item img{
-  object-fit: cover;
-  border-radius: 5px;
-  /* border: 2px solid #00bfe7; */
+  object-fit: contain;
 }
-.award{
-  filter: drop-shadow(10px 5px 50px #00bfe7);
+.carousel-inner{
+
+  /* filter: drop-shadow(7px 10px  50px #00bfe7); */
 }
+
+
 
 /*
 
