@@ -91,15 +91,10 @@
             height: 100%;
         }
 
-        .certificate {
-            margin-top: -25px;
-
-        }
-
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            background: #fff;
+            /* background: #fff; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -107,9 +102,15 @@
 
         .swiper-slide img {
             display: block;
-            width: 100%;
-            height: 100%;
+            width: calc(100% - 20px);
+            /* Adjust width based on padding */
+            height: calc(100% - 20px);
+            /* Adjust height based on padding */
             object-fit: cover;
+            /* padding: 10px; */
+            /* Space around each image */
+            box-sizing: border-box;
+            /* Include padding in the element's total width and height */
         }
     </style>
     <!-- Google Tag Manager -->
@@ -219,16 +220,16 @@
         <div class="container">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/img/about/ab-01.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-02.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-03.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-04.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-05.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-06.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-07.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-08.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-09.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/about/ab-10.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-01.jpg" alt="Placeholder 1"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-02.jpg" alt="Placeholder 2"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-03.jpg" alt="Placeholder 3"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-04.jpg" alt="Placeholder 4"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-05.jpg" alt="Placeholder 5"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-06.jpg" alt="Placeholder 6"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-07.jpg" alt="Placeholder 7"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-08.jpg" alt="Placeholder 8"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-09.jpg" alt="Placeholder 9"></div>
+                    <div class="swiper-slide"><img src="/img/about/ab-10.jpg" alt="Placeholder 9"></div>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -258,16 +259,16 @@
         <div class="container">
             <div class="swiper mySwiper certificate">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/img/certificate/cer-1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-2.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-3.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-4.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-5.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-6.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-7.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-8.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-9.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="/img/certificate/cer-10.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-02.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-03.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-04.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-05.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-06.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-07.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-08.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-09.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/img/certificate/cr-10.png" alt=""></div>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -283,24 +284,30 @@
     <!-- certification end -->
 
     <!-- meet our team Begin-->
-    <section class="team-section spad" style="background-color: #100028;">
+    <!-- meet our team Begin-->
+    <section class="team-section" style="background-color: #100028;">
         <div class="container">
             <div class="section-title center-title">
-                <h2>About Team</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed alias corporis fuga reiciendis totam
-                    vero consequuntur adipisci accusamus, quaerat distinctio, possimus quas aspernatur itaque. Possimus
-                    quibusdam, odio cumque harum dignissimos architecto officia quo laborum?</p>
+                <h2>About team</h2>
             </div>
             <div class=" row  justfy-content-center">
-                <div class="col-md-12 team-member">
-                    <div class="sonali">
-                        <img src="/img/team/our-team/sonali-maam.png" alt="PRAVIN NAGARE">
-                    </div>
+                <div class="col-md-12 team-member sonali">
+                    <img src="/img/team/our-team/sonali-maam.png" alt="PRAVIN NAGARE">
                     <h5 class="text-light">SONALI AVHAD</h5>
                     <p class=" text-muted">CEO</p>
                 </div>
             </div>
             <div class="row justify-content-center">
+                <!--<div class="col-md-3 col-sm-6 team-member">-->
+                <!--  <img src="/img/team/our-team/pravin-sir.jpg" alt="PRAVIN NAGARE">-->
+                <!--  <h5 class="text-light">PRAVIN NAGARE</h5>-->
+                <!--  <p class=" text-muted">CEO</p>-->
+                <!--</div>-->
+                <!-- <div class="col-md-3 col-sm-6 team-member">
+          <img src="/img/team/our-team/sonali-maam.png" alt="sonali avhad">
+          <h5 class="text-light">SONALI AVHAD</h5>
+          <p class="text-muted">CEO</p>
+        </div> -->
                 <div class="col-md-3 col-sm-6 team-member">
                     <img src="/img/team/our-team/sushrut.jpg" alt="Sushrut Mahajan">
                     <h5 class="text-light">SUSHRUT MAHAJAN</h5>
@@ -312,11 +319,6 @@
                     <p class="text-muted">Lead Counselor</p>
                 </div>
                 <div class="col-md-3 col-sm-6 team-member">
-                    <img src="/img/team/our-team/kaushalya.png" alt="Kaushalya Suryavanshi">
-                    <h5 class="text-light">KAUSHALYA SURYAVANSHI</h5>
-                    <p class="text-muted">Sr. Video Editor</p>
-                </div>
-                <div class="col-md-3 col-sm-6 team-member">
                     <img src="/img/team/our-team/ronak.png" alt="Ronak Sharma">
                     <h5 class="text-light">RONAK SHARMA</h5>
                     <p class="text-muted">Lead Cybersecurity Trainer</p>
@@ -325,6 +327,11 @@
                     <img src="/img/team/our-team/shivam-sir.png" alt="Shivam Angaitkar">
                     <h5 class="text-light">SHIVAM ANGAITKAR</h5>
                     <p class="text-muted">Sr. Cybersecurity Trainer</p>
+                </div>
+                <div class="col-md-3 col-sm-6 team-member">
+                    <img src="/img/team/our-team/kaushalya.png" alt="Kaushalya Suryavanshi">
+                    <h5 class="text-light">KAUSHALYA SURYAVANSHI</h5>
+                    <p class="text-muted">Sr. Video Editor</p>
                 </div>
                 <div class="col-md-3 col-sm-6 team-member">
                     <img src="/img/team/our-team/sushant.png" alt="Sushant Phad ">
@@ -359,6 +366,7 @@
             </div>
         </div>
     </section>
+    <!-- meet our team end-->
     <!-- meet our team end-->
 
     <!-- testimonial Begin -->
@@ -672,8 +680,6 @@
     <script src="js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Js Plugins end-->
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
@@ -691,10 +697,37 @@
                 delay: 3000, // 3 seconds delay between slides
                 disableOnInteraction: false, // Autoplay won't stop after user interaction
             },
+            breakpoints: {
+                320: {   // For small mobile devices
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                480: {   // For larger mobile devices
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                640: {   // For tablets
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {   // For small desktops
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                1024: {  // For desktops and larger devices
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1280: {  // For larger screens
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                }
+            }
         });
+
         // Auto slide every 3 seconds
         // setInterval(() => {
-        //     moveSlide(1);
+        // moveSlide(1);
         // }, 3000);
     </script>
 </body>
